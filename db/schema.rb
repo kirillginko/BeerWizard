@@ -18,14 +18,6 @@ ActiveRecord::Schema.define(version: 2020_03_05_204038) do
   create_table "beers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "brewery"
-    t.string "description"
-    t.string "location"
-    t.string "type"
-    t.integer "abv"
-    t.float "price"
-    t.string "pairing"
   end
 
   create_table "users", force: :cascade do |t|
