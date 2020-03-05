@@ -7,11 +7,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :remember_me, :avatar, :avatar_cache, :remove_avatar
-
+  #attr_accessor :email, :password, :remember_me, :avatar, :avatar_cache, :remove_avatar
+  has_one_attached :avatar
   has_many :reviews
   has_many :beers
-  has_many :followers
+  #has_many :follows
 
   validates_presence_of   :avatar
   validates_integrity_of  :avatar
