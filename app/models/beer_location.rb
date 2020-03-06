@@ -1,0 +1,2 @@
+class BeerLocation < ApplicationRecord
+end
