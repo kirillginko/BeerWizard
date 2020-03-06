@@ -1,0 +1,12 @@
+<h1>Beers Index</h1>
+<% @beers.each do |beer| %>
+
+<div>
+<h3><%=link_to beer.name, beer_path(beer) %></h3>
+<ul>
+<!-- <li>Category: <%= job.category %></li>
+<li>Internship duration : <%= job.duration %></li>
+<li><%=job.user.city%> </li>
+<li>Publication date : <%= job.created_at %></li>
+</ul>
+<div> -->
