@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_06_002138) do
+ActiveRecord::Schema.define(version: 2020_03_06_021802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,14 @@ ActiveRecord::Schema.define(version: 2020_03_06_002138) do
   create_table "beers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
-=======
+    t.string "name"
+    t.string "brewery"
+    t.string "location"
+    t.text "description"
+    t.string "type"
+    t.string "abv"
+    t.float "price"
+    t.text "pairing"
   end
 
   create_table "follows", force: :cascade do |t|
@@ -45,7 +51,6 @@ ActiveRecord::Schema.define(version: 2020_03_06_002138) do
     t.integer "likes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
->>>>>>> 4dd24614079369ffb9f5c37cd9671fca839b24d0
   end
 
   create_table "users", force: :cascade do |t|
