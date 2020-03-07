@@ -2,11 +2,10 @@ class BeersController < ApplicationController
   before_action :find_beer, only: [:show]
 
   def index
-    @beers.all
+    @beers = Beer.all
   end
 
-  def show
-  end
+  def show; end
 
   private
 
@@ -18,4 +17,3 @@ class BeersController < ApplicationController
     @beer = Beer.find(params[:id])
   end
 end
-

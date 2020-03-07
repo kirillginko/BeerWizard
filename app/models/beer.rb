@@ -10,5 +10,4 @@ class Beer < ApplicationRecord
   # validates :abv, presence: true
   # validates :price, presence: true
   # validates :pairing, presence: true
-
 end
