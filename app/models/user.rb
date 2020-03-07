@@ -10,8 +10,9 @@ class User < ApplicationRecord
   #attr_accessor :email, :password, :remember_me, :avatar, :avatar_cache, :remove_avatar
   has_one_attached :avatar
 
-  has_many :reviews, dependent: :destroy
   has_many :beers, through: :reviews
+  has_many :reviews, dependent: :destroy
+
 
   has_many :follows
   has_many :follower_relationships, foreign_key: :following_id, class_name: 'Follow'

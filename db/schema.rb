@@ -10,32 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_06_210053) do
+ActiveRecord::Schema.define(version: 2020_03_07_210958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "beer_locations", force: :cascade do |t|
+    t.bigint "location_id"
+    t.bigint "beer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "beer_id"
-    t.bigint "location_id"
     t.index ["beer_id"], name: "index_beer_locations_on_beer_id"
     t.index ["location_id"], name: "index_beer_locations_on_location_id"
   end
 
   create_table "beers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "name"
     t.string "brewery"
     t.string "location"
-    t.text "description"
+    t.string "description"
     t.string "type"
     t.string "abv"
-    t.float "price"
-    t.text "pairing"
+    t.string "price"
+    t.string "pairing"
     t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_beers_on_user_id"
   end
 
@@ -55,10 +55,10 @@ ActiveRecord::Schema.define(version: 2020_03_06_210053) do
     t.string "description"
     t.integer "stars"
     t.integer "likes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.bigint "beer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["beer_id"], name: "index_reviews_on_beer_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
@@ -72,8 +72,6 @@ ActiveRecord::Schema.define(version: 2020_03_06_210053) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar"
-    t.bigint "beer_id"
-    t.index ["beer_id"], name: "index_users_on_beer_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
