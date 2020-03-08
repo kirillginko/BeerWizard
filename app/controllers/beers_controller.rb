@@ -2,8 +2,10 @@ class BeersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :find_beer, only: [:show]
 
+
   def index
     @beers = Beer.all
+    @users = User.all
   end
 
   def show; end
