@@ -1,3 +1,8 @@
+<div class="container mt-4">
 <h2>show</h2>
 <%= @beer.name %>
-
+<br>
+<%= cl_image_tag @beer.avatar.key, width: 300, height: 400, crop: :fill %>
+<br>
+<%=link_to "edit beer", edit_beer_path, class: "btn btn-primary" %>
+</div>

@@ -10,3 +10,45 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.card-img-top {
+    height: 11vw;
+    object-fit: cover;
+  }
+
+.card-group {
+  width: 200px;
+  margin: 10px
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+  @media (min-width: 576px) {
+    .card-img-top {
+        height: 19vw;
+    }
+  }
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .card-img-top {
+        height: 16vw;
+    }
+  }
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .card-img-top {
+        height: 11vw;
+    }
+  }
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 992px) {
+    .card-img-top {
+        height: 11vw;
+    }
+  }
