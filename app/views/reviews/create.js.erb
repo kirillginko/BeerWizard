@@ -1,0 +1,12 @@
+reviewForm = document.getElementById('new_review')
+
+<% if @review.persisted? %>
+newReview = "<%= j render 'reviews/show', review: @review %>";
+Username =  "<p><%= @review.user.name %>-</p>";
+reviews = document.getElementById('reviews');
+reviews.insertAdjacentHTML('beforeend', Username);
+reviews.insertAdjacentHTML('beforeend', newReview);
+reviewForm.innerHTML = "<%= j render 'reviews/form', beer: @beer, review: Review.new %>";
+<% else %>
+reviewForm.innerHTML = "<%= j render 'reviews/form', beer: @beer, review: @review %>";
+<% end %>

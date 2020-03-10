@@ -5,11 +5,20 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.beer = @beer
     @review.user = current_user
-    if @beer.save
-      redirect_to beer_path(@beer)
+    if @review.save
+      respond_to do |format|
+        format.html { redirect_to beer_path(@beer) }
+        format.js
+      end
     else
-      render 'beers/show'
+      respond_to do |format|
+        format.html { render 'beers/show' }
+        format.js
+      end
     end
+  end
+
+  def destroy
   end
 
   private
