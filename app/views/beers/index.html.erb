@@ -1,12 +1,17 @@
+<div class="container mt-4">
 <h1>Beers Index</h1>
 <ul>
  <% @beers.each do |beer| %>
 <li><%= link_to beer.name, beer_path(beer) %></li>
  <% end %>
+ </ul>
+<h1> Users </h1>
+<ul>
 <% @users.each do |user| %>
 <li><%=link_to user.email, user_path(user) %></li>
 <% end %>
 </ul>
+</div>
 
 
 
