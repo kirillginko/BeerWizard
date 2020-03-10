@@ -2,16 +2,16 @@ class BeersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :update]
   before_action :find_beer, only: [:show, :update, :edit]
 
-
   def index
     @beers = Beer.all
     @users = User.all
   end
 
-  def show; end
+  def show
+    @review = Review.new
+  end
 
   def edit; end
-
 
   def update
     if @beer.update(beer_params)
@@ -19,7 +19,7 @@ class BeersController < ApplicationController
     else
       render :edit
     end
-   end
+  end
 
   private
 
