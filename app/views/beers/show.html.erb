@@ -4,5 +4,19 @@
 <br>
 <%= cl_image_tag @beer.avatar.key, width: 300, height: 400, crop: :fill %>
 <br>
+
+<h2> Reviews
+<%= plurize @beer.reviews.size, "review" %>
+</h2>
+
+<div id="reviews">
+<% if @beer.reviews.blank> %>
+  Be the first to leave a review for <%= @beer.review %>
+<% else %>
+  <% @beer.reviews.each do |review| %>
+  <%= render 'reviews/show', review: review %>
+  <% end %>
+<% end %>
+</div>
 <%=link_to "edit beer", edit_beer_path, class: "btn btn-primary" %>
 </div>
