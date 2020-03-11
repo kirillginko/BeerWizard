@@ -6,11 +6,10 @@
 
 
   <div class="form-inputs">
-    <%= f.input :photo, as: :file,
+    <%= f.input :avatar, as: :file,
                 require: true %>
      <%= f.input :name,
-                required: true,
-                input_html: { autocomplete: "first_name" }%>
+                required: true %>
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

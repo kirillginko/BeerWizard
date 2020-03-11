@@ -8,7 +8,6 @@ class User < ApplicationRecord
 
   # Setup accessible (or protected) attributes for your model
   #attr_accessor :email, :password, :remember_me, :avatar, :avatar_cache, :remove_avatar
-  has_one_attached :photo
   has_one_attached :avatar
 
   has_many :beers, through: :reviews
