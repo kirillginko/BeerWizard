@@ -1,3 +1,32 @@
-<h2>show</h2>
-<%= @beer.name %>
+<div class="container mt-2 ">
+  <div class="row">
+<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+<h2><%= @beer.name %></h2>
+<br>
+<%= cl_image_tag @beer.avatar.key, width: 300, height: 400, crop: :fill %>
+<br>
+<div class="mt-4">
+<h2>
+<%= pluralize @beer.reviews.size, "Review" %>
+</h2>
+</div>
+<br>
+<div id="reviews">
+<% if @beer.reviews.blank? %>
+  Be the first to leave a review for <%= @beer.name %> Beer!
+<% else %>
+  <% @beer.reviews.each do |review| %>
+  <%= review.user.name %>-
+  <br>
+  <%= render 'reviews/show', review: review %>
+
+  <% end %>
+<% end %>
+</div>
+<hr>
+<%= render 'reviews/form', beer: @beer, review: @review %>
+<%=link_to "edit beer", edit_beer_path, class: "btn btn-primary mt-2" %>
+</div>
+</div>
+</div>
 

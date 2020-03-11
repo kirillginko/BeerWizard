@@ -1,10 +1,24 @@
 class AvatarUploader < CarrierWave::Uploader::Base
+
+  include Cloudinary::CarrierWave
+
+  process :convert => 'png'
+  process :tags => ['post_picture']
+
+  version :standard do
+    process :resize_to_fill => [100, 150, :north]
+  end
+
+  version :thumbnail do
+    resize_to_fit(50, 50)
+  end
+
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  # storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -33,10 +47,20 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   process resize_to_fit: [50, 50]
   # end
 
+  # version :thumb do
+  #   process resize_to_fit: [150, 150]
+  #   process quality: [100]
+  # end
+
+  # version :thumb do
+  #   process resize_to_fit: [200, 200]
+  #   process quality: [100]
+  # end
+
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   # def extension_whitelist
-  #   %w(jpg jpeg gif png)
+  #  %w(jpg jpeg gif png)
   # end
 
   # Override the filename of the uploaded files:
