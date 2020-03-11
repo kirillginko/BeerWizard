@@ -28,6 +28,13 @@
   width: 50%;
 }
 
+.star-rating {
+  line-height:32px;
+  font-size:1.25em;
+}
+
+.star-rating .fa-star{color: yellow;}
+
 
   @media (min-width: 576px) {
     .card-img-top {
