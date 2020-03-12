@@ -1,6 +1,7 @@
 class BeersController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show, :update]
-  before_action :find_beer, only: [:show, :update, :edit]
+  skip_before_action :authenticate_user!, only: [:index, :show, :update, :vote]
+  before_action :find_beer, only: [:show, :update, :edit, :vote]
+  respond_to :js, :json, :html
 
   def index
     @beers = Beer.all
@@ -12,6 +13,14 @@ class BeersController < ApplicationController
   end
 
   def edit; end
+
+  def vote
+    if !current_user.liked? @beer
+      @beer.liked_by current_user
+    elsif current_user.liked? @beer
+      @beer.unliked_by current_user
+    end
+  end
 
   def update
     if @beer.update(beer_params)

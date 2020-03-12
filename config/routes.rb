@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users, only: %i(show edit)
   resources :beers do
+    member do
+      put "like" => "beers#vote"
+    end
     resources :reviews, only: [:create, :destroy ]
     resources :locations, only: [:index, :show ]
 
