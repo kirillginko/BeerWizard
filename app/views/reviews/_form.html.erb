@@ -1,5 +1,6 @@
 <%= simple_form_for([ beer, review ], remote: true) do |form| %>
   Add a review:
+  <%= form.collection_radio_buttons :stars, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
   <%= form.input :description, as: :string %>
   <%= form.button :submit, class: "btn btn-danger" %>
   <% end %>
