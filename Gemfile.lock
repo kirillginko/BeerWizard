@@ -185,6 +185,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    seed-fu (2.3.9)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
     simple_form (5.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -244,6 +247,7 @@ DEPENDENCIES
   rails (= 5.2.4.1)
   redis
   sassc-rails
+  seed-fu (~> 2.3)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
