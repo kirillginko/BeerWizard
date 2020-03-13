@@ -1,4 +1,12 @@
-
-<span class="fa fa-star-o" data-rating="1"><%=review.stars%></span>
-</div>
+<div class="review-rating" data-score="<%= review.stars %>"></div>
 <p>"<%= review.description %>"</p>
+
+<% if user_signed_in? %>
+  <% if review.user_id == current_user.id %>
+
+    <%= link_to "Edit", edit_beer_review_path(review.beer, review) %>
+    <%= link_to "Delete", beer_review_path(review.beer, review), method: :delete, data: {confirm: "Are you sure?"} %>
+
+    <% end %>
+  <% end %>
+

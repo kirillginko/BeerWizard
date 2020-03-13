@@ -12,7 +12,13 @@
 
 
     <div>
-      <%= cl_image_tag beer.avatar.key, width: 150, height: 150, crop: :fill %>
+      <% if beer.avatar.present? %>
+        <%= cl_image_tag beer.avatar.key, width: 150, height: 150, crop: :fill %>
+      <% else %>
+        <%= image_tag 'blank.jpg'%>
+      <% end %>
+
+
     </div>
 
   <%= link_to beer_path(beer) do %>

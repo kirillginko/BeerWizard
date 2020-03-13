@@ -1,15 +1,20 @@
 class BeersController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show, :update, :vote]
+  skip_before_action :authenticate_user!, only: [:new, :edit]
   before_action :find_beer, only: [:show, :update, :edit, :vote]
   respond_to :js, :json, :html
 
   def index
-    @beers = Beer.all
-    @users = User.all
+    @beers = Beer.all.order("created_at DESC")
+    @users = User.all.order("created_at DESC")
   end
 
   def show
     @review = Review.new
+    if @beer.reviews.blank?
+      @average_review = 0
+    else
+      @average_review = @beer.reviews.average(:stars).round(2)
+    end
   end
 
   def edit; end

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     member do
       put "like" => "beers#vote"
     end
-    resources :reviews, only: [:create, :destroy ]
+    resources :reviews, only: [:create, :destroy, :edit, :update ]
     resources :locations, only: [:index, :show ]
 
   end
