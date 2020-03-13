@@ -3,33 +3,24 @@
 
  <% @beers.each do |beer| %>
 
-
-
-<div class="card-group">
-  <div class="card">
+ <div>
  <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
-<%= link_to beer_path(beer) do %>
-<%= cl_image_tag beer.avatar.key, width: 150, height: 150, crop: :fill, class: "card-img-top center" %>
+    <span><i class="fas fa-heart pl-4"></i></span>
+      <% end %>
+  <span class="likes-count" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
+</div>
+
+
     <div>
-      <span><p><i class="fas fa-heart pl-4"></i></p></span>
-      </div>
-    <% end %>
-    <span class="likes-count pl-4"><%= beer.get_upvotes.size %></span>
-
-
-
-
-
-
-  <div class="card-body">
-      <h5 class="card-title"><%= link_to beer.name, beer_path(beer) %></h5>
-      <p class="card-text"><%= beer.description%></p>
-      <p class="card-text"><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
-        </div>
-      </div>
+      <%= cl_image_tag beer.avatar.key, width: 150, height: 150, crop: :fill %>
     </div>
+
+  <%= link_to beer_path(beer) do %>
+    <h4><%= link_to beer.name, beer_path(beer) %></h4>
+      <p><%= beer.description%></p>
+      <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
+    <% end %>
   <% end %>
-<% end %>
 
 
 <br>

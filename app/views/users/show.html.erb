@@ -7,11 +7,13 @@
       <p><b>Email: </b><%= @user.email %></p>
     <br>
 
-  <% current_user.find_liked_items.each do%>
-    <%= current_user.likes @beers %>
-    <% end %>
-  <div class= "mt-2">
-    <br>
+<h4>My Liked Beers</h4>
+  <% current_user.find_liked_items.each do |liked_item|%>
+    <p><%=link_to liked_item.name%></p>
+      <%= cl_image_tag liked_item.avatar.key, width: 150, height: 150, crop: :fill %>
+      <% end %>
+      <div class= "mt-2">
+      <br>
       <%= link_to "edit profile", edit_user_path %>
     </div>
   </div>

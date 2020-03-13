@@ -11,6 +11,7 @@ gem 'redis'
 gem 'carrierwave', '~> 2.0'
 gem 'cloudinary'
 gem 'acts_as_votable'
+gem 'seed-fu'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'

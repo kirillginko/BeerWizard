@@ -11,7 +11,9 @@
     <span><p><i class="fas fa-heart pl-4"></i></p></span>
   </div>
   <% end %>
-  <span class="likes-count"><%= @beer.get_upvotes.size %> </span>
+  <span class="likes-count" id="likes-count">
+    <%= render 'beers/vote', beer: @beer %>
+  </span>
 
 <br>
 <div class="mt-4">
