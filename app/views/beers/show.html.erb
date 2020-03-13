@@ -4,7 +4,11 @@
   <h2><%= @beer.name %></h2>
     <br>
 
-    <%= cl_image_tag @beer.avatar.key, width: 300, height: 400, crop: :fill %>
+     <% if @beer.avatar.present? %>
+      <%= cl_image_tag @beer.avatar.key, width: 300, height: 400, crop: :fill %>
+    <% else %>
+      <%= image_tag 'blank.jpg'%>
+    <% end %>
 
   <%= link_to like_beer_path(@beer), class: "like-btn", method: :put, remote: :true do %>
     <div>
@@ -13,30 +17,44 @@
   <% end %>
  <span class="likes-count" id="likes-count-<%= @beer.id %>"><%= render 'beers/vote', beer: @beer %></span>
 
-<br>
-<div class="mt-4">
-<h2>
-<%= pluralize @beer.reviews.size, "Review" %>
-</h2>
-</div>
-<br>
-<div id="reviews">
-<% if @beer.reviews.blank? %>
-  Be the first to leave a review for <%= @beer.name %> Beer!
-<% else %>
-  <% @beer.reviews.each do |review| %>
-  <%= cl_image_tag review.user.avatar.key,:width=>50, :height=>50, :gravity=>"face", :crop=>"thumb" %>
-  <%= review.user.name %>-
-  <br>
-  <%= render 'reviews/show', review: review %>
 
+<br>
+  <div class="mt-4">
+  <h2>
+    <%= pluralize @beer.reviews.size, "Review" %>
+  </h2>
+  </div>
+<br>
+
+
+  <div id="reviews">
+    <% if @beer.reviews.blank? %>
+      Be the first to leave a review for <%= @beer.name %> Beer!
+    <% else %>
+      <% @beer.reviews.each do |review| %>
+      <%= cl_image_tag review.user.avatar.key,:width=>50, :height=>50, :gravity=>"face", :crop=>"thumb" %>
+    <%= review.user.name %>-
+  <br>
+    <%= render 'reviews/show', review: review %>
   <% end %>
 <% end %>
 </div>
+
+
 <hr>
-<%= render 'reviews/form', beer: @beer, review: @review %>
-<%=link_to "edit beer", edit_beer_path, class: "btn btn-primary mt-2" %>
+  <%= render 'reviews/form', beer: @beer, review: @review %>
+    <%=link_to "edit beer", edit_beer_path, class: "btn btn-primary mt-2" %>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
 

@@ -1,0 +1,8 @@
+<h1> Edit Review</h1>
+
+<%= simple_form_for([@beer, @review]) do |form| %>
+  Add a review:
+  <%= form.input :stars %>
+  <%= form.input :description, as: :string %>
+  <%= form.button :submit, class: "btn btn-danger" %>
+  <% end %>

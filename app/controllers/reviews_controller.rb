@@ -1,7 +1,8 @@
 class ReviewsController < ApplicationController
+  before_action :find_beer
+
 
   def create
-    @beer = Beer.find(params[:beer_id])
     @review = Review.new(review_params)
     @review.beer = @beer
     @review.user = current_user
@@ -18,7 +19,23 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def edit
+  @review = Review.find(params[:id])
+  end
+
+  def update
+    @review = Review.find(params[:id])
+    if @review.update(review_params)
+      redirect_to beer_path(@beer)
+    else
+      render 'edit'
+  end
+end
+
   def destroy
+  @review = Review.find(params[:id])
+  @review.destroy
+  redirect_to beer_path(@beer)
   end
 
   private
@@ -27,3 +44,8 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:description, :likes, :stars)
   end
 end
+
+  def find_beer
+    @beer = Beer.find(params[:beer_id])
+  end
+
