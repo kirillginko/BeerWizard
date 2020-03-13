@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :find_beer
+  before_action :authenticate_user!, only: [:new, :edit]
 
 
   def create

@@ -2,7 +2,17 @@
 
 <%= simple_form_for([@beer, @review]) do |form| %>
   Add a review:
-  <%= form.input :stars %>
+  <div id="rating-form">
+  </div>
   <%= form.input :description, as: :string %>
   <%= form.button :submit, class: "btn btn-danger" %>
   <% end %>
+
+<script>
+$(document).ready(function() {
+    $('#rating-form').raty({
+        path: '/assets/',
+        scoreName: 'review[stars]'
+    });
+  });
+</script>

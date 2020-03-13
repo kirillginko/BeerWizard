@@ -2,6 +2,9 @@
   <div class="row">
 <div class="col-xs-12 col-sm-6 col-sm-offset-3">
   <h2><%= @beer.name %></h2>
+  <h4>Average Rating</h4>
+  <div class="average-review-rating" data-score=<%= @average_review %>></div>
+  <span>Based on <%= @beer.reviews.count %> reviews</span>
     <br>
 
      <% if @beer.avatar.present? %>
@@ -47,14 +50,26 @@
     </div>
   </div>
 </div>
-
 <script>
+$(document).ready(function() {
   $('.review-rating').raty({
-    readOnly: true,
-    score: function() {
-      return $(this).attr('data-score');
-    },
-    path: '/assets/'
+      readOnly: true,
+      score: function() {
+          return $(this).attr('data-score');
+      },
+      path: '/assets/'
   });
+});
 </script>
 
+<script>
+$(document).ready(function() {
+  $('.average-review-rating').raty({
+      readOnly: true,
+      path: '/assets/',
+      score: function() {
+          return $(this).attr('data-score');
+      },
+  });
+});
+</script>
