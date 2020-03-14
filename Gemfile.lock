@@ -250,7 +250,6 @@ DEPENDENCIES
   redis
   sassc-rails
   seed-fu
-
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
