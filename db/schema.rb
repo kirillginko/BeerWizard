@@ -58,8 +58,6 @@ ActiveRecord::Schema.define(version: 2020_03_14_180828) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
-    t.string "style"
-    t.string "ibu"
     t.integer "cached_votes_total", default: 0
     t.integer "cached_votes_score", default: 0
     t.integer "cached_votes_up", default: 0
@@ -67,6 +65,8 @@ ActiveRecord::Schema.define(version: 2020_03_14_180828) do
     t.integer "cached_weighted_score", default: 0
     t.integer "cached_weighted_total", default: 0
     t.float "cached_weighted_average", default: 0.0
+    t.string "style"
+    t.string "ibu"
     t.index ["user_id"], name: "index_beers_on_user_id"
   end
 
