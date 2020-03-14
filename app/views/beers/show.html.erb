@@ -7,6 +7,7 @@
   <span>Based on <%= @beer.reviews.count %> reviews</span>
     <br>
 
+
      <% if @beer.avatar.present? %>
       <%= cl_image_tag @beer.avatar.key, width: 300, height: 400, crop: :fill %>
     <% else %>
