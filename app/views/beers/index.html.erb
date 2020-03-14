@@ -9,24 +9,20 @@
       <% end %>
   <span class="likes-count" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
 </div>
-
-
-    <div>
-<<<<<<< HEAD
-=======
-      <% if beer.avatar.present? %>
-        <%= cl_image_tag beer.avatar.key, width: 150, height: 150, crop: :fill %>
-      <% else %>
-        <%= image_tag 'blank.jpg'%>
-      <% end %>
-
->>>>>>> 97ce6508ac5e846ffc5f6b47e43187d413c3dfa0
-
-    </div>
-
   <%= link_to beer_path(beer) do %>
     <h4><%= link_to beer.name, beer_path(beer) %></h4>
+      <% if beer.avatar.attached? %>
+      <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
+      <% else %>
+      <%= image_tag '/logo.png'%>
+    <% end %>
+      <p><%= beer.brewery%></p>
       <p><%= beer.description%></p>
+      <p><%= beer.style%></p>
+      <p><%= beer.beer_type%></p>
+      <p><%= beer.abv%></p>
+      <p><%= beer.ibu%></p>
+      <p><%= beer.pairing%></p>
       <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
     <% end %>
   <% end %>
