@@ -1,3 +1,3 @@
 class Location < ApplicationRecord
-  belongs_to :beer, through: :beer_location
+  has_many :beers, through: :beer_location
 end
