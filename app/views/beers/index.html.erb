@@ -9,6 +9,7 @@
       <% end %>
   <span class="likes-count" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
 </div>
+
   <%= link_to beer_path(beer) do %>
     <h4><%= link_to beer.name, beer_path(beer) %></h4>
       <% if beer.avatar.attached? %>
