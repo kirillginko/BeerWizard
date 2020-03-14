@@ -23,6 +23,13 @@
         <li class="nav-item">
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
         </li>
+        <li class="nav-item">
+         <% if current_user.avatar.attached? %>
+              <%= cl_image_tag current_user.avatar.key, width: 45, height: 45, crop: :fill, class: "nav-link" %>
+            <% else %>
+              <%= image_tag 'blank.jpg'%>
+            <% end %>
+          </li>
         </div>
       <% else %>
         <li class="nav-item">
