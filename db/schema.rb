@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_12_053523) do
+ActiveRecord::Schema.define(version: 2020_03_14_160714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2020_03_12_053523) do
     t.string "brewery"
     t.string "location"
     t.string "description"
-    t.string "type"
+    t.string "beer_type"
     t.string "abv"
     t.string "price"
     t.string "pairing"
@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 2020_03_12_053523) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
+    t.string "style"
+    t.string "ibu"
     t.integer "cached_votes_total", default: 0
     t.integer "cached_votes_score", default: 0
     t.integer "cached_votes_up", default: 0
