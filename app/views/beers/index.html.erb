@@ -1,5 +1,15 @@
 <div class="container mt-4">
 
+  <h1>Beers Index</h1>
+    <% @beers.each do |beer| %>
+      <div>
+        <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
+        <span><i class="fas fa-heart pl-4"></i></span>
+      <% end %>
+    <span class="likes-count" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
+  </div>
+
+
   <!-- beer card start -->
 
   <div class="card_beer">
@@ -44,12 +54,12 @@
 <% end %>
 
   <%= link_to beer_path(beer) do %>
-    <h4><%= link_to beer.name, beer_path(beer) %></h4>
+  <h4><%= link_to beer.name, beer_path(beer) %></h4>
       <% if beer.avatar.attached? %>
-      <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
-      <% else %>
+        <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
+        <% else %>
       <%= image_tag '/logo.png'%>
-    <% end %>
+      <% end %>
       <p><%= beer.brewery%></p>
       <p><%= beer.description%></p>
       <p><%= beer.style%></p>
@@ -61,15 +71,13 @@
     <% end %>
   <% end %>
 
-
-
 <br>
   <h1> Users </h1>
     <ul>
     <% @users.each do |user| %>
       <li><%=link_to user.email, user_path(user) %></li>
-    <% end %>
-  </ul>
+      <% end %>
+    </ul>
 </div>
 
 
