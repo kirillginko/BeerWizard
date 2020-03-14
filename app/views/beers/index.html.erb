@@ -12,6 +12,15 @@
 
 
     <div>
+<<<<<<< HEAD
+=======
+      <% if beer.avatar.present? %>
+        <%= cl_image_tag beer.avatar.key, width: 150, height: 150, crop: :fill %>
+      <% else %>
+        <%= image_tag 'blank.jpg'%>
+      <% end %>
+
+>>>>>>> 97ce6508ac5e846ffc5f6b47e43187d413c3dfa0
 
     </div>
 
