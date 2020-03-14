@@ -10,6 +10,7 @@
     <span>Based on <%= @beer.reviews.count %> reviews</span>
   <br>
 
+
 <!-- review scripts w raty -->
 
   <% if @beer.avatar.attached? %>
@@ -19,6 +20,7 @@
   <% end %>
 
 <!-- review likes w ajax rendering like/unlike -->
+
 
   <%= link_to like_beer_path(@beer), class: "like-btn", method: :put, remote: :true do %>
     <div>
