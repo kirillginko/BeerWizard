@@ -249,8 +249,7 @@ DEPENDENCIES
   rails (= 5.2.4.1)
   redis
   sassc-rails
-  seed-fu
-
+  seed-fu (~> 2.3)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
