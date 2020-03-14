@@ -12,15 +12,48 @@
       <p><b>Email: </b><%= @user.email %></p>
     <br>
 
-
+<hr>
 <h4>My Liked Beers</h4>
   <% current_user.find_liked_items.each do |liked_item|%>
-    <p><%=link_to liked_item.name%></p>
+    <%= link_to beer_path(liked_item) do %>
+    <p><%= liked_item.name%></p>
       <%= cl_image_tag liked_item.avatar.key, width: 150, height: 150, crop: :fill %>
       <% end %>
-      <div class= "mt-2">
+      <% end %>
+<hr>
+<!--Reviews  -->
+<div class=" mt-4">
+<h4> My Reviews </h4>
+  <p><%= current_user.reviews.size %> Reviews Left</p>
+  <% current_user.reviews.each do |reviews| %>
+      <%= link_to beer_path(reviews.beer) do %>
+        <p><%= reviews.beer.name%></p>
+          <p><%= cl_image_tag reviews.beer.avatar.key, width: 100, height: 100, :crop=>"thumb"%></p>
+          <%= link_to user_path(reviews.user) do %>
+           <div class= "mt-4"><%= cl_image_tag current_user.avatar.key,:width=>50, :height=>50, :gravity=>"face", :crop=>"thumb" %></div>
+
+           <p><%= current_user.name %>-</p>
+           <% end %>
+           <div class="review-rating" data-score="<%= reviews.stars %>"></div>
+          <p><%= reviews.description %></p>
+          <% end %>
+          <% end %>
+
+        <div class= "mt-2">
       <br>
-      <%= link_to "edit profile", edit_user_path %>
-    </div>
+    <%= link_to "edit profile", edit_user_path %>
   </div>
 </div>
+
+
+<script>
+$(document).ready(function() {
+  $('.review-rating').raty({
+      readOnly: true,
+      score: function() {
+          return $(this).attr('data-score');
+      },
+      path: '/assets/'
+  });
+});
+</script>

@@ -1,7 +1,15 @@
 <div class="container mt-4">
 <h1>Beers Index</h1>
 
- <% @beers.each do |beer| %>
+  <% @beers.each do |beer| %>
+    <%= link_to beer_path(beer) do %>
+        <h4><%= beer.name %></h4>
+        <% if beer.avatar.attached? %>
+        <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
+      <% else %>
+    <%= image_tag 'blank.jpg'%>
+  <% end %>
+<% end %>
 
  <div>
  <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
@@ -9,6 +17,20 @@
       <% end %>
   <span class="likes-count" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
 </div>
+
+
+
+    <div>
+      <% if beer.avatar.present? %>
+      <% else %>
+        <%= image_tag 'blank.jpg'%>
+      <% end %>
+      </div>
+
+
+<p><%= beer.description%></p>
+<p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
+<% end %>
 
   <%= link_to beer_path(beer) do %>
     <h4><%= link_to beer.name, beer_path(beer) %></h4>
@@ -27,6 +49,7 @@
       <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
     <% end %>
   <% end %>
+
 
 
 <br>
