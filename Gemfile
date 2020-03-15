@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
-gem 'seed-fu', '~> 2.3'
+
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
@@ -12,6 +12,7 @@ gem 'redis'
 gem 'carrierwave', '~> 2.0'
 gem 'cloudinary'
 gem 'acts_as_votable'
+gem 'seed-fu'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
