@@ -12,6 +12,8 @@ gem 'redis'
 gem 'carrierwave', '~> 2.0'
 gem 'cloudinary'
 gem 'acts_as_votable'
+gem 'seed-fu'
+
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
@@ -30,5 +32,5 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', groups: [:development, :test]
 end
