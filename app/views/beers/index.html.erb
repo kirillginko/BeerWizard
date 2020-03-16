@@ -1,26 +1,13 @@
 <div class="container mt-4">
-
-  <h1>Beers Index</h1>
-    <% @beers.each do |beer| %>
-      <div>
-        <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
-        <span><i class="fas fa-heart pl-4"></i></span>
-      <% end %>
-    <span class="likes-count" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
-  </div>
-
-
-  <!-- beer card start -->
-
-  <div class="card_beer">
-    <div class="card_beer__beer">
-      <div class="card_beer__heart"><%= image_tag("like.svg") %></div>
-    </div>
-  </div>
-
-  <!-- beer card end -->
-
 <h1>Beers Index</h1>
+
+<!-- Beer count -->
+
+<div class ="mt-2 mb-4">
+  <em><%= pluralize @beers.size, "Beers Found" %></em>
+</div>
+
+<!-- Beer Card -->
 
   <% @beers.each do |beer| %>
     <%= link_to beer_path(beer) do %>
@@ -28,57 +15,33 @@
         <% if beer.avatar.attached? %>
         <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
       <% else %>
-    <%= image_tag 'blank.jpg'%>
-  <% end %>
-<% end %>
+        <%= image_tag 'BeerWizardLogo.png',  width: 150, height: 150, crop: :fill %>
+          <% end %>
+          <% end %>
+            <p>description: <%= beer.description %></p>
+            <p>Brewery: <%= beer.brewery %></p>
+              <p>Style: <%= beer.style %></p>
+              <p>Type: <%= beer.beer_type %></p>
+              <p>Abv: <%= beer.abv %></p>
+              <p>IBU: <%= beer.ibu %></p>
+              <p>Pairings: <%= beer.pairing %></p>
+            <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
+            <hr>
 
- <div>
+
+<!-- Beer like Heart and Ajax likes display -->
+
+<div>
  <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
     <span><i class="fas fa-heart pl-4"></i></span>
       <% end %>
   <span class="likes-count" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
 </div>
 
-
-
-    <div>
-      <% if beer.avatar.present? %>
-      <% else %>
-        <%= image_tag 'blank.jpg'%>
-      <% end %>
-      </div>
-
-
-<p><%= beer.description%></p>
-<p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
 <% end %>
-
-  <%= link_to beer_path(beer) do %>
-  <h4><%= link_to beer.name, beer_path(beer) %></h4>
-      <% if beer.avatar.attached? %>
-        <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
-        <% else %>
-      <%= image_tag '/logo.png'%>
-      <% end %>
-      <p><%= beer.brewery%></p>
-      <p><%= beer.description%></p>
-      <p><%= beer.style%></p>
-      <p><%= beer.beer_type%></p>
-      <p><%= beer.abv%></p>
-      <p><%= beer.ibu%></p>
-      <p><%= beer.pairing%></p>
-      <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
-    <% end %>
-  <% end %>
-
-<br>
-  <h1> Users </h1>
-    <ul>
-    <% @users.each do |user| %>
-      <li><%=link_to user.email, user_path(user) %></li>
-      <% end %>
-    </ul>
 </div>
+
+
 
 
 
