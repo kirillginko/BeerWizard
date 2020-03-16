@@ -2,14 +2,15 @@
   <h2><%=@user.name %>'s Profile </h2>
     <div class="mt-4">
 
-  <% if @user.avatar.present? %>
+  <% if @user.avatar.attached? %>
     <%= cl_image_tag @user.avatar.key, width: 250, height: 250, crop: :fill %>
   <% else %>
-    <%= image_tag 'blank.jpg'%>
+    <%= image_tag 'BeerWizardLogo.png',  width: 250, height: 250, crop: :fill %>
     <% end %>
 
     <p><b>Name: </b><%= @user.name %></p>
       <p><b>Email: </b><%= @user.email %></p>
+        <p><small class="text-muted">User Since: <%= @user.created_at.strftime("%b %d, %Y")%></small></p>
     <br>
 
 <hr>
@@ -17,11 +18,16 @@
   <% current_user.find_liked_items.each do |liked_item|%>
     <%= link_to beer_path(liked_item) do %>
     <p><%= liked_item.name%></p>
+    <% if liked_item.avatar.attached? %>
       <%= cl_image_tag liked_item.avatar.key, width: 150, height: 150, crop: :fill %>
-      <% end %>
-      <% end %>
+      <% else %>
+ <%= image_tag 'BeerWizardLogo.png',  width: 250, height: 250, crop: :fill %>     <% end %>
+    <% end %>
+  <% end %>
 <hr>
+
 <!--Reviews  -->
+
 <div class=" mt-4">
 <h4> My Reviews </h4>
   <p><%= current_user.reviews.size %> Reviews Left</p>
@@ -45,6 +51,7 @@
   </div>
 </div>
 
+<!-- Review Ratings Raty Script -->
 
 <script>
 $(document).ready(function() {
