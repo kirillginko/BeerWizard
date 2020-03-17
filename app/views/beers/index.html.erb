@@ -1,36 +1,22 @@
 <div class="container mt-4">
+<h1>Beers Index</h1>
 
-  <h1>Beers Index</h1>
-    <% @beers.each do |beer| %>
-      <div>
-        <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
-        <span><i class="fas fa-heart pl-4"></i></span>
-      <% end %>
-    <span class="likes-count" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
-  </div>
-
-
-  <!-- beer card start -->
-
+<!-- beer card start -->
   <div class="card_beer">
     <div class="card_beer__beer">
       <div class="card_beer__heart"><%= image_tag("like.svg") %></div>
     </div>
   </div>
-
-  <!-- beer card end -->
-
-<h1>Beers Index</h1>
+<!-- beer card end -->
 
   <% @beers.each do |beer| %>
     <%= link_to beer_path(beer) do %>
         <h4><%= beer.name %></h4>
         <% if beer.avatar.attached? %>
-        <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
+        <%= cl_image_tag beer.avatar.key, width: 100, height: 200, crop: :fill %>
       <% else %>
-    <%= image_tag 'BeerWizardLogo.png'%>
+    <%= image_tag ''%>
   <% end %>
-<% end %>
 
  <div>
  <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
@@ -39,20 +25,20 @@
   <span class="likes-count" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
 </div>
 
+<div>
+  <% if beer.avatar.present? %>
+  <% else %>
+    <%= image_tag ''%>
+  <% end %>
+</div>
 
-
-    <div>
-      <% if beer.avatar.present? %>
-      <% else %>
-        <%= image_tag 'blank.jpg'%>
-      <% end %>
-      </div>
 
 
 <p><%= beer.description%></p>
 <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
 <% end %>
 
+m`ùmù
   <%= link_to beer_path(beer) do %>
   <h4><%= link_to beer.name, beer_path(beer) %></h4>
       <% if beer.avatar.attached? %>
@@ -70,7 +56,6 @@
       <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
     <% end %>
   <% end %>
-
 <br>
   <h1> Users </h1>
     <ul>
