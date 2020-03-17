@@ -1,0 +1,9 @@
+<%= form_tag beers_path, method: :get, class: "form-inline d-flex justify-content-center md-form form-sm active-pink-2 mt-2" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control form-control-sm w-75",
+    placeholder: "Find a Beer"
+  %>
+  <i class="fas fa-search mr-4 ml-1" aria-hidden="true"></i>
+
+<% end %>
