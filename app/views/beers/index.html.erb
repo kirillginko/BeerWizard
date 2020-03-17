@@ -1,20 +1,6 @@
 <div class="container mt-4">
 <h1>Beers Index</h1>
 
-<<<<<<< HEAD
-<!-- beer card start -->
-  <div class="card_beer">
-    <div class="card_beer__beer">
-      <div class="card_beer__heart"><%= image_tag("like.svg") %></div>
-    </div>
-  </div>
-<!-- beer card end -->
-=======
-<!--Beer Search -->
-
-
-
-
 <!-- Beer count -->
 
 <div class ="mt-2 mb-4">
@@ -24,7 +10,6 @@
 </div>
 
 <!-- Beer Card -->
->>>>>>> 1a2cd050203a4a77f9f78867a85742470a2487b1
 
   <% @beers.each do |beer| %>
     <%= link_to beer_path(beer) do %>
@@ -42,10 +27,8 @@
         <% if beer.avatar.attached? %>
         <%= cl_image_tag beer.avatar.key, width: 100, height: 200, crop: :fill %>
       <% else %>
-<<<<<<< HEAD
     <%= image_tag ''%>
   <% end %>
-=======
         <%= image_tag 'BeerWizardLogo.png',  width: 150, height: 150, crop: :fill %>
           <% end %>
             <p>description: <%= beer.description %></p>
@@ -56,8 +39,6 @@
               <p>IBU: <%= beer.ibu %></p>
               <p>Pairings: <%= beer.pairing %></p>
             <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
->>>>>>> 1a2cd050203a4a77f9f78867a85742470a2487b1
-
 
 <div>
   <% if beer.avatar.present? %>
@@ -68,8 +49,6 @@
 
 <!-- Beer like Heart and Ajax likes display -->
 
-<<<<<<< HEAD
-=======
 <div>
  <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
     <span><i class="fas fa-heart pl-4"></i></span>
@@ -77,12 +56,8 @@
   <span class="likes-count-" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
  <hr>
 </div>
->>>>>>> 1a2cd050203a4a77f9f78867a85742470a2487b1
-
 <% end %>
 
-<<<<<<< HEAD
-m`ùmù
   <%= link_to beer_path(beer) do %>
   <h4><%= link_to beer.name, beer_path(beer) %></h4>
       <% if beer.avatar.attached? %>
@@ -107,8 +82,6 @@ m`ùmù
       <li><%=link_to user.email, user_path(user) %></li>
       <% end %>
     </ul>
-=======
->>>>>>> 1a2cd050203a4a77f9f78867a85742470a2487b1
 </div>
 
 <!-- review scripts w raty to rate -->
