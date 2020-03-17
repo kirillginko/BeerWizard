@@ -1,12 +1,13 @@
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "BeerWizardLogo.png", class: "rounded" %>
     <% end %>
 
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -27,7 +28,11 @@
          <% if current_user.avatar.attached? %>
               <%= cl_image_tag current_user.avatar.key, width: 45, height: 45, crop: :fill, class: "nav-link" %>
             <% else %>
+<<<<<<< HEAD
               <%= image_tag 'BeerWizardLogo.png'%>
+=======
+    <%= image_tag 'BeerWizardLogo.png',  width: 45, height: 45, crop: :fill %>
+>>>>>>> 1a2cd050203a4a77f9f78867a85742470a2487b1
             <% end %>
           </li>
         </div>
