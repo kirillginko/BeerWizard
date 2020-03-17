@@ -8,6 +8,7 @@ class BeersController < ApplicationController
       @beerquery =  "#" + params[:query]
       sql_query = " \
       beers.description @@ :query \
+      OR beers.name @@ :query \
       OR beers.brewery @@ :query \
       OR beers.beer_type @@ :query \
       OR beers.style @@ :query \

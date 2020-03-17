@@ -14,7 +14,7 @@
 <!-- review scripts w raty -->
 
   <% if @beer.avatar.attached? %>
-    <%= cl_image_tag @beer.avatar.key, width: 300, height: 400, crop: :fill %>
+    <%= cl_image_tag @beer.avatar.key, width: 50, height: 50, crop: :fill %>
       <% else %>
     <%= image_tag 'BeerWizardLogo.png'%>
   <% end %>
@@ -45,7 +45,11 @@
       Be the first to leave a review for <%= @beer.name %> Beer!
     <% else %>
       <% @beer.reviews.each do |review| %>
-      <%= cl_image_tag review.user.avatar.key,:width=>50, :height=>50, :gravity=>"face", :crop=>"thumb" %>
+       <% if review.user.avatar.attached? %>
+        <%= cl_image_tag review.user.avatar.key,:width=> 50, :height=> 50, :gravity=>"face", :crop=>"thumb" %>
+      <% else %>
+        <%= image_tag 'BeerWizardLogo.png'%>
+      <% end %>
     <%= review.user.name %>-
   <br>
     <%= render 'reviews/show', review: review %>

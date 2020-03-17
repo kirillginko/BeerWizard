@@ -9,7 +9,7 @@
 <!-- Beer count -->
 
 <div class ="mt-2 mb-4">
-  <% if @beers %>
+  <% if @beers.count != 30 %>
   <em><%= @beers.count %> Beers found for: <%= @beerquery %></em>
   <% end %>
 </div>
@@ -19,11 +19,20 @@
   <% @beers.each do |beer| %>
     <%= link_to beer_path(beer) do %>
         <h4><%= beer.name %></h4>
+        <% end %>
+
+<!-- average rating w raty---------------->
+
+        <p>Average Rating</p>
+        <div class="average-review-rating" id="average-review-rating <%= beer.id %>" data-score=<%= @average_review %>></div>
+    <span>Based on <%= beer.reviews.count %> reviews</span>
+  <br>
+
+<!-- ------------------------------------->
         <% if beer.avatar.attached? %>
         <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
       <% else %>
         <%= image_tag 'BeerWizardLogo.png',  width: 150, height: 150, crop: :fill %>
-          <% end %>
           <% end %>
             <p>description: <%= beer.description %></p>
             <p>Brewery: <%= beer.brewery %></p>
@@ -33,7 +42,7 @@
               <p>IBU: <%= beer.ibu %></p>
               <p>Pairings: <%= beer.pairing %></p>
             <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
-            <hr>
+
 
 
 <!-- Beer like Heart and Ajax likes display -->
@@ -43,13 +52,38 @@
     <span><i class="fas fa-heart pl-4"></i></span>
       <% end %>
   <span class="likes-count-" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
+ <hr>
 </div>
 
 <% end %>
 
 </div>
 
+<!-- review scripts w raty to rate -->
 
+<script>
+$(document).ready(function() {
+  $('.review-rating').raty({
+      readOnly: true,
+      score: function() {
+          return $(this).attr('data-score');
+      },
+      path: '/assets/'
+  });
+});
+</script>
 
+<!-- review scripts w raty to average -->
 
+<script>
+$(document).ready(function() {
+  $('.average-review-rating').raty({
+      readOnly: true,
+      path: '/assets/',
+      score: function() {
+          return $(this).attr('data-score');
+      },
+  });
+});
+</script>
 
