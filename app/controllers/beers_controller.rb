@@ -4,9 +4,21 @@ class BeersController < ApplicationController
   respond_to :js, :json, :html
 
   def index
+    if params[:query].present?
+      @beerquery =  "#" + params[:query]
+      sql_query = " \
+      beers.description @@ :query \
+      OR beers.name @@ :query \
+      OR beers.brewery @@ :query \
+      OR beers.beer_type @@ :query \
+      OR beers.style @@ :query \
+      "
+      @beers = Beer.where(sql_query, query: "%#{params[:query]}%")
+    else
     @beers = Beer.all.order("created_at DESC")
     @users = User.all.order("created_at DESC")
   end
+end
 
   def show
     @review = Review.new
