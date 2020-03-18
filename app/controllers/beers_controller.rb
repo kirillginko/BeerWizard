@@ -22,11 +22,6 @@ end
 
   def show
     @review = Review.new
-    if @beer.reviews.blank?
-      @average_review = 0
-    else
-      @average_review = @beer.reviews.average(:stars).round(2)
-    end
   end
 
   def edit; end
