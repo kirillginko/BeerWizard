@@ -10,16 +10,9 @@
 <!-- Beer Card -->
   <% @beers.each do |beer| %>
     <%= link_to beer_path(beer) do %>
-        <h4><%= beer.name %></h4>
-        <% end %>
-<!-- average rating w raty---------------->
-        <p>Average Rating</p>
-        <div class="average-review-rating" id="average-review-rating<%= beer.id %>" data-score=<%= @average_review %>></div>
     <h4><%= beer.name %></h4>
   <% end %>
-
 <!-- average rating w raty---------------->
-
   <p>Average Rating: </p>
     <div class="average-review-rating" id="average-review-rating<%= beer.id %>" data-score=
       <%= beer.average_review %>></div>

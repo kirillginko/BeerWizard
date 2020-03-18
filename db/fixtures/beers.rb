@@ -424,7 +424,7 @@ Beer.seed do |s|
     s.style = "IPA"
     s.beer_type = "American IPA"
     s.abv = "6,5%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Strong, spicy food (classic with curry), bold, sweet desserts like carrot cake."
 end
 
@@ -449,8 +449,8 @@ Beer.seed do |s|
     s.description = "This irresistible creation with mango, overflowing with hops, will make you discover a beautiful bitterness, as well as its fruity aromas with resinous shades. In Mouth, she unveils hop flavours with subtle mango notes."
     s.style = "IPA"
     s.beer_type = "American IPA"
-    s.abv =
-    s.ibu =
+    s.abv = ""
+    s.ibu = ""
     s.pairing = "Strong, spicy food (classic with curry), bold, sweet desserts like carrot cake."
 end
 
@@ -463,25 +463,12 @@ Beer.seed do |s|
     s.style = "IPA"
     s.beer_type = "American IPA"
     s.abv = "5,5%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Strong, spicy food (classic with curry), bold, sweet desserts like carrot cake."
 end
 
 Beer.seed do |s|
     s.id = 37
-    s.name = "Urubu Citra-Galaxy-Mosaïc"
-    s.brewery = "À la Fût"
-    s.location = "https://www.alafut.qc.ca/"
-    s.description = "The Urubu is freely inspired by the New England India Pale Ale. For each load, different highly aromatic hops are used for the two raw hops."
-    s.style = "IPA"
-    s.beer_type = "Citra"
-    s.abv = "7%"
-    s.ibu =
-    s.pairing = "Strong, spicy food (classic with curry), bold, sweet desserts like carrot cake."
-end
-
-Beer.seed do |s|
-    s.id = 38
     s.name = "Pale Ale 50/50"
     s.brewery = "Riverbend"
     s.location = "https://www.microriverbend.com/"
@@ -489,12 +476,12 @@ Beer.seed do |s|
     s.style = "Pale Ale"
     s.beer_type = "American Pale Ale"
     s.abv = "4,8%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Wide range of food: meat pie, English cheese, great with a burger"
 end
 
 Beer.seed do |s|
-    s.id = 39
+    s.id = 38
     s.name = "Don de Dieu"
     s.brewery = "Unibroue"
     s.location = "https://www.unibroue.com/en/"
@@ -507,7 +494,7 @@ Beer.seed do |s|
 end
 
 Beer.seed do |s|
-    s.id = 40
+    s.id = 39
     s.name = "Coureur Des Bois"
     s.brewery = "Les Frères Houblon"
     s.location = "http://www.lesfrereshoublon.com/"
@@ -520,33 +507,33 @@ Beer.seed do |s|
 end
 
 Beer.seed do |s|
-    s.id = 41
+    s.id = 40
     s.name = "1837"
     s.brewery = "Unibroue"
     s.location = "https://www.unibroue.com/en/"
     s.description = ""
     s.style = "Belgian"
-    s.beer_type =
+    s.beer_type = ""
     s.abv = "7%"
     s.ibu = "13"
     s.pairing = "Wide range of food: meat pie, English cheese, great with a burger"
 end
 
 Beer.seed do |s|
-    s.id = 42
+    s.id = 41
     s.name = "Raftman"
     s.brewery = "Unibroue"
     s.location = "https://www.unibroue.com"
     s.description = "A complex blend of smoke, apples, caramel, and whisky malt. Smoked malt whisky, low acidity masked by a caramelized apple flavor with a taste of fine yeast."
     s.style = "Belgian"
-    s.beer_type =
+    s.beer_type = ""
     s.abv = "5,5%"
     s.ibu = "16"
     s.pairing = "Wide range of food: meat pie, English cheese, great with a burger"
 end
 
 Beer.seed do |s|
-    s.id = 43
+    s.id = 42
     s.name = "Noire de Chambly"
     s.brewery = "Unibroue"
     s.location = "https://www.unibroue.com"
@@ -559,7 +546,7 @@ Beer.seed do |s|
 end
 
 Beer.seed do |s|
-    s.id = 44
+    s.id = 43
     s.name = "Réserve"
     s.brewery = "Les Frères Houblon"
     s.location = "http://www.lesfrereshoublon.com/"
@@ -572,7 +559,7 @@ Beer.seed do |s|
 end
 
 Beer.seed do |s|
-    s.id = 45
+    s.id = 44
     s.name = "Trois Pistoles"
     s.brewery = "Unibroue"
     s.location = "https://www.unibroue.com"
@@ -585,20 +572,20 @@ Beer.seed do |s|
 end
 
 Beer.seed do |s|
-    s.id = 46
+    s.id = 45
     s.name = "Blanche du 150ième"
     s.brewery = "Riverbend"
     s.location = "https://www.microriverbend.com/"
     s.description = "Blanche du 150ième beer is a white honey Honey Creek. Alma, city of hospitality, overflowing with heritage riches, celebrates 150 years of dynamism, civic pride and flourishing culture."
     s.style = "Wibier"
-    s.beer_type =
+    s.beer_type = ""
     s.abv = "5%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
 end
 
 Beer.seed do |s|
-    s.id = 47
+    s.id = 46
     s.name = "Blanche Des Trois-Rivières"
     s.brewery = "Les frères Houblon"
     s.location = "http://www.lesfrereshoublon.com"
@@ -606,25 +593,12 @@ Beer.seed do |s|
     s.style = "White beer on lees, based on pale malt from Bio Malt Mauricie and malted wheat. The technique of pasting uphill gives it an incomparable lightness and fruity. Without added spices. Sweet sweet!"
     s.beer_type =
     s.abv = "5%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
 end
 
 Beer.seed do |s|
-    s.id = 48
-    s.name =
-    s.brewery =
-    s.location =
-    s.description =
-    s.style =
-    s.beer_type =
-    s.abv =
-    s.ibu =
-    s.pairing =
-end
-
-Beer.seed do |s|
-    s.id = 49
+    s.id = 47
     s.name = "Blanche du Rang des Pointes"
     s.brewery = "À la Fût"
     s.location = "https://www.alafut.qc.ca/"
@@ -632,12 +606,12 @@ Beer.seed do |s|
     s.style = "Wibier"
     s.beer_type = "Fruit"
     s.abv = "4,2%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
 end
 
 Beer.seed do |s|
-    s.id = 50
+    s.id = 48
     s.name = "Berliner Weisse"
     s.brewery = "Riverbend"
     s.location = "https://www.microriverbend.com"
@@ -645,51 +619,51 @@ Beer.seed do |s|
     s.style = "Wibier"
     s.beer_type = "Berliner"
     s.abv = "5,4%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
 end
 
 Beer.seed do |s|
-    s.id = 51
+    s.id = 49
     s.name = "Blanche de Chambly"
     s.brewery = "Unibroue"
     s.location = "https://www.unibroue.com"
     s.description = "Subtle bouquet of spice, citrus notes, aromas of yeast breads, coriander, and cloves Wheat and subtle spices blanketed in citrus flavors reminiscent of orange and lemon"
     s.style = "Wibier"
-    s.beer_type =
+    s.beer_type = ""
     s.abv = "5%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
 end
 
 Beer.seed do |s|
-    s.id = 52
+    s.id = 50
     s.name = "Grand Blanche"
     s.brewery = "La Forge du Malt"
     s.location = "https://www.laforgedumalt.com/"
     s.description = "Refreshing beer that will give you pleasure with every sip. The harmony of the flavors of this Belgian white, with notes of citrus and typical spices, will attract you to its noble and white collar."
     s.style = "Wibier"
-    s.beer_type =
+    s.beer_type = ""
     s.abv = "4,6%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
 end
 
 Beer.seed do |s|
-    s.id = 53
+    s.id = 51
     s.name = "Mékinoise"
     s.brewery = "À la Fût"
     s.location = "https://www.alafut.qc.ca"
     s.description = "The Mékinoise is our Belgian-inspired white. A sweet and refreshing beer where the flavors of wheat, spices, citrus and yeast balance each other."
     s.style = "Wibier"
-    s.beer_type =
+    s.beer_type = ""
     s.abv = "4,8%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
 end
 
 Beer.seed do |s|
-    s.id = 54
+    s.id = 52
     s.name = "Berliner Weisse à la Cerise Griott"
     s.brewery = "Riverbend"
     s.location = "https://www.microriverbend.com"
@@ -697,12 +671,12 @@ Beer.seed do |s|
     s.style = "Wibier"
     s.beer_type = "Berliner"
     s.abv = "5,6%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
 end
 
 Beer.seed do |s|
-    s.id = 55
+    s.id = 53
     s.name = "Bitter/Rousse"
     s.brewery = "Riverbend"
     s.location = "https://www.microriverbend.com/"
@@ -710,25 +684,25 @@ Beer.seed do |s|
     s.style = "Bitter"
     s.beer_type = "English"
     s.abv = "3,8%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Wide range of food: roast chicken or pork, fish & chips, mild cheese."
 end
 
 Beer.seed do |s|
-    s.id = 56
+    s.id = 54
     s.name = "Eau Benite"
     s.brewery = "Unibroue"
     s.location = "https://www.unibroue.com/en/"
     s.description = "Midway between a Belgian blonde and a triple, its pale sweet malt notes never fail to charm the palate. Brewed for the first time in the summer of 1996."
     s.style = "Tripel"
-    s.beer_type =
+    s.beer_type = ""
     s.abv = "7,7%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Barbecue, meat stews, or a nice thick steak or smoked rib roast."
 end
 
 Beer.seed do |s|
-    s.id = 57
+    s.id = 55
     s.name = "Batiscani"
     s.brewery = "À la Fût"
     s.location = "https://www.alafut.qc.ca/"
@@ -736,45 +710,45 @@ Beer.seed do |s|
     s.style = "Tripel"
     s.beer_type = "Brett"
     s.abv = "11%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Barbecue, meat stews, or a nice thick steak or smoked rib roast."
 end
 
 Beer.seed do |s|
-    s.id = 58
+    s.id = 56
     s.name = "Boulet Burdock"
     s.brewery = "À la Fût"
     s.location = "https://www.alafut.qc.ca/"
     s.description = "Blend of Boulet - Season with wild yeast matured in barrels and Skin Contact from Burdock, macerated for 5 weeks on Chardonnay peels. Never bottled, only on tap!"
     s.style = "Blend"
-    s.beer_type =
+    s.beer_type = ""
     s.abv = "5%"
-    s.ibu =
-    s.pairing =
+    s.ibu = ""
+    s.pairing = ""
 end
 
 Beer.seed do |s|
-    s.id = 59
+    s.id = 57
     s.name = "Rouge de Mékinac"
     s.brewery = "À la Fût"
     s.location = "https://www.alafut.qc.ca/"
     s.description = "Having aged 16 months in oak barrels, a series of wild yeasts as well as a large batch of morello cherries have been added and give this beer a sharp acidity, a typical egret and fruity and vanilla flavors."
     s.style = "Kriek"
-    s.beer_type =
+    s.beer_type = ""
     s.abv = "5,4%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Barbecue, meat stews, or a nice thick steak or smoked rib roast."
 end
 
 Beer.seed do |s|
-    s.id = 60
+    s.id = 58
     s.name = "Cuvée Western Spontanée"
     s.brewery = "À la Fût"
     s.location = "https://www.alafut.qc.ca/"
     s.description = "These musts were created inspired by the Quebec maple syrup tradition, obtained by cooling them in a maple syrup evaporator. These divine liquids then matured for more than 2 years in oak barrels before being added to this blend."
     s.style = "Blend"
-    s.beer_type =
+    s.beer_type = ""
     s.abv = "5%"
-    s.ibu =
+    s.ibu = ""
     s.pairing = "Barbecue, meat stews, or a nice thick steak or smoked rib roast."
 end
