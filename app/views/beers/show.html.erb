@@ -6,7 +6,7 @@
 
 <h2><%= @beer.name %></h2>
   <h4>Average Rating</h4>
-    <div class="average-review-rating" data-score=<%= @average_review %>></div>
+    <div class="average-review-rating" data-score=<%= @beer.average_review %>></div>
     <span>Based on <%= @beer.reviews.count %> reviews</span>
   <br>
 
