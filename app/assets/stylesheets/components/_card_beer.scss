@@ -1,0 +1,22 @@
+.card_beer {
+  border: solid green 1px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  display: flex;
+  justify-content: flex-end;
+  width: 130px;
+  height: 200px;
+
+  .card_beer__beer {
+    border: solid red 1px;
+    padding: 12px;
+  }
+  .card_beer__heart {
+    border: solid red 1px;
+    line-height: 0;
+
+    svg {
+      fill: $red !important;
+    }
+  }
+}

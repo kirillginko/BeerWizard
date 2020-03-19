@@ -1,4 +1,16 @@
 <div class="container mt-4">
+
+  <!-- beer card start -->
+
+  <div class="card_beer">
+    <div class="card_beer__beer">
+      <%= image_tag("Sir-Wallac-Hivernale.png", width:'85') %>
+    </div>
+    <div class="card_beer__heart"><%= image_tag("like.svg") %></div>
+  </div>
+
+  <!-- beer card end -->
+
 <h1>Beers Index</h1>
 
  <% @beers.each do |beer| %>
