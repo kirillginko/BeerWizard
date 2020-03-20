@@ -1,5 +1,9 @@
 <div class="container mt-4">
-  <h2><%=@user.name %>'s Profile </h2>
+    <% if  @user != current_user %>
+    <h2><%= @user.name%>'s Profile</h2>
+  <% else  %>
+    <h2>My Profile</h2>
+  <% end %>
     <div class="mt-4">
 
 <!--- follow button -->
@@ -16,7 +20,7 @@
 
 <!-- followers count -->
 
-  <% if @user.followers.count != 0 %>
+  <p><% if @user.followers.count != 0 %></p>
     <p>Followers: <%= @user.followers.count %></p>
       <% end %>
     <% if @user.following.count != 0 %>
@@ -52,7 +56,12 @@
 
 <!--- Liked Beers --->
 
-<h4>My Liked Beers</h4>
+  <% if  @user != current_user %>
+    <h4><%= @user.name%>'s Favorites</h4>
+  <% else  %>
+    <h4>My Liked Beers</h4>
+  <% end %>
+
   <% current_user.find_liked_items.each do |liked_item|%>
     <%= link_to beer_path(liked_item) do %>
     <p><%= liked_item.name%></p>
@@ -78,7 +87,12 @@
 <!--Reviews  -->
 
 <div class=" mt-4">
-<h4> My Reviews </h4>
+  <% if  @user != current_user %>
+    <h4><%= @user.name%>'s Reviews</h4>
+  <% else  %>
+    <h4>My Reviews</h4>
+  <% end %>
+
   <p><%= current_user.reviews.size %> Reviews Left</p>
     <% current_user.reviews.each do |reviews| %>
       <%= link_to beer_path(reviews.beer) do %>
