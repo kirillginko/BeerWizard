@@ -12,43 +12,69 @@
   <!-- beer card end -->
 
 <h1>Beers Index</h1>
-
- <% @beers.each do |beer| %>
-
- <div>
- <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
+<!--Beer Search -->
+<!-- Beer count -->
+<div class ="mt-2 mb-4">
+  <% if @beers.count != 30 %>
+    <em><%= @beers.count %> Beers found for: <%= @beerquery %></em>
+  <% end %>
+</div>
+<!-- Beer Card -->
+  <% @beers.each do |beer| %>
+    <%= link_to beer_path(beer) do %>
+    <h4><%= beer.name %></h4>
+  <% end %>
+<!-- average rating w raty---------------->
+  <p>Average Rating: </p>
+    <div class="average-review-rating" id="average-review-rating<%= beer.id %>" data-score=
+      <%= beer.average_review %>></div>
+    <span>Based on <%= beer.reviews.count %> reviews</span>
+  <br>
+<!-- ------------------------------------->
+  <% if beer.avatar.attached? %>
+    <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
+      <% else %>
+        <%= image_tag 'BeerWizardLogo.png',  width: 150, height: 150, crop: :fill %>
+          <% end %>
+          <p><small><b>Description:</b> <%= beer.description %></small></p>
+          <p><small><b>Brewery:</b> <%= beer.brewery %></small></p>
+          <p><small><b>Style:</b> <%= beer.style %></small></p>
+          <p><small><b>Type:</b> <%= beer.beer_type %></small></p>
+          <p><small><b>Abv:</b> <%= beer.abv %></small></p>
+          <p><small><b>IBU:</b> <%= beer.ibu %></small></p>
+          <p><small><b>Pairings:</b> <%= beer.pairing %></small></p>
+        <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
+<!-- Beer like Heart and Ajax likes display -->
+<div>
+  <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
     <span><i class="fas fa-heart pl-4"></i></span>
       <% end %>
-  <span class="likes-count" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
+    <span class="likes-count-" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
+    <hr>
+  </div>
+<% end %>
 </div>
-
-  <%= link_to beer_path(beer) do %>
-    <h4><%= link_to beer.name, beer_path(beer) %></h4>
-      <% if beer.avatar.attached? %>
-      <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
-      <% else %>
-      <%= image_tag '/logo.png'%>
-    <% end %>
-      <p><%= beer.brewery%></p>
-      <p><%= beer.description%></p>
-      <p><%= beer.style%></p>
-      <p><%= beer.beer_type%></p>
-      <p><%= beer.abv%></p>
-      <p><%= beer.ibu%></p>
-      <p><%= beer.pairing%></p>
-      <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
-    <% end %>
-  <% end %>
-
-
-<br>
-  <h1> Users </h1>
-    <ul>
-    <% @users.each do |user| %>
-      <li><%=link_to user.email, user_path(user) %></li>
-    <% end %>
-  </ul>
-</div>
-
-
-
+<!-- review scripts w raty to rate -->
+<script>
+$(document).ready(function() {
+  $('.review-rating').raty({
+      readOnly: true,
+      score: function() {
+          return $(this).attr('data-score');
+      },
+      path: '/assets/'
+  });
+});
+</script>
+<!-- review scripts w raty to average -->
+<script>
+$(document).ready(function() {
+  $('.average-review-rating').raty({
+      readOnly: true,
+      path: '/assets/',
+      score: function() {
+          return $(this).attr('data-score');
+      },
+  });
+});
+</script>

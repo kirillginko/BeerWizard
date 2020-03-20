@@ -14,6 +14,7 @@ gem 'cloudinary'
 gem 'acts_as_votable'
 gem 'seed-fu'
 
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'sassc-rails'

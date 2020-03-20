@@ -3,4 +3,3 @@ class ChangeTypeToBeerTypeToBeers < ActiveRecord::Migration[5.2]
     rename_column :beers, :type, :beer_type
   end
 end
-# comments
