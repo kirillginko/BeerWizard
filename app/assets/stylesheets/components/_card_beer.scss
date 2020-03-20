@@ -1,23 +1,33 @@
 .card_beer {
   // border: solid green 1px;
+  position: relative;
   background: #FFFFFF;
   border-radius: 6px;
-  justify-content: content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex-direction: column;
   width: 130px;
   height: 200px;
+  padding: 16px;
 
-  .card_beer__beer {
-    display: flex;
-    // border: solid red 1px;
-    justify-content: flex-end;
-    padding: 12px;
-    line-height: 0;
+  &__beer {
 
-    .card_beer__heart {
-
-      img, svg {
-        fill: $red;
+    img {
+      width: 78px;
     }
   }
-}
+  &__heart {
+    // align-self: flex-start;
+    top: 16px;
+    right: 16px;
+    line-height: 0;
+    width: 18px;
+    position: absolute;
+
+
+    svg {
+      fill: $red ;
+    }
+  }
 }

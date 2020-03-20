@@ -13,6 +13,7 @@ gem 'carrierwave', '~> 2.0'
 gem 'cloudinary'
 gem 'acts_as_votable'
 gem 'seed-fu'
+gem 'inline_svg'
 
 
 gem 'autoprefixer-rails'

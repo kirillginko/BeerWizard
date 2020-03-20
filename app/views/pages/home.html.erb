@@ -5,25 +5,24 @@
 
     <%= render 'shared/searchbar' %>
 <!-- -->
+
+<!-- buttons -->
+
 <button type="button" class="btn btn-secondary mt-4" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
   Beer Type
 </button>
+<p></p>
+<a href="#" class="button-m">Follow</a>
 
 <!-- avatar user -->
 <p>
 <div><%= image_tag ("user_avatar_test.png"), class:"avatar_s" %></div>
 
-<!-- -->
+<!-- buttons end -->
 
-
-
-    <div class ="mt-4">
-      <div class="card_beer">
-        <div class="card_beer__beer">
-        <div class="card_beer__heart"><%= image_tag("like.svg") %></div>
-      </div>
+<p></p>
+    <div class="card_beer">
+      <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+      <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "like.svg" %><% end %></div>
     </div>
-  </div>
-</div>
-<!-- beer card end -->
-
+  <!-- beer card end -->
