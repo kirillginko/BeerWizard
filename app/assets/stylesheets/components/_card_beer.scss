@@ -7,17 +7,15 @@
   height: 200px;
 
   .card_beer__beer {
-    display: flex;
-    // border: solid red 1px;
-    justify-content: flex-end;
+    border: solid red 1px;
     padding: 12px;
+  }
+  .card_beer__heart {
+    border: solid red 1px;
     line-height: 0;
 
-    .card_beer__heart {
-
-      img, svg {
-        fill: $red;
+    svg {
+      fill: $red !important;
     }
   }
-}
 }
