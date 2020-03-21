@@ -1,0 +1,27 @@
+.card_social {
+  // border: solid green 1px;
+  font-family: "AvenirNext";
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // flex-direction: row;
+  width: 269px;
+  height: 32px;
+  padding: 16px;
+
+  &__avatar {
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &__description {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+  }
+  &__button{
+    height: 100%;
+  }
+}
