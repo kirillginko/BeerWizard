@@ -1,4 +1,4 @@
 <p>Followers: <%= @user.followers.count %></p>
   <% if @user.following.count != 0 %>
-    <p> Following: </p>
+    <p> Following: <%= @user.following.count %> </p>
     <% end %>
