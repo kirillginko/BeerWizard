@@ -1,3 +1,5 @@
-<% if current_user.follow? @user %>
-$('#follow_button').html('<%= escape_javascript(render :partial => 'follow_button') %>');
+likeButton = document.getElementById('follow_button')
+likeButton.innerHTML = "<%= j render 'friendships/follow_button', user: @user%>";
+followCount = document.getElementById('follow_count')
+followCount.innerHTML = "<%= j render 'friendships/follow_count', user: @user%>";
 console.log("kirill ginko");
