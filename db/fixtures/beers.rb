@@ -9,7 +9,7 @@ Beer.seed do |s|
     s.beer_type = "Citra"
     s.abv = "7%"
     s.ibu = "-"
-    s.pairing = "Ideal pairings: strong, spicy food (classic with curry), bold, sweet desserts like carrot cake"
+    s.pairing = "Strong, spicy food (classic with curry), bold, sweet desserts like carrot cake"
 end
 
 Beer.seed do |s|
@@ -22,7 +22,7 @@ Beer.seed do |s|
     s.beer_type = ""
     s.abv = "8,3%"
     s.ibu = "-"
-    s.pairing = "Ideal pairings: big, intense dishes such as roast beef, lamb or game, grilled or roasted."
+    s.pairing = "Big, intense dishes such as roast beef, lamb or game, grilled or roasted."
 end
 
 Beer.seed do |s|
@@ -35,7 +35,7 @@ Beer.seed do |s|
     s.beer_type = "American IPA"
     s.abv = "6.5%"
     s.ibu = "-"
-    s.pairing = "Ideal pairings: strong, spicy food (classic with curry!), bold, sweet desserts like carrot cake."
+    s.pairing = "Strong, spicy food (classic with curry!), bold, sweet desserts like carrot cake."
 end
 
 Beer.seed do |s|
@@ -48,7 +48,7 @@ Beer.seed do |s|
     s.beer_type = "Citrus IPA"
     s.abv = "6%"
     s.ibu = "45"
-    s.pairing = "Ideal pairings: strong, spicy food (classic with curry!), bold, sweet desserts like carrot cake."
+    s.pairing = "Strong, spicy food (classic with curry!), bold, sweet desserts like carrot cake."
 end
 
 Beer.seed do |s|
@@ -61,7 +61,7 @@ Beer.seed do |s|
     s.beer_type = "American IPA"
     s.abv = "7%"
     s.ibu = "77"
-    s.pairing = "Ideal pairings: strong, spicy food (classic with curry!), bold, sweet desserts like carrot cake."
+    s.pairing = "Strong, spicy food (classic with curry!), bold, sweet desserts like carrot cake."
 end
 
 Beer.seed do |s|
@@ -74,7 +74,7 @@ Beer.seed do |s|
     s.beer_type = "Black IPA"
     s.abv = "6%"
     s.ibu = "65"
-    s.pairing = "Ideal pairings: strong, spicy food (classic with curry!), bold, sweet desserts like carrot cake."
+    s.pairing = "Strong, spicy food (classic with curry!), bold, sweet desserts like carrot cake."
 end
 
 Beer.seed do |s|
@@ -87,7 +87,7 @@ Beer.seed do |s|
     s.beer_type = "American IPA"
     s.abv = "6,2%"
     s.ibu = "53"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -100,7 +100,7 @@ Beer.seed do |s|
     s.beer_type = "Session IPA"
     s.abv = "3,7%"
     s.ibu = "45"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -113,7 +113,7 @@ Beer.seed do |s|
     s.beer_type = "Imperial"
     s.abv = "8%"
     s.ibu = "100"
-    s.pairing = "Ideal pairings: smoked beef brisket, grilled lamb, southern chicken-fried steak."
+    s.pairing = "Smoked beef brisket, grilled lamb, southern chicken-fried steak."
 end
 
 Beer.seed do |s|
@@ -126,7 +126,7 @@ Beer.seed do |s|
     s.beer_type = "Imperial"
     s.abv = "8,2%"
     s.ibu = "120"
-    s.pairing = "Ideal pairings: smoked beef brisket, grilled lamb, southern chicken-fried steak."
+    s.pairing = "Smoked beef brisket, grilled lamb, southern chicken-fried steak."
 end
 
 Beer.seed do |s|
@@ -139,7 +139,7 @@ Beer.seed do |s|
     s.beer_type = "NEIPA"
     s.abv = "6,5%"
     s.ibu = "45"
-    s.pairing = "Ideal pairings: smoked beef brisket, grilled lamb, southern chicken-fried steak."
+    s.pairing = "Smoked beef brisket, grilled lamb, southern chicken-fried steak."
 end
 
 Beer.seed do |s|
@@ -152,7 +152,7 @@ Beer.seed do |s|
     s.beer_type = "American IPA"
     s.abv = "6%"
     s.ibu = "27"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -165,7 +165,7 @@ Beer.seed do |s|
     s.beer_type = "Session IPA"
     s.abv = "4%"
     s.ibu = "30"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -178,7 +178,7 @@ Beer.seed do |s|
     s.beer_type = "NEIPA"
     s.abv = "6,5%"
     s.ibu = "35"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -191,7 +191,7 @@ Beer.seed do |s|
     s.beer_type = "IPA Milkshake"
     s.abv = "5,8%"
     s.ibu = "45"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -204,7 +204,7 @@ Beer.seed do |s|
     s.beer_type = "Citra"
     s.abv = "7,5%"
     s.ibu = "45"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -217,7 +217,7 @@ Beer.seed do |s|
     s.beer_type = "American IPA"
     s.abv = "6,5%"
     s.ibu = "50"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -230,7 +230,7 @@ Beer.seed do |s|
     s.beer_type = "NEIPA"
     s.abv = "6,5%"
     s.ibu = "-"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -243,7 +243,7 @@ Beer.seed do |s|
     s.beer_type = "American IPA"
     s.abv = "6%"
     s.ibu = "45"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -256,7 +256,7 @@ Beer.seed do |s|
     s.beer_type = "Session IPA"
     s.abv = "3,9%"
     s.ibu = "55"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -269,7 +269,7 @@ Beer.seed do |s|
     s.beer_type = "Hopped pils"
     s.abv = "5,0%"
     s.ibu = "40"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -282,7 +282,7 @@ Beer.seed do |s|
     s.beer_type = "Double IPA"
     s.abv = "8,2%"
     s.ibu = "40"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -295,7 +295,7 @@ Beer.seed do |s|
     s.beer_type = "IPA"
     s.abv = "2,0%"
     s.ibu = "15"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -308,7 +308,7 @@ Beer.seed do |s|
     s.beer_type = "Double IPA"
     s.abv = "7,7%"
     s.ibu = "60"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -321,7 +321,7 @@ Beer.seed do |s|
     s.beer_type = "Irish"
     s.abv = "5,0%"
     s.ibu = "-"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -334,7 +334,7 @@ Beer.seed do |s|
     s.beer_type = "NEIPA"
     s.abv = "6,0%"
     s.ibu = "-"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -347,7 +347,7 @@ Beer.seed do |s|
     s.beer_type = "Double IPA"
     s.abv = "8,8%"
     s.ibu = "90"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -360,7 +360,7 @@ Beer.seed do |s|
     s.beer_type = "IPL"
     s.abv = "4,2%"
     s.ibu = "-"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -373,7 +373,7 @@ Beer.seed do |s|
     s.beer_type = "IPA Milkshake"
     s.abv = "6,1%"
     s.ibu = "50"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
 end
 
 Beer.seed do |s|
@@ -386,5 +386,369 @@ Beer.seed do |s|
     s.beer_type = "Gose Lemon"
     s.abv = "3,8%"
     s.ibu = "5,6"
-    s.pairing = "Ideal pairings: BBQ chicken, pizza, souvlaki, curry, pad thai."
+    s.pairing = "BBQ chicken, pizza, souvlaki, curry, pad thai."
+end
+
+Beer.seed do |s|
+    s.id = 31
+    s.name = "Vox Stout Milkshake"
+    s.brewery = "Vox Populi"
+    s.location = "http://www.microbrasserievoxpopuli.com/"
+    s.description = "Rich, creamy and vanilla as desired, our milkshake stout is a little decadence without guilt."
+    s.style = "Stout"
+    s.beer_type = "Stout Milkshake"
+    s.abv = "5,5%"
+    s.ibu = "25"
+    s.pairing = "Easily overpowers most main dishes, but stands up to foie gras, smoked goose."
+end
+
+Beer.seed do |s|
+    s.id = 32
+    s.name = "Session IPA"
+    s.brewery = "Riverbend"
+    s.location = "https://www.microriverbend.com/"
+    s.description = "The sharp bitterness of Centennial hops gives off aromas of lemon and grapefruit. Refreshing at will, this is the beer designed to quench your thirst!"
+    s.style = "IPA"
+    s.beer_type = "American IPA"
+    s.abv = "3,1%"
+    s.ibu = "60"
+    s.pairing = "Strong, spicy food (classic with curry), bold, sweet desserts like carrot cake."
+end
+
+Beer.seed do |s|
+    s.id = 33
+    s.name = "SMaSH IPA (Citra)"
+    s.brewery = "Le Trou Du Diable"
+    s.location = "https://troududiable.com/"
+    s.description = "SMaSH IPA is named for the expression ‘single malt, single hop’ since it is made from a single malt, the Golden Promises, and a single hop, the Citra."
+    s.style = "IPA"
+    s.beer_type = "American IPA"
+    s.abv = "6,5%"
+    s.ibu = ""
+    s.pairing = "Strong, spicy food (classic with curry), bold, sweet desserts like carrot cake."
+end
+
+Beer.seed do |s|
+    s.id = 34
+    s.name = "La Mer Ardente"
+    s.brewery = "La Forge du Malt"
+    s.location = "https://www.laforgedumalt.com/"
+    s.description = "The arrangement of hops in this double IPA will get you out of the known seas. The late addition of Japanese hops Sorachi Ace, with its notable aromas of lemon, dill and coconut, will make you rock to unexplored places that you will certainly revisit."
+    s.style = "IPA"
+    s.beer_type = "Imperial IPA"
+    s.abv = "7,6%"
+    s.ibu = "100"
+    s.pairing = "Smoked beef brisket, grilled lamb, Southern chicken-fried steak."
+end
+
+Beer.seed do |s|
+    s.id = 35
+    s.name = "Héroïne"
+    s.brewery = "Brasserie Grande Allée"
+    s.location = "https://www.facebook.com/labrasserieGA/"
+    s.description = "This irresistible creation with mango, overflowing with hops, will make you discover a beautiful bitterness, as well as its fruity aromas with resinous shades. In Mouth, she unveils hop flavours with subtle mango notes."
+    s.style = "IPA"
+    s.beer_type = "American IPA"
+    s.abv = ""
+    s.ibu = ""
+    s.pairing = "Strong, spicy food (classic with curry), bold, sweet desserts like carrot cake."
+end
+
+Beer.seed do |s|
+    s.id = 36
+    s.name = "Houblon Noir"
+    s.brewery = "Brasseurs du Monde"
+    s.location = "https://brasseursdumonde.com/"
+    s.description = "Houblon Noir is inspired by the India Pale Ales (IPA), which occasionally, when the malt drying was too intense, had a noticeably darker, even black, color."
+    s.style = "IPA"
+    s.beer_type = "American IPA"
+    s.abv = "5,5%"
+    s.ibu = ""
+    s.pairing = "Strong, spicy food (classic with curry), bold, sweet desserts like carrot cake."
+end
+
+Beer.seed do |s|
+    s.id = 37
+    s.name = "Pale Ale 50/50"
+    s.brewery = "Riverbend"
+    s.location = "https://www.microriverbend.com/"
+    s.description = "Pale Ale 50/50 is a beer made from a blend of fermented beer in oak barrels and stainless steel. To its honeyed taste are added subtle woody and vanilla touches supported by a slight bitterness."
+    s.style = "Pale Ale"
+    s.beer_type = "American Pale Ale"
+    s.abv = "4,8%"
+    s.ibu = ""
+    s.pairing = "Wide range of food: meat pie, English cheese, great with a burger"
+end
+
+Beer.seed do |s|
+    s.id = 38
+    s.name = "Don de Dieu"
+    s.brewery = "Unibroue"
+    s.location = "https://www.unibroue.com/en/"
+    s.description = "This was the first strong white beer brewed in Canada. When it launched, it was meant to be seasonal but, due to high consumer demand, it became a year-long item."
+    s.style = "Belgian"
+    s.beer_type = "Pale Ale"
+    s.abv = "9%"
+    s.ibu = "11"
+    s.pairing = "Wide range of food: meat pie, English cheese, great with a burger"
+end
+
+Beer.seed do |s|
+    s.id = 39
+    s.name = "Coureur Des Bois"
+    s.brewery = "Les Frères Houblon"
+    s.location = "http://www.lesfrereshoublon.com/"
+    s.description = "The Coureur des Bois is aging well. The double fermentation of Belgian type gives it its rich amber color. Its residual sugars release aromas that are both malty and fruity."
+    s.style = "Belgian"
+    s.beer_type = ""
+    s.abv = "8%"
+    s.ibu = ""
+    s.pairing = "Wide range of food: meat pie, English cheese, great with a burger"
+end
+
+Beer.seed do |s|
+    s.id = 40
+    s.name = "1837"
+    s.brewery = "Unibroue"
+    s.location = "https://www.unibroue.com/en/"
+    s.description = ""
+    s.style = "Belgian"
+    s.beer_type = ""
+    s.abv = "7%"
+    s.ibu = "13"
+    s.pairing = "Wide range of food: meat pie, English cheese, great with a burger"
+end
+
+Beer.seed do |s|
+    s.id = 41
+    s.name = "Raftman"
+    s.brewery = "Unibroue"
+    s.location = "https://www.unibroue.com"
+    s.description = "A complex blend of smoke, apples, caramel, and whisky malt. Smoked malt whisky, low acidity masked by a caramelized apple flavor with a taste of fine yeast."
+    s.style = "Belgian"
+    s.beer_type = ""
+    s.abv = "5,5%"
+    s.ibu = "16"
+    s.pairing = "Wide range of food: meat pie, English cheese, great with a burger"
+end
+
+Beer.seed do |s|
+    s.id = 42
+    s.name = "Noire de Chambly"
+    s.brewery = "Unibroue"
+    s.location = "https://www.unibroue.com"
+    s.description = "Smooth roasted grains, mildly smoky notes , and spices (cloves, green anis, mint) with a chocolaty finish, wood, smoky, roasted coffee beans, licorice."
+    s.style = "Belgian"
+    s.beer_type = "Dark Ale"
+    s.abv = "6,2%"
+    s.ibu = "21"
+    s.pairing = "Hearty, spicy food: barbecue, sausages, roasted meat."
+end
+
+Beer.seed do |s|
+    s.id = 43
+    s.name = "Réserve"
+    s.brewery = "Les Frères Houblon"
+    s.location = "http://www.lesfrereshoublon.com/"
+    s.description = "This Belgian-style double fermentation beer contains four varieties of hops including Cascade and other hops that release subtle citrus aromas. Complex, she develops a good bitterness."
+    s.style = "Belgian"
+    s.beer_type = "Dark Ale"
+    s.abv = "7,3%"
+    s.ibu = "60"
+    s.pairing = "Hearty, spicy food: barbecue, sausages, roasted meat."
+end
+
+Beer.seed do |s|
+    s.id = 44
+    s.name = "Trois Pistoles"
+    s.brewery = "Unibroue"
+    s.location = "https://www.unibroue.com"
+    s.description = "Due to its complex character, this beer immediately attracted a lot of fans. Its fruity notes and high alcohol level often draw comparisons to port."
+    s.style = "Belgian"
+    s.beer_type = "Dark Ale"
+    s.abv = "9%"
+    s.ibu = "16"
+    s.pairing = "Hearty, spicy food: barbecue, sausages, roasted meat."
+end
+
+Beer.seed do |s|
+    s.id = 45
+    s.name = "Blanche du 150ième"
+    s.brewery = "Riverbend"
+    s.location = "https://www.microriverbend.com/"
+    s.description = "Blanche du 150ième beer is a white honey Honey Creek. Alma, city of hospitality, overflowing with heritage riches, celebrates 150 years of dynamism, civic pride and flourishing culture."
+    s.style = "Wibier"
+    s.beer_type = ""
+    s.abv = "5%"
+    s.ibu = ""
+    s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
+end
+
+Beer.seed do |s|
+    s.id = 46
+    s.name = "Blanche Des Trois-Rivières"
+    s.brewery = "Les frères Houblon"
+    s.location = "http://www.lesfrereshoublon.com"
+    s.description = "Wibier"
+    s.style = "White beer on lees, based on pale malt from Bio Malt Mauricie and malted wheat. The technique of pasting uphill gives it an incomparable lightness and fruity. Without added spices. Sweet sweet!"
+    s.beer_type =
+    s.abv = "5%"
+    s.ibu = ""
+    s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
+end
+
+Beer.seed do |s|
+    s.id = 47
+    s.name = "Blanche du Rang des Pointes"
+    s.brewery = "À la Fût"
+    s.location = "https://www.alafut.qc.ca/"
+    s.description = "The Blanche du Rang des Pointes is our new white with camerises."
+    s.style = "Wibier"
+    s.beer_type = "Fruit"
+    s.abv = "4,2%"
+    s.ibu = ""
+    s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
+end
+
+Beer.seed do |s|
+    s.id = 48
+    s.name = "Berliner Weisse"
+    s.brewery = "Riverbend"
+    s.location = "https://www.microriverbend.com"
+    s.description = "Beer sour by a natural process, this berliner weisse develops surprising aromas of grapefruit, pineapple and passion fruit. True to the acid taste of style, our version of this legendary German ale offers an enhanced alcohol level."
+    s.style = "Wibier"
+    s.beer_type = "Berliner"
+    s.abv = "5,4%"
+    s.ibu = ""
+    s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
+end
+
+Beer.seed do |s|
+    s.id = 49
+    s.name = "Blanche de Chambly"
+    s.brewery = "Unibroue"
+    s.location = "https://www.unibroue.com"
+    s.description = "Subtle bouquet of spice, citrus notes, aromas of yeast breads, coriander, and cloves Wheat and subtle spices blanketed in citrus flavors reminiscent of orange and lemon"
+    s.style = "Wibier"
+    s.beer_type = ""
+    s.abv = "5%"
+    s.ibu = ""
+    s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
+end
+
+Beer.seed do |s|
+    s.id = 50
+    s.name = "Grand Blanche"
+    s.brewery = "La Forge du Malt"
+    s.location = "https://www.laforgedumalt.com/"
+    s.description = "Refreshing beer that will give you pleasure with every sip. The harmony of the flavors of this Belgian white, with notes of citrus and typical spices, will attract you to its noble and white collar."
+    s.style = "Wibier"
+    s.beer_type = ""
+    s.abv = "4,6%"
+    s.ibu = ""
+    s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
+end
+
+Beer.seed do |s|
+    s.id = 51
+    s.name = "Mékinoise"
+    s.brewery = "À la Fût"
+    s.location = "https://www.alafut.qc.ca"
+    s.description = "The Mékinoise is our Belgian-inspired white. A sweet and refreshing beer where the flavors of wheat, spices, citrus and yeast balance each other."
+    s.style = "Wibier"
+    s.beer_type = ""
+    s.abv = "4,8%"
+    s.ibu = ""
+    s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
+end
+
+Beer.seed do |s|
+    s.id = 52
+    s.name = "Berliner Weisse à la Cerise Griott"
+    s.brewery = "Riverbend"
+    s.location = "https://www.microriverbend.com"
+    s.description = "With the addition of sour cherries, the acidity of our berliner weisse explodes in the mouth. When the body of beer meets the soul of the fruit."
+    s.style = "Wibier"
+    s.beer_type = "Berliner"
+    s.abv = "5,6%"
+    s.ibu = ""
+    s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
+end
+
+Beer.seed do |s|
+    s.id = 53
+    s.name = "Bitter/Rousse"
+    s.brewery = "Riverbend"
+    s.location = "https://www.microriverbend.com/"
+    s.description = "This beer finds the balance between crystal malt caramel and the finesse of Quebec hops. Thanks to its low alcohol content, this red ale lends itself to all occasions."
+    s.style = "Bitter"
+    s.beer_type = "English"
+    s.abv = "3,8%"
+    s.ibu = ""
+    s.pairing = "Wide range of food: roast chicken or pork, fish & chips, mild cheese."
+end
+
+Beer.seed do |s|
+    s.id = 54
+    s.name = "Eau Benite"
+    s.brewery = "Unibroue"
+    s.location = "https://www.unibroue.com/en/"
+    s.description = "Midway between a Belgian blonde and a triple, its pale sweet malt notes never fail to charm the palate. Brewed for the first time in the summer of 1996."
+    s.style = "Tripel"
+    s.beer_type = ""
+    s.abv = "7,7%"
+    s.ibu = ""
+    s.pairing = "Barbecue, meat stews, or a nice thick steak or smoked rib roast."
+end
+
+Beer.seed do |s|
+    s.id = 55
+    s.name = "Batiscani"
+    s.brewery = "À la Fût"
+    s.location = "https://www.alafut.qc.ca/"
+    s.description = "Lovers of Brettanomyces, your taste buds will be delighted by our prestigious award-winning beer, inspired by the watershed of the Batiscan river in Mauricie."
+    s.style = "Tripel"
+    s.beer_type = "Brett"
+    s.abv = "11%"
+    s.ibu = ""
+    s.pairing = "Barbecue, meat stews, or a nice thick steak or smoked rib roast."
+end
+
+Beer.seed do |s|
+    s.id = 56
+    s.name = "Boulet Burdock"
+    s.brewery = "À la Fût"
+    s.location = "https://www.alafut.qc.ca/"
+    s.description = "Blend of Boulet - Season with wild yeast matured in barrels and Skin Contact from Burdock, macerated for 5 weeks on Chardonnay peels. Never bottled, only on tap!"
+    s.style = "Blend"
+    s.beer_type = ""
+    s.abv = "5%"
+    s.ibu = ""
+    s.pairing = ""
+end
+
+Beer.seed do |s|
+    s.id = 57
+    s.name = "Rouge de Mékinac"
+    s.brewery = "À la Fût"
+    s.location = "https://www.alafut.qc.ca/"
+    s.description = "Having aged 16 months in oak barrels, a series of wild yeasts as well as a large batch of morello cherries have been added and give this beer a sharp acidity, a typical egret and fruity and vanilla flavors."
+    s.style = "Kriek"
+    s.beer_type = ""
+    s.abv = "5,4%"
+    s.ibu = ""
+    s.pairing = "Barbecue, meat stews, or a nice thick steak or smoked rib roast."
+end
+
+Beer.seed do |s|
+    s.id = 58
+    s.name = "Cuvée Western Spontanée"
+    s.brewery = "À la Fût"
+    s.location = "https://www.alafut.qc.ca/"
+    s.description = "These musts were created inspired by the Quebec maple syrup tradition, obtained by cooling them in a maple syrup evaporator. These divine liquids then matured for more than 2 years in oak barrels before being added to this blend."
+    s.style = "Blend"
+    s.beer_type = ""
+    s.abv = "5%"
+    s.ibu = ""
+    s.pairing = "Barbecue, meat stews, or a nice thick steak or smoked rib roast."
 end

@@ -1,65 +1,91 @@
-.navbar-lewagon {
+.navbar__ {
+  // outline: solid green 1px;
+  background-color: $red;
+  height: 48px;
+  padding: 0 48px;
+  display: flex;
   justify-content: space-between;
-  background: white;
-}
+  align-items: center;
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
-.card-img-top {
-    height: 11vw;
-    object-fit: cover;
-  }
-
-.card-group {
-  width: 200px;
-  margin: 10px
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.star-rating {
-  line-height:32px;
-  font-size:1.25em;
-}
-
-.star-rating .fa-star{color: yellow;}
-
-
-  @media (min-width: 576px) {
-    .card-img-top {
-        height: 19vw;
+  &bg {
+    height: 20px;
+    svg {
+      fill: #fff;
     }
   }
 
-  .liked {
-  color: blue;
+  &icons {
+    display: block;
+    margin: 0 auto;
+    fill: #fff;
+    height: 20px;
+  }
+
 }
-  /* Medium devices (tablets, 768px and up) */
-  @media (min-width: 768px) {
-    .card-img-top {
-        height: 16vw;
-    }
-  }
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
-    .card-img-top {
-        height: 11vw;
-    }
-  }
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 992px) {
-    .card-img-top {
-        height: 11vw;
-    }
-  }
+
+
+// .navbar-lewagon {
+//   justify-content: space-between;
+//   background: white;
+// }
+
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
+
+// .card-img-top {
+//     height: 11vw;
+//     object-fit: cover;
+//   }
+
+// .card-group {
+//   width: 200px;
+//   margin: 10px
+// }
+
+// .center {
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 50%;
+// }
+
+// .star-rating {
+//   line-height:32px;
+//   font-size:1.25em;
+// }
+
+// .star-rating .fa-star{color: yellow;}
+
+
+//   @media (min-width: 576px) {
+//     .card-img-top {
+//         height: 19vw;
+//     }
+//   }
+
+//   .liked {
+//   color: blue;
+// }
+//   /* Medium devices (tablets, 768px and up) */
+//   @media (min-width: 768px) {
+//     .card-img-top {
+//         height: 16vw;
+//     }
+//   }
+//   /* Large devices (desktops, 992px and up) */
+//   @media (min-width: 992px) {
+//     .card-img-top {
+//         height: 11vw;
+//     }
+//   }
+//   /* Extra large devices (large desktops, 1200px and up) */
+//   @media (min-width: 992px) {
+//     .card-img-top {
+//         height: 11vw;
+//     }
+//   }

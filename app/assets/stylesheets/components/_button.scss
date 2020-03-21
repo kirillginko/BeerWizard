@@ -1,0 +1,26 @@
+.button-m {
+
+  border : {
+    style: solid;
+    color: $medium-gray;
+    width: 1px;
+    radius: 3px;
+  }
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Rift-Demi;
+  font-size: 13px;
+  color: #606060;
+
+  &:hover {
+    text-decoration: none;
+    color: #606060;
+  }
+}
+
+.button-l {
+
+}

@@ -1,34 +1,35 @@
 <div class="container mt-4">
+
+  <!-- beer card start -->
+
+  <div class="card_beer">
+    <div class="card_beer__beer">
+      <%= image_tag("Sir-Wallac-Hivernale.png", width:'85') %>
+    </div>
+    <div class="card_beer__heart"><%= image_tag("like.svg") %></div>
+  </div>
+
+  <!-- beer card end -->
+
 <h1>Beers Index</h1>
-
 <!--Beer Search -->
-
-
-
-
 <!-- Beer count -->
-
 <div class ="mt-2 mb-4">
   <% if @beers.count != 30 %>
     <em><%= @beers.count %> Beers found for: <%= @beerquery %></em>
   <% end %>
 </div>
-
 <!-- Beer Card -->
-
   <% @beers.each do |beer| %>
     <%= link_to beer_path(beer) do %>
     <h4><%= beer.name %></h4>
   <% end %>
-
 <!-- average rating w raty---------------->
-
   <p>Average Rating: </p>
     <div class="average-review-rating" id="average-review-rating<%= beer.id %>" data-score=
       <%= beer.average_review %>></div>
     <span>Based on <%= beer.reviews.count %> reviews</span>
   <br>
-
 <!-- ------------------------------------->
   <% if beer.avatar.attached? %>
     <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
@@ -43,11 +44,7 @@
           <p><small><b>IBU:</b> <%= beer.ibu %></small></p>
           <p><small><b>Pairings:</b> <%= beer.pairing %></small></p>
         <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
-
-
-
 <!-- Beer like Heart and Ajax likes display -->
-
 <div>
   <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
     <span><i class="fas fa-heart pl-4"></i></span>
@@ -57,9 +54,7 @@
   </div>
 <% end %>
 </div>
-
 <!-- review scripts w raty to rate -->
-
 <script>
 $(document).ready(function() {
   $('.review-rating').raty({
@@ -71,9 +66,7 @@ $(document).ready(function() {
   });
 });
 </script>
-
 <!-- review scripts w raty to average -->
-
 <script>
 $(document).ready(function() {
   $('.average-review-rating').raty({
@@ -85,4 +78,3 @@ $(document).ready(function() {
   });
 });
 </script>
-
