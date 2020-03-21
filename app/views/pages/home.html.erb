@@ -43,24 +43,7 @@
     <%= link_to "Belgian", controller: "beers", query: "Belgian"%>
     </button>
 
-
-<!-- avatar -->
-<p>
-<div><%= image_tag ("user_avatar.png"), class:"avatar_s" %></div>
-<p>
-<div><%= image_tag ("user_avatar.png"), class:"avatar_m" %></div>
-<p>
-<div><%= image_tag ("user_avatar.png"), class:"avatar_l" %></div>
-<p>
-<!-- avatar end -->
-
-
-<p></p>
-    <div class="card_beer">
-      <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
-      <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "like.svg" %><% end %></div>
-    </div>
-  <!-- beer card end -->
+<!-- Tooltips -->
 <script>
 $(function () {
   $('[data-toggle="tooltip"]').tooltip({
@@ -70,29 +53,4 @@ $(function () {
 
 })
 </script>
-
-<!-- Navbar -->
-<p></p>
-<div class="navbar__">
-  <div class="navbar__bg">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "Home.svg", class: 'navbar__icons' %>
-    <% end %>
-  </div>
-  <div class="navbar__bg">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "Barcode.svg", class: 'navbar__icons' %>
-    <% end %>
-  </div>
-  <div class="navbar__bg">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "Bell.svg", class: 'navbar__icons' %>
-    <% end %>
-  </div>
-  <div class="navbar__bg">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "Search.svg", class: 'navbar__icons' %>
-    <% end %>
-  </div>
-</div>
 
