@@ -4,17 +4,45 @@
 <!-- searchbar -->
 
     <%= render 'shared/searchbar' %>
-<!-- -->
 
-<!-- buttons -->
+<!-- Search Query Buttons -->
 
-<button type="button" class="btn btn-secondary mt-4" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-  Beer Type
-</button>
-<p></p>
-<a href="#" class="button-m">Follow</a>
+<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="India Pale Ale, a hoppy style of beer within the pale ale category.">
+    <%= link_to "IPA", controller: "beers", query: "IPA"%>
+    </button>
 
-<!-- buttons end -->
+<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="A sour German wheat beer, typically brewed with salt and coriander seeds.">
+    <%= link_to "Gose", controller: "beers", query: "Gose"%>
+    </button>
+
+<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="A kind of strong, dark beer brewed with roasted malt or barley.">
+    <%= link_to "Stout", controller: "beers", query: "Stout"%>
+    </button>
+
+<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="A type of light-colored beer strongly flavored with hops.">
+    <%= link_to "Pale Ale", controller: "beers", query: "Pale Ale"%>
+    </button>
+
+<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="Deep amber to brown in colour. Caramel and chocolate flavours are evident.">
+    <%= link_to "Brown Ale", controller: "beers", query: "Brown Ale"%>
+    </button>
+
+<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="Lager beer uses a process of cool fermentation, followed by maturation in cold storage. The German word Lager means storeroom or warehouse.">
+    <%= link_to "Lager", controller: "beers", query: "Lager"%>
+    </button>
+
+<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="A lager beer with a strong hop flavor, originally brewed at Pilsen in Bohemia (now the Czech Republic), and traditionally served in a tall glass tapered at the bottom.">
+    <%= link_to "Pilsner", controller: "beers", query: "Pilsner"%>
+    </button>
+
+<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="Saison is a pale ale that is highly carbonated, fruity, spicy, and often bottle conditioned.">
+    <%= link_to "Saison", controller: "beers", query: "Saison"%>
+    </button>
+
+<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="Belgian beers are primarily ales (as opposed to lagers) with a heavy emphasis on malts and a lot of fruity yeast flavors.">
+    <%= link_to "Belgian", controller: "beers", query: "Belgian"%>
+    </button>
+
 
 <!-- avatar -->
 <p>
@@ -26,12 +54,22 @@
 <p>
 <!-- avatar end -->
 
+
 <p></p>
     <div class="card_beer">
       <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
       <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "like.svg" %><% end %></div>
     </div>
   <!-- beer card end -->
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip({
+    delay: { "show": 300, "hide": 100 }
+  });
+
+
+})
+</script>
 
 <!-- Navbar -->
 <p></p>
@@ -57,3 +95,4 @@
     <% end %>
   </div>
 </div>
+
