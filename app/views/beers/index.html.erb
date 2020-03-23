@@ -15,17 +15,22 @@
 </div>
 
 <!-- Beer Card -->
+
   <% @beers.each do |beer| %>
     <%= link_to beer_path(beer) do %>
     <h4><%= beer.name %></h4>
   <% end %>
+
 <!-- average rating w raty---------------->
+
   <p>Average Rating: </p>
     <div class="average-review-rating" id="average-review-rating<%= beer.id %>" data-score=
       <%= beer.average_review %>></div>
     <span>Based on <%= beer.reviews.count %> reviews</span>
   <br>
-<!-- ------------------------------------->
+
+<!----- Beer Card -------->
+
   <% if beer.avatar.attached? %>
     <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
       <% else %>
@@ -39,7 +44,9 @@
           <p><small><b>IBU:</b> <%= beer.ibu %></small></p>
           <p><small><b>Pairings:</b> <%= beer.pairing %></small></p>
         <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
+
 <!-- Beer like Heart and Ajax likes display -->
+
 <div>
   <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
     <span><i class="fas fa-heart pl-4"></i></span>
@@ -49,27 +56,5 @@
   </div>
 <% end %>
 </div>
+
 <!-- review scripts w raty to rate -->
-<script>
-$(document).ready(function() {
-  $('.review-rating').raty({
-      readOnly: true,
-      score: function() {
-          return $(this).attr('data-score');
-      },
-      path: '/assets/'
-  });
-});
-</script>
-<!-- review scripts w raty to average -->
-<script>
-$(document).ready(function() {
-  $('.average-review-rating').raty({
-      readOnly: true,
-      path: '/assets/',
-      score: function() {
-          return $(this).attr('data-score');
-      },
-  });
-});
-</script>
