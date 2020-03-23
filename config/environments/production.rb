@@ -95,3 +95,4 @@ Rails.application.configure do
 end
 
 DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+#

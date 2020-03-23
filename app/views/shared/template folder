@@ -1,0 +1,28 @@
+<!-- avatar -->
+<p>
+<div><%= image_tag ("user_avatar.png"), class:"avatar_s" %></div>
+<p>
+<div><%= image_tag ("user_avatar.png"), class:"avatar_m" %></div>
+<p>
+<div><%= image_tag ("user_avatar.png"), class:"avatar_l" %></div>
+<p>
+<!-- avatar end -->
+
+  <!-- beer card start -->
+
+  <div class="card_beer">
+    <div class="card_beer__beer">
+      <%= image_tag("Sir-Wallac-Hivernale.png", width:'85') %>
+    </div>
+    <div class="card_beer__heart"><%= image_tag("like.svg") %></div>
+  </div>
+
+  <!-- beer card end -->
+
+
+<p></p>
+    <div class="card_beer">
+      <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+      <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "like.svg" %><% end %></div>
+    </div>
+  <!-- beer card end -->

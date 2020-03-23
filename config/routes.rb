@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
   devise_for :users
   root to: 'pages#home'
-  resources :users, only: %i(show edit)
+  resources :users, only: %i(show edit index)
   resources :beers do
     member do
       put "like" => "beers#vote"

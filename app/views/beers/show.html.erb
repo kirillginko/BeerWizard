@@ -46,7 +46,7 @@
     <% else %>
       <% @beer.reviews.each do |review| %>
        <% if review.user.avatar.attached? %>
-        <%= cl_image_tag review.user.avatar.key,:width=> 50, :height=> 50, :gravity=>"face", :crop=>"thumb" %>
+        <small><%= cl_image_tag review.user.avatar.key,:width=> 50, :height=> 50, :gravity=>"face", :crop=>"thumb" %></small>
       <% else %>
         <%= image_tag 'BeerWizardLogo.png'%>
       <% end %>
