@@ -30,7 +30,7 @@
 
 <!-- review scripts w raty to rate -->
 <script>
-reviewRating =
+
 $(document).ready(function() {
   $('.review-rating').raty({
       readOnly: true,
@@ -39,10 +39,9 @@ $(document).ready(function() {
       },
       path: '/assets/'
   });
-});
+
 </script>
 <script>
-averageRating =
 $(document).ready(function() {
   $('.average-review-rating').raty({
       readOnly: true,
@@ -51,7 +50,7 @@ $(document).ready(function() {
           return $(this).attr('data-score');
       },
   });
-});
+
 </script>
 
   </body>
