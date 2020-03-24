@@ -1,0 +1,31 @@
+.accordion{
+  margin-top: 24px;
+
+  li {
+    border-bottom: solid $medium-gray 1px;
+  }
+
+  &__title {
+    font-size: 15px;
+  }
+
+  &__counter {
+    margin-left: 8px;
+    display: inline;
+    padding: 2px 5px;
+    background: $red;
+    border-radius: 5px;
+    vertical-align: middle;
+    text-align: center;
+    font : {
+      size: 9px;
+      family: 'AvenirNextLTW01-Regular', 'Avenir Next';
+    }
+    color: #fff;
+  }
+
+  &__content {
+    margin: 0;
+    padding-bottom: 24px;
+  }
+}
