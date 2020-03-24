@@ -1,16 +1,22 @@
 .card_review {
   // border: solid green 1px;
   font-family: "AvenirNext";
-  position: relative;
-  background: #FFFFFF;
+  font-size: 100%;
+  background: #f5f5f5;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   // flex-direction: row;
   width: 269px;
   height: 109px;
-  padding: 16px;
 
-  &__avatar {
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+  &__description {
+    width: 140px;
+    height: 32px;
   }
   &__stars {
     img {
@@ -19,13 +25,6 @@
     }
   }
   &__comment {
-    width: 181px;
-    height: 21px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000000;
-  }
-   &__description {
     width: 181px;
     height: 21px;
     font-size: 16px;
