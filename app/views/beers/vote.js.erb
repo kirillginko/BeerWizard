@@ -1,8 +1,10 @@
+$(document).ready(function() {
 <% if current_user.liked? @beer %>
   $('.like-btn').addClass('liked');
 <% else %>
   $('.like-btn').removeClass('like-btn');
-  <% end %>
+<% end %>
+});
 showVotes = document.getElementById('likes-count-<%= @beer.id %>');
 showVotes.innerHTML = "<%= j render 'beers/vote', beer: @beer %>";
 

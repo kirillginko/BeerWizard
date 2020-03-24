@@ -1,0 +1,9 @@
+  <% if signed_in? %>
+    <% if  @user != current_user %>
+      <% if current_user.following?(@user) %>
+        <%=link_to "Unfollow", friendships_path(user_id: @user.id), method: :delete, remote: true, class: "btn btn-primary"  %>
+      <% else %>
+        <%=link_to "Follow", friendships_path(user_id: @user.id), method: :post, remote: true, class: "btn btn-primary"  %>
+      <% end %>
+    <% end %>
+  <% end %>
