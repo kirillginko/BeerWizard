@@ -1,0 +1,67 @@
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $red;
+  padding: 36px 0;
+
+  &__content {
+    text-align: center;
+    padding-bottom: 16px;
+  }
+
+  &__avatar {
+    padding-bottom: 8px;
+  }
+
+  &__infos {
+
+  }
+
+  &__numbers {
+    display: flex;
+
+    a {
+      text-decoration: none;
+    }
+
+    p {
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    }
+  }
+
+  &__reviews {
+    text-align: center;
+    border-right: solid 1px rgba(255, 255, 255, .3);
+    padding: 0 24px
+  }
+
+  &__followers {
+    text-align: center;
+    border-right: solid 1px rgba(255, 255, 255, .3);
+    padding: 0 24px
+  }
+
+  &__follows {
+    text-align: center;
+    padding: 0 24px
+  }
+
+  h2 {
+    color: #fff;
+    margin: 0;
+  }
+
+  h5 {
+    color: #fff;
+    margin: 0 0 2px 0;
+  }
+
+  p {
+    color: #fff;
+    margin: 0;
+  }
+}
+

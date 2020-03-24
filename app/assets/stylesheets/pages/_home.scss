@@ -28,17 +28,17 @@ h2 {
   font: {
     family: 'Rift W05 Bold', 'Rift';
     weight: Bold;
-    size: 18px;
+    size: 24px;
   }
   color: #000;
-  line-height: 22px;
+  line-height: 24px;
 }
 
 h3 {
   font: {
     family: 'Rift W05 Bold', 'Rift';
     weight: Bold;
-    size: 32px;
+    size: 18px;
   }
   color: #000;
   line-height: 32px;
@@ -56,10 +56,11 @@ h4 {
 h5 {
   font: {
     family: 'Rift W05 Regular', 'Rift';
-    size: 32px;
+    size: 14px;
+    weight: normal;
   }
   color: #000;
-  line-height: 32px;
+  line-height: 14px;
 }
 
 .abv {

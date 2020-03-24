@@ -95,8 +95,15 @@
 <h1>Lorem ipsum dolor sit amet.</h1>
 
 <!-- H2 -->
+<h2>Martin Picard</h2>
 
-<h2>IBU</h2>
+<!-- H3 -->
+
+<h3>IBU</h3>
+
+<!-- H5 -->
+
+<h5>Reviews</h5>
 
 <!-- Bookmark button -->
 
@@ -132,7 +139,53 @@
   </ul>
 </div>
 
+<!-- User Profile -->
+
+<div class="user-profile">
+  <div class="user-profile__content">
+    <div class="user-profile__avatar">
+      <%= image_tag ("user_avatar.png"), class:"avatar_l" %>
+    </div>
+    <div class="user-profile__infos">
+      <h2>Martin Picard</h2>
+      <p>Montréal, QC</p>
+    </div>
+  </div>
+  <div class="user-profile__numbers">
+    <%= link_to "#" do %>
+    <div class="user-profile__reviews">
+      <h5>Reviews</h5>
+      <p>52</p>
+    <% end %>
+    </div>
+    <%= link_to "#" do %>
+    <div class="user-profile__followers">
+      <h5>Followers</h5>
+      <p class="user-profile__bold-numbers">35</p>
+    </div>
+    <% end %>
+    <%= link_to "#" do %>
+    <div class="user-profile__follows">
+      <h5>Follows</h5>
+      <p class="user-profile__bold-numbers">290</p>
+    </div>
+    <% end %>
+  </div>
+</div>
+
 <!-- Search Query Buttons -->
+
+  <div class="beer_type">
+  <%= link_to "IPA", {controller: "beers", query: "IPA"},  class: "beer-type__button" %>
+  <%= link_to "Gose", {controller: "beers", query: "Gose"}, class: "beer-type__button"%>
+  <%= link_to "Stout", {controller: "beers", query: "Stout"}, class: "beer-type__button"%>
+  <%= link_to "Pale Ale", {controller: "beers", query: "Pale Ale"}, class: "beer-type__button"%>
+  <%= link_to "Brown Ale", {controller: "beers", query: "Brown Ale"}, class: "beer-type__button"%>
+  <%= link_to "Lager", {controller: "beers", query: "Lager"}, class: "beer-type__button"%>
+  <%= link_to "Pilsner", {controller: "beers", query: "Pilsner"}, class: "beer-type__button"%>
+  <%= link_to "Saison", {controller: "beers", query: "Saison"}, class: "beer-type__button"%>
+  <%= link_to "Belgian", {controller: "beers", query: "Belgian"}, class: "beer-type__button"%>
+</div>
 
 <button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="India Pale Ale, a hoppy style of beer within the pale ale category.">
     <%= link_to "IPA", controller: "beers", query: "IPA"%>
