@@ -8,19 +8,52 @@
   Beer Type
 </button>
 
-<!-- buttons end -->
 <p></p>
 <a href="#" class="button-m">Follow</a>
 
-
 <!-- avatar -->
+
 <p></p>
 <div class="show_row">
   <%= image_tag ("user_avatar.png"), class:"avatar_s" %>
   <%= image_tag ("user_avatar.png"), class:"avatar_m" %>
   <%= image_tag ("user_avatar.png"), class:"avatar_l" %>
 </div>
-<!-- Beer card end -->
+
+<!-- card social -->
+
+<p></p>
+<div class="card_social">
+  <div class="card_social__avatar"><%= image_tag "user_avatar.png", class:"avatar" %></div>
+  <div>
+    <div class="card_social__id">Martin Picard</div>
+    <div class="card_social__location">Montréal, QC</div>
+  </div>
+  <a href="#" class="button-m">FOLLOW</a>
+</div>
+
+<!-- card review -->
+
+<p></p>
+<div class="card_review">
+  <div class="card_review__comment">Excellente bière !</div>
+  <div class="card_review__rating">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+  </div>
+  <div class="card_review__description">
+    <div class="card_review__avatar"><%= image_tag "user_avatar.png", class:"avatar" %></div>
+    <div>
+      <div class="card_review__id">Martin Picard</div>
+      <div class="card_review__location">Montréal, QC</div>
+    </div>
+  </div>
+</div>
+
+<!-- beer card-->
 
 <p></p>
 <div class="card_beer">
