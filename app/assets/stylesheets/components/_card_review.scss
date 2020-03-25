@@ -1,34 +1,55 @@
 .card_review {
-  // border: solid green 1px;
-  font-family: "AvenirNext";
-  font-size: 100%;
-  background: #f5f5f5;
+  //background: #f7f7f7;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  // flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 269px;
-  height: 109px;
+
+  &__comment {
+    width: 263px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  &__rating {
+    margin-bottom: 7px;
+  }
+
+  &__fa fa-star {
+    width: 101px;
+    color: orange;
+  }
+
+  .checked {
+  color: #ffc100;
+  }
+
+  &__description {
+  display:flex;
+  }
 
   .avatar {
     width: 32px;
     height: 32px;
+    margin-right: 20px;
   }
-  &__description {
-    width: 140px;
-    height: 32px;
-  }
-  &__stars {
-    img {
-      width: 14px;
-      height: 13px;
-    }
-  }
-  &__comment {
-    width: 181px;
-    height: 21px;
-    font-size: 16px;
-    font-weight: 600;
+
+   &__id {
+    width: 115px;
+    font-family: "AvenirNextLTW01-Medium";
+    font-size: 100%;
+    font-weight: 800;
     color: #000000;
+  }
+
+  &__location {
+    width: 80px;
+    font-family:"AvenirNextLTW01-Regular";
+    font-size: 12px;
+    color: #000000;
+    line-height: 8px;
+    padding-bottom: 2px;
   }
 }
