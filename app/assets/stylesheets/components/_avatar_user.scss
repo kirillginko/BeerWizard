@@ -3,11 +3,12 @@
   width: 29px;
   height: 29px;
   border-radius: 14.5px;
+  border: 1px solid white;
   border: solid 3px rgba(255, 255, 255, .3);
 }
 
+/*
 .badge {
-/*  display: inline-block;*/
   width: 10px;
   height: 10px;
   background-color: #e85b3f;
@@ -18,11 +19,13 @@
   text-align: center;
   vertical-align: super;
 }
+*/
 
 .avatar_m {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  border: 1px solid white;
   border: solid 4px rgba(255, 255, 255, .3);
 }
 
@@ -30,6 +33,7 @@
   width: 101px;
   height: 101px;
   border-radius: 50%;
+  border: 1px solid white;
   border: solid 8px rgba(255, 255, 255, .3);
 }
 
