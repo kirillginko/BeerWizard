@@ -7,18 +7,18 @@
     <div class="mt-4">
 
 <!--- follow button -->
-<div class='follow_button' id="follow_button">
 
- <%= render 'friendships/follow_button', user: @user %>
-
-</div>
+<div class='follow_button' id="follow_btn_<%= @user.id %>">
+  <%= render 'friendships/follow_button', user: @user %>
+    </div>
 
 <!-- followers count -->
+
 <div class='follow_count mt-2' id="follow_count">
-
   <%= render 'friendships/follow_count', user: @user %>
+    </div>
 
-      </div>
+    <!-- User Followers -->
 
     <% @user.following.each do |follow|%>
       <%= link_to friendships_path(@user.followers) do %>
@@ -35,7 +35,7 @@
     <hr>
 
 
-<!-- User profile card -->
+<!-- User Profile Card -->
 
   <% if @user.avatar.attached? %>
     <p><%= cl_image_tag @user.avatar.key, width: 250, height: 250, crop: :fill %></p>
@@ -115,28 +115,4 @@
 </div>
 
 <!-- Review Ratings Raty Script -->
-<!-- review scripts w raty to rate -->
-<script>
-$(document).ready(function() {
-  $('.review-rating').raty({
-      readOnly: true,
-      score: function() {
-          return $(this).attr('data-score');
-      },
-      path: '/assets/'
-  });
-});
-</script>
-<!-- review scripts w raty to average -->
-<script>
-$(document).ready(function() {
-  $('.average-review-rating').raty({
-      readOnly: true,
-      path: '/assets/',
-      score: function() {
-          return $(this).attr('data-score');
-      },
-  });
-});
-</script>
 

@@ -2,7 +2,22 @@
 <h2>Users</h2>
     <%= render 'shared/usersearch' %>
 <hr>
+
   <% @users.each do |user| %>
+
+    <!-- follow button -->
+
+    <p><span class="index" id="follow_btn_<%= user.id%>">
+      <%= render 'friendships/follow_button', user: user %></span></p>
+
+      <!-- Follow Count -->
+
+      <div class='follow_count mt-2' id="follow_count_<%= user.id%>">
+        <%= render 'friendships/follow_count', user: user %>
+        </div>
+
+      <!-- User Card -->
+
     <%= link_to user_path(user) do %>
     <h4><%= user.name %></h4>
     <% if user.avatar.attached? %>
