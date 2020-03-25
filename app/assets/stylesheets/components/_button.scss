@@ -36,25 +36,28 @@
   height: 44px;
   border-radius: 50%;
   margin: 0 16px 0 0;
+
+  &__bookmark {
+      width: 20px;
+      fill: $medium-gray;
+
+      &--is-checked {
+        fill:  $red;
+    }
+  }
 }
 
-.bookmark {
-  fill:  $red;
-  width: 20px;
-  display: flex;
 
-   &:hover {
-    opacity: 0.6;
-   }
-}
 
 .beer_type {
-
+  background-color: $red;
+  padding:24px;
   margin: 24px 0;
 
   .beer-type__button {
-    opacity: 0.2;
-    background: #000;
+    margin: 0 8px 8px 0;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 14.5px;
     padding: 6px 15px;
     text-decoration: none;
@@ -62,12 +65,27 @@
       // font-family:'AvenirNextLTW01-Regular';
       size: 12px;
     }
-    color: #fff;
 
     &:hover {
       text-decoration: none;
       color: #fff;
     }
+  }
+}
+
+.back-button {
+  width: 36px;
+  height: 36px;
+  background-color: $red;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    fill: #fff;
+    width: 12px;
+    height: 12px;
   }
 }
 
