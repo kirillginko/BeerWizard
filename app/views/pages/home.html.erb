@@ -228,10 +228,14 @@
 </div>
 
 <!-- Back button -->
-
+<%= link_to "#" do %>
+<div class="back-button">
+ <%= inline_svg_tag "left-arrow.svg"%>
+</div>
+<% end %>
 
 <!-- Stars -->
-
+<p></p>
 <div class="rating">
   <div class="rating__box">
     <%= link_to "#" do %>
@@ -270,6 +274,7 @@
   </div>
 </div>
 
+<p></p>
 <button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="India Pale Ale, a hoppy style of beer within the pale ale category.">
     <%= link_to "IPA", controller: "beers", query: "IPA"%>
     </button>
