@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Icons/arrow-left</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.5180747,19.4702542 L11.5296299,20.458699 C11.1110992,20.8772297 10.4343262,20.8772297 10.020248,20.458699 L1.36467751,11.8075809 C0.946146842,11.3890503 0.946146842,10.7122772 1.36467751,10.298199 L10.020248,1.64262852 C10.4387787,1.22409784 11.1155517,1.22409784 11.5296299,1.64262852 L12.5180747,2.6310733 C12.9410578,3.05405642 12.9321529,3.74418679 12.5002649,4.15826501 L7.13505786,9.26968216 L19.9314106,9.26968216 C20.5235869,9.26968216 20.9999995,9.74609474 20.9999995,10.3382711 L20.9999995,11.7630564 C20.9999995,12.3552328 20.5235869,12.8316453 19.9314106,12.8316453 L7.13505786,12.8316453 L12.5002649,17.9430625 C12.9366054,18.3571407 12.9455103,19.0472711 12.5180747,19.4702542 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons/arrow-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Mask"></g>
+        <g id="color/black" mask="url(#mask-2)" fill="#000000">
+            <rect id="Rectangle-Copy-4" x="0" y="0" width="22" height="22"></rect>
+        </g>
+    </g>
+</svg>

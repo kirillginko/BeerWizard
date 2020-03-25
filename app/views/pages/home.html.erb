@@ -22,10 +22,35 @@
 </div>
 <!-- Beer card end -->
 
-<p></p>
-<div class="card_beer">
-  <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
-  <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "like.svg" %><% end %></div>
+<div class="beer-background">
+  <div class="card_beer">
+    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
+  </div>
+  <div class="card_beer">
+    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
+  </div>
+  <div class="card_beer">
+    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
+  </div>
+    <div class="card_beer">
+    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
+  </div>
+  <div class="card_beer">
+    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
+  </div>
+  <div class="card_beer">
+    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
+  </div>
+  <div class="card_beer">
+    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
+  </div>
 </div>
 
 <!-- Navbar -->
@@ -82,12 +107,22 @@
 <div class="show_row">
   <div class="circle">
     <%= link_to "#" do %>
-    <%= inline_svg_tag "Heart_full.svg", class: 'bookmark' %>
+    <%= inline_svg_tag "heart_stroke.svg", class: "circle__bookmark"%>
     <% end %>
   </div>
   <div class="circle">
     <%= link_to "#" do %>
-    <%= inline_svg_tag "Bookmark_full.svg", class: 'bookmark' %>
+    <%= inline_svg_tag "bookmark_stroke.svg", class: "circle__bookmark"%>
+    <% end %>
+  </div>
+  <div class="circle">
+    <%= link_to "#" do %>
+    <%= inline_svg_tag "heart_full.svg", class: "circle__bookmark circle__bookmark--is-checked"%>
+    <% end %>
+  </div>
+  <div class="circle">
+    <%= link_to "#" do %>
+    <%= inline_svg_tag "bookmark_full.svg", class: "circle__bookmark circle__bookmark--is-checked"%>
     <% end %>
   </div>
 </div>
@@ -147,7 +182,7 @@
 
 <!-- Search Query Buttons -->
 
-  <div class="beer_type">
+<div class="beer_type">
   <%= link_to "IPA", {controller: "beers", query: "IPA"},  class: "beer-type__button" %>
   <%= link_to "Gose", {controller: "beers", query: "Gose"}, class: "beer-type__button"%>
   <%= link_to "Stout", {controller: "beers", query: "Stout"}, class: "beer-type__button"%>
@@ -157,6 +192,49 @@
   <%= link_to "Pilsner", {controller: "beers", query: "Pilsner"}, class: "beer-type__button"%>
   <%= link_to "Saison", {controller: "beers", query: "Saison"}, class: "beer-type__button"%>
   <%= link_to "Belgian", {controller: "beers", query: "Belgian"}, class: "beer-type__button"%>
+</div>
+
+<!-- Back button -->
+
+
+<!-- Stars -->
+
+<div class="rating">
+  <div class="rating__box">
+    <%= link_to "#" do %>
+    <div class="rating__star">
+      <%= inline_svg_tag "star.svg" %>
+    </div>
+    <% end %>
+  </div>
+  <div class="rating__box">
+    <%= link_to "#" do %>
+    <div class="rating__star">
+      <%= inline_svg_tag "star.svg" %>
+    </div>
+    <% end %>
+  </div>
+  <div class="rating__box">
+    <%= link_to "#" do %>
+    <div class="rating__star">
+      <%= inline_svg_tag "star.svg" %>
+    </div>
+    <% end %>
+  </div>
+  <div class="rating__box">
+    <%= link_to "#" do %>
+    <div class="rating__star">
+      <%= inline_svg_tag "star.svg" %>
+    </div>
+    <% end %>
+  </div>
+  <div class="rating__box">
+    <%= link_to "#" do %>
+    <div class="rating__star">
+      <%= inline_svg_tag "star.svg" %>
+    </div>
+    <% end %>
+  </div>
 </div>
 
 <button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="India Pale Ale, a hoppy style of beer within the pale ale category.">
