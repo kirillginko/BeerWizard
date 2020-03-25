@@ -1,5 +1,7 @@
-likeButton = document.getElementById('follow_button')
-likeButton.innerHTML = "<%= j render 'friendships/follow_button', user: @user%>";
-followCount = document.getElementById('follow_count')
+followButton = document.getElementById('follow_btn_<%= @user.id%>')
+followButton.innerHTML = "<%= j render 'friendships/follow_button', user: @user%>";
+followCount = document.getElementById('follow_count_<%= @user.id%>')
 followCount.innerHTML = "<%= j render 'friendships/follow_count', user: @user%>";
-console.log("kirill ginko");
+
+
+
