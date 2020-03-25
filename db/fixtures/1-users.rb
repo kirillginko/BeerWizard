@@ -67,3 +67,143 @@ User.seed do |s|
   s.name  = "Melissa"
   s.password = "123456"
 end
+
+User.seed do |s|
+  s.id    = 11
+  s.email = "eric@example.com"
+  s.name  = "Eric"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 12
+  s.email = "Guillaume@example.com"
+  s.name  = "Guillaume"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 13
+  s.email = "Kirill@example.com"
+  s.name  = "Kirill"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 14
+  s.email = "Lotfi@example.com"
+  s.name  = "Lotfi"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 15
+  s.email = "mg@example.com"
+  s.name  = "Marie-Gabrielle"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 16
+  s.email = "Jeff@example.com"
+  s.name  = "Jeff"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 17
+  s.email = "Patrice@example.com"
+  s.name  = "Patrice"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 18
+  s.email = "Patrick@example.com"
+  s.name  = "Patrick"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 19
+  s.email = "Ines@example.com"
+  s.name  = "Ines"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 20
+  s.email = "Morgan@example.com"
+  s.name  = "Morgan"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 21
+  s.email = "Mila@example.com"
+  s.name  = "Mila"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 22
+  s.email = "Leo@example.com"
+  s.name  = "Leo"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 23
+  s.email = "Robert@example.com"
+  s.name  = "Robert"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 24
+  s.email = "Bob@example.com"
+  s.name  = "Bob"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 25
+  s.email = "Donald@example.com"
+  s.name  = "Donald"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 26
+  s.email = "Bernie@example.com"
+  s.name  = "Bernie"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 27
+  s.email = "Hillary@example.com"
+  s.name  = "Hillary"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 28
+  s.email = "Martin@example.com"
+  s.name  = "Martin"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 29
+  s.email = "Stephane@example.com"
+  s.name  = "Stephane"
+  s.password = "123456"
+end
+
+User.seed do |s|
+  s.id    = 30
+  s.email = "Alexis@example.com"
+  s.name  = "Alexis"
+  s.password = "123456"
+end
