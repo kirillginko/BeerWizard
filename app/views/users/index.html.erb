@@ -21,7 +21,7 @@
     <%= link_to user_path(user) do %>
     <h4><%= user.name %></h4>
     <% if user.avatar.attached? %>
-    <%= cl_image_tag user.avatar.key, width: 50, height: 50, crop: :fill %>
+    <%= cl_image_tag user.avatar.key, width: 50, height: 50, crop: :fill, class:"avatar_user" %>
       <% else %>
         <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
           <% end %>
