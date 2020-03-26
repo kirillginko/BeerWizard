@@ -37,13 +37,50 @@
 <p></p>
 <div class="card_review">
   <div class="card_review__comment">Excellente bière !</div>
-  <div class="card_review__rating">
+  <!--<div class="card_review__rating">
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star checked"></span>
+  </div-->
+  <div class="rating">
+  <div class="rating__box">
+    <%= link_to "#" do %>
+    <div class="rating__star">
+      <%= inline_svg_tag "star.svg" %>
+    </div>
+    <% end %>
   </div>
+  <div class="rating__box">
+    <%= link_to "#" do %>
+    <div class="rating__star">
+      <%= inline_svg_tag "star.svg" %>
+    </div>
+    <% end %>
+  </div>
+  <div class="rating__box">
+    <%= link_to "#" do %>
+    <div class="rating__star">
+      <%= inline_svg_tag "star.svg" %>
+    </div>
+    <% end %>
+  </div>
+  <div class="rating__box">
+    <%= link_to "#" do %>
+    <div class="rating__star">
+      <%= inline_svg_tag "star.svg" %>
+    </div>
+    <% end %>
+  </div>
+  <div class="rating__box">
+    <%= link_to "#" do %>
+    <div class="rating__star">
+      <%= inline_svg_tag "star.svg" %>
+    </div>
+    <% end %>
+  </div>
+</div>
   <div class="card_review__description">
     <div class="card_review__avatar"><%= image_tag "user_avatar.png", class:"avatar" %></div>
     <div>
@@ -55,6 +92,7 @@
 
 <!-- beer card-->
 
+<p></p>
 <div class="beer-background">
   <div class="card_beer">
     <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
@@ -228,6 +266,7 @@
 </div>
 
 <!-- Back button -->
+
 <%= link_to "#" do %>
 <div class="back-button">
  <%= inline_svg_tag "left-arrow.svg"%>
@@ -235,6 +274,7 @@
 <% end %>
 
 <!-- Stars -->
+
 <p></p>
 <div class="rating">
   <div class="rating__box">
