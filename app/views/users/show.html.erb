@@ -19,11 +19,12 @@
     </div>
 
     <!-- User Followers -->
+ <div class="row justify-content-around">
 
     <% @user.following.each do |follow|%>
-      <%= link_to friendships_path(@user.followers) do %>
+      <%= link_to user_path(follow) do %>
       <% if @user.avatar.attached? %>
-        <p>Following: <small><%= cl_image_tag @user.avatar.key, width: 50, height: 50, crop: :fill %></small> </p>
+        <p><small><%= cl_image_tag follow.avatar.key, width: 50, height: 50, crop: :fill %></small> </p>
           <%= follow.name %>
       <% else %>
         <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
@@ -31,6 +32,7 @@
       <% end %>
     <% end %>
   <% end %>
+</div>
 
     <hr>
 
@@ -89,8 +91,8 @@
     <h4>My Reviews</h4>
   <% end %>
 
-  <p><%= current_user.reviews.size %> Reviews Left</p>
-    <% current_user.reviews.each do |reviews| %>
+  <p><%= @user.reviews.size %> Reviews Left</p>
+    <% @user.reviews.each do |reviews| %>
       <%= link_to beer_path(reviews.beer) do %>
         <p><%= reviews.beer.name%></p>
           <% if reviews.user.avatar.attached? %>
