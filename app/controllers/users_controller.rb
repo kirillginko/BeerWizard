@@ -1,14 +1,11 @@
 class UsersController < ApplicationController
+  respond_to :html, :js
 
   def index
     if params[:query].present?
-      @userquery =  "#" + params[:query]
-      user_query = " \
-      users.name @@ :query \
-"
-      @users = User.where(user_query, query: "%#{params[:query]}%")
-    else
-    @users = User.all.order("created_at DESC")
+    @users = User.search_title(params[:query])
+  else
+    @users = User.all.order("name ASC")
   end
 end
 
