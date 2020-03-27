@@ -7,7 +7,7 @@
 
     <!-- follow button -->
 
-    <p><span class="index" id="follow_btn_<%= user.id%>">
+    <p><span class="index button-m" id="follow_btn_<%= user.id%>">
       <%= render 'friendships/follow_button', user: user %></span></p>
 
       <!-- Follow Count -->
@@ -21,9 +21,9 @@
     <%= link_to user_path(user) do %>
     <h4><%= user.name %></h4>
     <% if user.avatar.attached? %>
-    <%= cl_image_tag user.avatar.key, width: 50, height: 50, crop: :fill, class:"avatar_user" %>
+    <%= cl_image_tag user.avatar.key, class: "avatar_s users-search__avatar_s" %>
       <% else %>
-        <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
+        <%= image_tag 'BeerWizardLogo.png', class: "avatar_s users-search__avatar_s"%>
           <% end %>
             <p><small><b>Reviews Left: </b><%= user.reviews.count %></small></p>
               <p><small class="text-muted">User Since: <%= user.created_at.strftime("%b %d, %Y")%></small></p>
