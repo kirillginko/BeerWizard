@@ -1,4 +1,11 @@
 class User < ApplicationRecord
+    include PgSearch::Model
+    pg_search_scope :search_title, :against => [:name, :email]
+
+    multisearchable against: [
+    :name,
+    :email
+  ]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   # mount_uploader :avatar, AvatarUploader

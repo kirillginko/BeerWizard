@@ -6,7 +6,6 @@ class FriendshipsController < ApplicationController
 
   def create
     current_user.follow(@user)
-    p @user
     respond_to do |format|
     format.html { redirect_to @user }
     format.js {render :action => "follow_button"}
