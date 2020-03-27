@@ -1,22 +1,16 @@
 <div class="container mt-4">
 <h2>Users</h2>
-    <%= render 'shared/usersearch' %>
-<hr>
-
-  <% @users.each do |user| %>
-
-    <!-- follow button -->
 
     <p><span class="index button-m" id="follow_btn_<%= user.id%>">
       <%= render 'friendships/follow_button', user: user %></span></p>
 
-      <!-- Follow Count -->
+<%= render 'shared/usersearch' %>
+<hr>
 
-      <div class='follow_count mt-2' id="follow_count_<%= user.id%>">
-        <%= render 'friendships/follow_count', user: user %>
-        </div>
+<div id= "user_index">
 
-      <!-- User Card -->
+
+<%= render 'users/search', users: @users %>
 
     <%= link_to user_path(user) do %>
     <h4><%= user.name %></h4>
@@ -28,7 +22,6 @@
             <p><small><b>Reviews Left: </b><%= user.reviews.count %></small></p>
               <p><small class="text-muted">User Since: <%= user.created_at.strftime("%b %d, %Y")%></small></p>
               <hr>
-
-  <% end %>
-<% end %>
+  
+</div>
 </div>

@@ -6,24 +6,13 @@
   justify-content: space-between;
   width: 269px;
 
-  .avatar {
-    width: 32px;
-    height: 32px;
-  }
 
   &__id {
-    width: 115px;
-    font-family: "AvenirNextLTW01-Medium";
-    font-size: 100%;
-    font-weight: 800;
   }
 
   &__location {
-    width: 80px;
-    font-family:"AvenirNextLTW01-Regular";
+    // font-family:"AvenirNextLTW01-Regular";
     font-size: 12px;
-    line-height: 8px;
-    padding-bottom: 2px;
   }
 
   &__button {
