@@ -1,8 +1,26 @@
+<!-- Users search index -->
+<div class="users-search">
+  <!-- Header back buton, user avatar & searchbar -->
+  <div class="header">
+    <%= link_to "#" do %>
+      <div class="back-button users-search__back-button">
+        <%= inline_svg_tag "left-arrow.svg"%>
+      </div>
+    <% end %>
+    <% if current_user.avatar.attached? %>
+      <p><%= cl_image_tag current_user.avatar.key, class: "avatar_s users-search__avatar_s" %></p>
+    <% else %>
+      <p><%= image_tag 'BeerWizardLogo.png',  class: "avatar_s users-search__avatar_s" %></p>
+    <% end %>
+    <form class="search-bar" action="">
+      <input type="text" placeholder="Search for people" name="search">
+    </form>
+  </div>
+
+  <!-- Users to follow -->
   <% users.each do |user| %>
-
-    <!-- follow button -->
-
-    <p><span class="index" id="follow_btn_<%= user.id%>">
+    <!-- Follow button -->
+    <p><span class="index button-m" id="follow_btn_<%= user.id%>">
       <%= render 'friendships/follow_button', user: user %></span></p>
 
       <!-- Follow Count -->
@@ -16,13 +34,14 @@
     <%= link_to user_path(user) do %>
     <h4><%= user.name %></h4>
     <% if user.avatar.attached? %>
-    <%= cl_image_tag user.avatar.key, width: 50, height: 50, crop: :fill %>
+    <%= cl_image_tag user.avatar.key, class: "avatar_s users-search__avatar_s" %>
       <% else %>
-        <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
+        <%= image_tag 'BeerWizardLogo.png', class: "avatar_s users-search__avatar_s" %>
           <% end %>
             <p><small><b>Reviews Left: </b><%= user.reviews.count %></small></p>
               <p><small class="text-muted">User Since: <%= user.created_at.strftime("%b %d, %Y")%></small></p>
               <hr>
 
   <% end %>
-<% end %>
+  <% end %>
+</div>
