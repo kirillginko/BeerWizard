@@ -1,6 +1,5 @@
 // Specific CSS for your home-page
 body {
-  padding: 150px;
   background-color: #fff;
 }
 
@@ -22,6 +21,7 @@ h1 {
   }
   color: #000;
   line-height: 32px;
+  margin: 0;
 }
 
 h2 {
@@ -47,13 +47,23 @@ h3 {
 h4 {
   font: {
     family: 'Rift W05 Bold', 'Rift';
+    weight: normal;
+    size: 16px;
+  }
+  color: #000;
+  margin: 0;
+}
+
+h5 {
+  font: {
+    family: 'Rift W05 Bold', 'Rift';
     weight: Bold;
     size: 15px;
   }
   color: #000;
 }
 
-h5 {
+h6 {
   font: {
     family: 'Rift W05 Regular', 'Rift';
     size: 14px;
