@@ -1,4 +1,4 @@
-<%= form_tag beers_path, method: :get, remote: true, id: "click_me" class: "form-inline d-flex justify-content-center md-form form-sm active-pink-2 mt-2" do %>
+<%= form_tag beers_path, method: :get, id: "query", remote: true, class: "form-inline d-flex justify-content-center md-form form-sm active-pink-2 mt-2" do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control form-control-sm w-75",

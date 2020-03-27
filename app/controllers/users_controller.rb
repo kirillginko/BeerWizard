@@ -4,9 +4,8 @@ class UsersController < ApplicationController
   def index
     if params[:query].present?
     @users = User.search_title(params[:query])
-
-    else
-    @users = User.all.order("created_at DESC")
+  else
+    @users = User.all.order("name ASC")
   end
 end
 
