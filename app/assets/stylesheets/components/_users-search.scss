@@ -1,0 +1,39 @@
+.users-search {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;;
+  padding: 36px 0;
+
+  .top {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    }
+  &__back-button {
+    align-self: flex-start;
+  }
+
+  &__avatar_s {
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+  }
+
+  form.search-bar input {
+    display:flex;
+    flex-direction: row;
+    font-family: "AvenirNextLTW01-Regular";
+    padding-left: 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    float: left;
+    height: 43px;
+    width: 100%;
+    background: #e8e8e8;
+  }
+
+}
