@@ -1,7 +1,21 @@
+body {
+    max-width: 320px;
+    // z-index: 10;
+}
+
 .beer {
-  padding: 24px;
   background-color: $lager;
-  background-position: 0 -50px;
+
+  // &::after {
+  //   content: '';
+  //   background-color: red;
+  //   height: 100px;
+  //   width: 100%;
+  //   display: block;
+  //   position: relative;
+  //   top: -100px;
+  //   // z-index: 1;
+  // }
 
   &__topnav {
     display: flex;
@@ -36,7 +50,7 @@
   }
 
   &__description {
-    padding: 24px;
+    // padding: 24px;
   }
 
   p {
