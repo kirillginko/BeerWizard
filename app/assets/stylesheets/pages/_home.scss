@@ -4,7 +4,7 @@ body {
   max-width: 320px;
 }
 
-p {
+p, td {
   font : {
     family: 'AvenirNextLTW01-Regular', 'Avenir Next';
     size: 15px;
@@ -35,14 +35,15 @@ h2 {
   line-height: 24px;
 }
 
-h3 {
+h3, th {
+  text-align: left;
   font: {
     family: 'Rift W05 Bold', 'Rift';
     weight: Bold;
     size: 18px;
   }
   color: #000;
-  line-height: 32px;
+  line-height: 18px;
 }
 
 h4 {

@@ -1,6 +1,11 @@
 .accordion{
   margin-top: 24px;
 
+  ul {
+    border-top: solid $medium-gray 1px;
+    padding-top: 20px;
+  }
+
   li {
     border-bottom: solid $medium-gray 1px;
   }

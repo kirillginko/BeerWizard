@@ -1,4 +1,5 @@
 .rating {
+  margin-top: 8px;
   display: flex;
 
   &__star {
@@ -7,7 +8,7 @@
 
   svg {
       fill: $yellow;
-      width: 14px;
-      height: 14px;
+      width: 17px;
+      height: 17px;
   }
 }

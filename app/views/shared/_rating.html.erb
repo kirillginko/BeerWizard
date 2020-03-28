@@ -1,37 +1,5 @@
-<div class="rating">
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-</div>
+<div class="average-review-rating" id="average-review-rating<%= @beer.id %>" data-score=
+  <%= @beer.average_review %>></div>
+<!-- <span>Based on <%= @beer.reviews.count %> reviews</span>
+ -->
+
