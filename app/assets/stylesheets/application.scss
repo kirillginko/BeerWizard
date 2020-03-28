@@ -4,7 +4,7 @@
 // @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap/scss/bootstrap";
+// @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -15,3 +15,6 @@
 //components
 // @import "components/card_beer";
 @import "components/avatar_user";
+@import "components/card_social";
+@import "components/card_review";
+@import "components/users-index";

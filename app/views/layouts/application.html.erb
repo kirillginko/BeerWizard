@@ -3,11 +3,30 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <!--- Javascript Headers---->
+    <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <!----- StyleSheet/ Fonts ---->
+    
     <link rel="stylesheet" href="https://use.typekit.net/fvk0owd.css">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/fvk0owd.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
+    <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/1d64cae2-0c52-4722-808e-082a1306c523.css"/>
+
 
     <title>Beer Wizard</title>
     <%= csrf_meta_tags %>
@@ -18,8 +37,35 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+
+<!-- review scripts w raty to rate -->
+<script>
+
+$(document).ready(function() {
+  $('.review-rating').raty({
+      readOnly: true,
+      score: function() {
+          return $(this).attr('data-score');
+      },
+      path: '/assets/'
+  });
+});
+</script>
+<script>
+$(document).ready(function() {
+  $('.average-review-rating').raty({
+      readOnly: true,
+      path: '/assets/',
+      score: function() {
+          return $(this).attr('data-score');
+      },
+  });
+});
+</script>
+
   </body>
 </html>

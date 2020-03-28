@@ -1,8 +1,19 @@
-<div class="review-rating" data-score="<%= review.stars %>"></div>
-<p>"<%= review.description %>"</p>
 
-<% if user_signed_in? %>
-  <% if review.user_id == current_user.id %>
+  <div class="review-rating" data-score="<%= review.stars %>"></div>
+  <% if review.user.avatar.attached? %>
+    <small><%= cl_image_tag review.user.avatar.key,:width=> 50, :height=> 50, :gravity=>"face", :crop=>"thumb" %></small>
+      <% else %>
+      <%= image_tag 'BeerWizardLogo.png', :width=> 50, :height=> 50 %>
+    <% end %>
+
+    <%= review.user.name %>-
+    <div class="mt-4">
+    <b><%= review.title %></b>
+    <p><small>"<%= review.description %>"</small></p>
+</div>
+    <!--user edit review -->
+    <% if user_signed_in? %>
+    <% if review.user_id == current_user.id %>
 
     <%= link_to "Edit", edit_beer_review_path(review.beer, review) %>
     <%= link_to "Delete", beer_review_path(review.beer, review), method: :delete, data: {confirm: "Are you sure?"} %>
@@ -10,3 +21,14 @@
     <% end %>
   <% end %>
 
+<script>
+$(document).ready(function() {
+  $('.review-rating').raty({
+      readOnly: true,
+      score: function() {
+          return $(this).attr('data-score');
+      },
+      path: '/assets/'
+  });
+});
+</script>

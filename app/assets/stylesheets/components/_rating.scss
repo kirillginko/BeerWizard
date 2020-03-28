@@ -1,0 +1,13 @@
+.rating {
+  display: flex;
+
+  &__star {
+    margin-right: 4px;
+  }
+
+  svg {
+      fill: $yellow;
+      width: 14px;
+      height: 14px;
+  }
+}

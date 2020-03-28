@@ -1,7 +1,87 @@
 // Specific CSS for your home-page
 body {
-  background-color: $light-gray;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-style: normal;
+  background-color: #fff;
+}
+
+p {
+  font : {
+    family: 'AvenirNextLTW01-Regular', 'Avenir Next';
+    size: 15px;
+    weight: normal;
+  }
+  color: $dark-gray;
+  line-height: 22px;
+}
+
+h1 {
+  font: {
+    family: 'Rift W05 Bold', 'Rift';
+    size: 32px;
+    weight: Bold;
+  }
+  color: #000;
+  line-height: 32px;
+  margin: 0;
+}
+
+h2 {
+  font: {
+    family: 'Rift W05 Bold', 'Rift';
+    weight: Bold;
+    size: 24px;
+  }
+  color: #000;
+  line-height: 24px;
+}
+
+h3 {
+  font: {
+    family: 'Rift W05 Bold', 'Rift';
+    weight: Bold;
+    size: 18px;
+  }
+  color: #000;
+  line-height: 32px;
+}
+
+h4 {
+  font: {
+    family: 'Rift W05 Bold', 'Rift';
+    weight: normal;
+    size: 16px;
+  }
+  color: #000;
+  margin: 0;
+}
+
+h5 {
+  font: {
+    family: 'Rift W05 Bold', 'Rift';
+    weight: Bold;
+    size: 15px;
+  }
+  color: #000;
+}
+
+h6 {
+  font: {
+    family: 'Rift W05 Regular', 'Rift';
+    size: 14px;
+    weight: normal;
+  }
+  color: #000;
+  line-height: 14px;
+}
+
+.abv {
+  font: {
+  size: 24px;
+  family: 'Rift W05 Regular', 'Rift';
+  weight: normal;
+  }
+  color: #000;
+}
+
+.show_row {
+  display: flex;
 }

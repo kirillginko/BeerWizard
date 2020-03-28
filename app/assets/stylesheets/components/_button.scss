@@ -6,14 +6,19 @@
     width: 1px;
     radius: 3px;
   }
-  width: 80px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
+  // width: 80px;
+  // height: 30px;
+  // display: flex;
+  // justify-content: center;
+  padding: 8px 24px;
   align-items: center;
-  font-family: Rift-Demi;
-  font-size: 13px;
-  color: #606060;
+  font : {
+    family: 'Rift W05 Bold', 'Rift';
+    size: 13px;
+    weight: bold;
+  }
+  color: #000;
+;
 
   &:hover {
     text-decoration: none;
@@ -24,3 +29,70 @@
 .button-l {
 
 }
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.19);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: 0 8px 0 0;
+
+  &__bookmark {
+      width: 20px;
+      fill: $medium-gray;
+
+      &--is-checked {
+        fill:  $red;
+    }
+  }
+}
+
+
+
+.beer_type {
+  background-color: $red;
+  padding:24px;
+  margin: 24px 0;
+
+  .beer-type__button {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 14.5px;
+    padding: 6px 15px;
+    text-decoration: none;
+    font: {
+      // font-family:'AvenirNextLTW01-Regular';
+      size: 12px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+.back-button {
+  width: 36px;
+  height: 36px;
+  background-color: $red;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    fill: #fff;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+
+
