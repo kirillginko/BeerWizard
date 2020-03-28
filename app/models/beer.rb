@@ -18,9 +18,6 @@ class Beer < ApplicationRecord
   # acts_as_taggable_on :brewery
   # acts_as_taggable_on :price
 
-  $beertypes = ['american', 'ale', 'session', 'double','neipa', 'rye', 'gose', 'milkshake' ,'imperial', 'belgian']
-  $styles = ['ipa', 'sour', 'stout', 'pale ale', 'brown ale', 'lager' , 'pilsner', 'saison', 'belgian', 'witbier']
-
   has_many :reviews, dependent: :destroy
   has_many :users, through: :reviews
   has_one_attached :photo

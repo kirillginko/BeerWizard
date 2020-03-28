@@ -45,6 +45,7 @@
     <% end %>
 
     <p><b>Name: </b><%= @user.name %></p>
+        <p><b><%= @user.location%></b></p>
       <p><b>Email: </b><%= @user.email %></p>
         <p><small class="text-muted">User Since: <%= @user.created_at.strftime("%b %d, %Y")%></small></p>
     <br>
@@ -100,9 +101,10 @@
               <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
           <% end %>
             <%= link_to user_path(reviews.user) do %>
-            <p><%= current_user.name %>-</p>
+            <p><%= reviews.user.name %>-</p>
           <% end %>
             <div class="review-rating" data-score="<%= reviews.stars %>"></div>
+            <p><b><%= reviews.title %></b></p>
             <p><small><%= reviews.description %></small></p>
           <% end %>
         <% end %>
