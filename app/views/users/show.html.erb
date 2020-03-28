@@ -20,7 +20,6 @@
 
     <!-- User Followers -->
  <div class="row justify-content-around">
-
     <% @user.following.each do |follow|%>
       <%= link_to user_path(follow) do %>
       <% if @user.avatar.attached? %>
