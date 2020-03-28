@@ -431,7 +431,8 @@ CREATE TABLE public.users (
     avatar character varying,
     name character varying,
     photo character varying,
-    location character varying
+    location character varying,
+    city character varying
 );
 
 
@@ -974,6 +975,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200327182338'),
 ('20200327182339'),
 ('20200328152709'),
-('20200328152857');
+('20200328152857'),
+('20200328183729');
 
 
