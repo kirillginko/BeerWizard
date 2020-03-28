@@ -1,0 +1,64 @@
+  <% users.each do |user| %>
+
+    <!-- follow button -->
+
+<<<<<<< HEAD:app/views/users/_search.html.erb
+    <p><span class="index" id="follow_btn_<%= user.id%>">
+      <%= render 'friendships/follow_button', user: user %></span></p>
+
+      <!-- Follow Count -->
+
+      <div class='follow_count mt-2' id="follow_count_<%= user.id%>">
+        <%= render 'friendships/follow_count', user: user %>
+        </div>
+
+      <!-- User Card -->
+
+    <%= link_to user_path(user) do %>
+    <h4><%= user.name %></h4>
+    <p><%= user.location %></p>
+    <% if user.avatar.attached? %>
+    <%= cl_image_tag user.avatar.key, width: 50, height: 50, crop: :fill %>
+      <% else %>
+        <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
+          <% end %>
+            <p><small><b>Reviews Left: </b><%= user.reviews.count %></small></p>
+              <p><small class="text-muted">User Since: <%= user.created_at.strftime("%b %d, %Y")%></small></p>
+              <hr>
+
+  <% end %>
+<% end %>
+=======
+  <!-- searchbar -->
+  <%= render 'shared/usersearch' %>
+</div>
+
+
+
+  <!-- Users card-->
+<div id="user_index">
+  <% users.each do |user| %>
+    <div class="card_social">
+      <div class="card_social__info">
+        <div class="card_social__avatar"><% if user.avatar.attached? %>
+            <%= cl_image_tag user.avatar.key, class: "avatar_s users-index__avatar_s" %>
+          <% else %>
+            <%= image_tag 'BeerWizardLogo.png', class: "avatar_s users-index__avatar_s" %>
+          <% end %>
+        </div>
+        <div class="card_social__user">
+          <p class="card_social__id"><%= link_to user_path(user) do %>
+            <%= user.name %><% end %>
+          </p>
+          <p class="card_social__city"><%= link_to user_path(user) do %>
+            <%= user.city %><% end %>
+          </p>
+        </div>
+      </div>
+      <span class="index button-m" id="follow_btn_<%= user.id%>">
+        <%= render 'friendships/follow_button', user: user %>
+      </span>
+    </div>
+  <% end %>
+</div>
+>>>>>>> 5118ec5e655f7d1fd25298ac3806fa33ec5610cd:app/views/users/_users_index.html.erb
