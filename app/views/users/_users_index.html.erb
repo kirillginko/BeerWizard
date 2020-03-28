@@ -41,9 +41,11 @@
           </p>
         </div>
       </div>
+      <% if  user != current_user %>
       <span class="index button-m" id="follow_btn_<%= user.id%>">
         <%= render 'friendships/follow_button', user: user %>
       </span>
+      <% end %>
     </div>
   <% end %>
 </div>
