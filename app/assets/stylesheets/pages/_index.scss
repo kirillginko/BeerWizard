@@ -1,3 +1,15 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "beer";
+
+// .bw stand for BeerWizard. It a prefix for class use to add properties to some
+// elements without having to modify or create a new class.
+
+.bw-container {
+  padding: 0 24px ;
+}
+
+.bw-flex {
+  display: flex;
+  justify-content: center;
+}

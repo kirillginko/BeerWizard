@@ -42,7 +42,7 @@ end
   private
 
   def review_params
-    params.require(:review).permit(:description, :likes, :stars)
+    params.require(:review).permit(:description, :likes, :stars, :title)
   end
 end
 

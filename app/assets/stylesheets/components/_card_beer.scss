@@ -1,11 +1,11 @@
 .beer-background {
   background-color: $light-gray;
-  padding: 24px;
+  padding: 24px 0;
   display: flex;
 }
 
 .card_beer {
-  // border: solid green 1px;
+  flex-shrink: 0;
   margin-right: 8px;
   position: relative;
   background: #FFFFFF;
@@ -14,7 +14,6 @@
   justify-content: center;
   align-items: center;
   // flex-direction: column;
-  width: 130px;
   height: 200px;
   padding: 16px;
 
