@@ -3,7 +3,7 @@ User.seed do |s|
   s.email = "jon@example.com"
   s.name  = "Jon"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -11,7 +11,7 @@ User.seed do |s|
   s.email = "steve@example.com"
   s.name  = "Steve"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -19,7 +19,7 @@ User.seed do |s|
   s.email = "frank@example.com"
   s.name  = "Frank"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -27,7 +27,7 @@ User.seed do |s|
   s.email = "bill@example.com"
   s.name  = "Bill"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -35,7 +35,7 @@ User.seed do |s|
   s.email = "henry@example.com"
   s.name  = "Henry"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -43,7 +43,7 @@ User.seed do |s|
   s.email = "tony@example.com"
   s.name  = "Tony"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -51,7 +51,7 @@ User.seed do |s|
   s.email = "jonathan@example.com"
   s.name  = "Jonathan"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -59,7 +59,7 @@ User.seed do |s|
   s.email = "jennifer@example.com"
   s.name  = "Jennifer"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -67,7 +67,7 @@ User.seed do |s|
   s.email = "mary@example.com"
   s.name  = "Mary"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -75,7 +75,7 @@ User.seed do |s|
   s.email = "melissa@example.com"
   s.name  = "Melissa"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -83,7 +83,7 @@ User.seed do |s|
   s.email = "eric@example.com"
   s.name  = "Eric"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -91,7 +91,7 @@ User.seed do |s|
   s.email = "Guillaume@example.com"
   s.name  = "Guillaume"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -99,7 +99,7 @@ User.seed do |s|
   s.email = "Kirill@example.com"
   s.name  = "Kirill"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -107,7 +107,7 @@ User.seed do |s|
   s.email = "Lotfi@example.com"
   s.name  = "Lotfi"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -115,7 +115,7 @@ User.seed do |s|
   s.email = "mg@example.com"
   s.name  = "Marie-Gabrielle"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -123,7 +123,7 @@ User.seed do |s|
   s.email = "Jeff@example.com"
   s.name  = "Jeff"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -131,7 +131,7 @@ User.seed do |s|
   s.email = "Patrice@example.com"
   s.name  = "Patrice"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -139,7 +139,7 @@ User.seed do |s|
   s.email = "Patrick@example.com"
   s.name  = "Patrick"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -147,7 +147,7 @@ User.seed do |s|
   s.email = "Ines@example.com"
   s.name  = "Ines"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -155,7 +155,7 @@ User.seed do |s|
   s.email = "Morgan@example.com"
   s.name  = "Morgan"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -163,7 +163,7 @@ User.seed do |s|
   s.email = "Mila@example.com"
   s.name  = "Mila"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -171,7 +171,7 @@ User.seed do |s|
   s.email = "Leo@example.com"
   s.name  = "Leo"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -179,7 +179,7 @@ User.seed do |s|
   s.email = "Robert@example.com"
   s.name  = "Robert"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -187,7 +187,7 @@ User.seed do |s|
   s.email = "Bob@example.com"
   s.name  = "Bob"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -195,7 +195,7 @@ User.seed do |s|
   s.email = "Donald@example.com"
   s.name  = "Donald"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -203,7 +203,7 @@ User.seed do |s|
   s.email = "Bernie@example.com"
   s.name  = "Bernie"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -211,7 +211,7 @@ User.seed do |s|
   s.email = "Hillary@example.com"
   s.name  = "Hillary"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -219,7 +219,7 @@ User.seed do |s|
   s.email = "Martin@example.com"
   s.name  = "Martin"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -227,7 +227,7 @@ User.seed do |s|
   s.email = "Stephane@example.com"
   s.name  = "Stephane"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
 
 User.seed do |s|
@@ -235,5 +235,5 @@ User.seed do |s|
   s.email = "Alexis@example.com"
   s.name  = "Alexis"
   s.password = "123456"
-  s.city = "Montréal, QC"
+  s.location = "Montréal, QC"
 end
