@@ -1,4 +1,3 @@
-
 Beer.seed do |s|
     s.id = 1
     s.name = "Urubu Citra-Galaxy-Mosaïc"
@@ -591,7 +590,7 @@ Beer.seed do |s|
     s.location = "http://www.lesfrereshoublon.com"
     s.description = "White beer on lees, based on pale malt from Bio Malt Mauricie and malted wheat. The technique of pasting uphill gives it an incomparable lightness and fruity. Without added spices. Sweet sweet!"
     s.style = "Hefeweizen"
-    s.beer_type = "Germany"
+    s.beer_type = "German"
     s.abv = "5%"
     s.ibu = "n/a"
     s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."

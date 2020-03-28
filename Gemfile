@@ -15,6 +15,7 @@ gem 'acts_as_votable'
 gem 'seed-fu'
 gem 'inline_svg'
 gem 'pg_search'
+gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'

@@ -1,6 +1,7 @@
 class Beer < ApplicationRecord
   include PgSearch::Model
-    pg_search_scope :search_title, :against => [:name, :beer_type, :style, :description, :brewery]
+    pg_search_scope :search_title, :against => [:name, :beer_type, :style, :description, :brewery, :abv, :pairing],
+    using: { tsearch: { any_word: true } }
 
     multisearchable against: [
     :name,
@@ -9,6 +10,13 @@ class Beer < ApplicationRecord
     :description,
     :brewery,
   ]
+
+  # acts_as_taggable_on :beer_type
+  # acts_as_taggable_on :style
+  # acts_as_taggable_on :abv
+  # acts_as_taggable_on :ibu
+  # acts_as_taggable_on :brewery
+  # acts_as_taggable_on :price
 
   has_many :reviews, dependent: :destroy
   has_many :users, through: :reviews
