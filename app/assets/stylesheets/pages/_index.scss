@@ -3,10 +3,14 @@
 @import "beer";
 
 // .bw stand for BeerWizard. It a prefix for class use to add properties to some
-// elements without having to modify or create a new class.
+// elements without having to modify or create a new class. Eric F.
 
 .bw-container {
   padding: 0 24px ;
+}
+
+.bw-padding-top {
+  padding-top: 24px;
 }
 
 .bw-flex {
