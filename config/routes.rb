@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     end
     resources :reviews, only: [:create, :destroy, :edit, :update ]
     resources :locations, only: [:index, :show ]
-
   end
   resource :friendships, only: [:create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

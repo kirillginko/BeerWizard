@@ -111,7 +111,7 @@
       Be the first to leave a review for <%= @beer.name %> Beer!
     <% else %>
 
-  <% @beer.reviews.each do |review| %>
+    <% @beer.reviews.each do |review| %>
   <br>
     <%= render 'reviews/show', review: review %>
   <% end %>

@@ -1,6 +1,8 @@
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
+@import "config/general";
+
 // @import "config/bootstrap_variables";
 
 // External libraries
@@ -17,3 +19,4 @@
 @import "components/avatar_user";
 @import "components/card_social";
 @import "components/card_review";
+@import "components/users-index";

@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     include PgSearch::Model
-    pg_search_scope :search_title, :against => [:name, :email]
+    pg_search_scope :search_title, :against => [:name, :email],
+    using: { tsearch: { any_word: true } }
 
     multisearchable against: [
     :name,

@@ -1,0 +1,8 @@
+ <div class=" row justify-content-between">
+ <%= simple_form_for :index, url: beers_path, method: "GET" do |f| %>
+  <%= f.input :beer_type, label: "Type",  collection: $beertypes, as: :check_boxes %>
+  <%= f.input :style, label: "Styles", collection: $styles, as: :check_boxes %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
+  <%= link_to "Reset", root_path  %>
+<% end %>
+</div>

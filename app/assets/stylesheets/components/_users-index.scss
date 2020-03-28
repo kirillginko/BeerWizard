@@ -1,0 +1,23 @@
+.users-index {
+  background-color: #ffffff;
+  padding: 36px 0;
+
+  .header {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    }
+  &__back-button {
+    align-self: flex-start;
+  }
+
+  &__avatar_s {
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+  }
+
+}
