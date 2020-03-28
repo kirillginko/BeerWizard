@@ -1,33 +1,19 @@
-  <% users.each do |user| %>
+<!-- Users index -->
+<div class="users-index">
 
-    <!-- follow button -->
-
-
-    <p><span class="index" id="follow_btn_<%= user.id%>">
-      <%= render 'friendships/follow_button', user: user %></span></p>
-
-      <!-- Follow Count -->
-
-      <div class='follow_count mt-2' id="follow_count_<%= user.id%>">
-        <%= render 'friendships/follow_count', user: user %>
-        </div>
-
-      <!-- User Card -->
-
-    <%= link_to user_path(user) do %>
-    <h4><%= user.name %></h4>
-    <p><%= user.location %></p>
-    <% if user.avatar.attached? %>
-    <%= cl_image_tag user.avatar.key, width: 50, height: 50, crop: :fill %>
-      <% else %>
-        <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
-          <% end %>
-            <p><small><b>Reviews Left: </b><%= user.reviews.count %></small></p>
-              <p><small class="text-muted">User Since: <%= user.created_at.strftime("%b %d, %Y")%></small></p>
-              <hr>
-
-  <% end %>
-<% end %>
+  <!-- Header back buton & user avatar -->
+  <div class="header">
+    <%= link_to "#" do %>
+      <div class="back-button users-search__back-button">
+        <%= inline_svg_tag "left-arrow.svg"%>
+      </div>
+    <% end %>
+    <% if current_user.avatar.attached? %>
+      <p><%= cl_image_tag current_user.avatar.key, class: "avatar_s users-index__avatar_s" %></p>
+    <% else %>
+      <p><%= image_tag 'BeerWizardLogo.png',  class: "avatar_s users-index__avatar_s" %></p>
+    <% end %>
+  </div>
 
   <!-- searchbar -->
   <%= render 'shared/usersearch' %>
