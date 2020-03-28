@@ -1,0 +1,49 @@
+<!-- Users index -->
+<div class="users-index">
+
+  <!-- Header back buton & user avatar -->
+  <div class="header">
+    <%= link_to "#" do %>
+      <div class="back-button users-search__back-button">
+        <%= inline_svg_tag "left-arrow.svg"%>
+      </div>
+    <% end %>
+    <% if current_user.avatar.attached? %>
+      <p><%= cl_image_tag current_user.avatar.key, class: "avatar_s users-index__avatar_s" %></p>
+    <% else %>
+      <p><%= image_tag 'BeerWizardLogo.png',  class: "avatar_s users-index__avatar_s" %></p>
+    <% end %>
+  </div>
+
+  <!-- searchbar -->
+  <%= render 'shared/usersearch' %>
+</div>
+
+
+
+  <!-- Users card-->
+<div id="user_index">
+  <% users.each do |user| %>
+    <div class="card_social">
+      <div class="card_social__info">
+        <div class="card_social__avatar"><% if user.avatar.attached? %>
+            <%= cl_image_tag user.avatar.key, class: "avatar_s users-index__avatar_s" %>
+          <% else %>
+            <%= image_tag 'BeerWizardLogo.png', class: "avatar_s users-index__avatar_s" %>
+          <% end %>
+        </div>
+        <div class="card_social__user">
+          <p class="card_social__id"><%= link_to user_path(user) do %>
+            <%= user.name %><% end %>
+          </p>
+          <p class="card_social__city"><%= link_to user_path(user) do %>
+            <%= user.location %><% end %>
+          </p>
+        </div>
+      </div>
+      <span class="index button-m" id="follow_btn_<%= user.id%>">
+        <%= render 'friendships/follow_button', user: user %>
+      </span>
+    </div>
+  <% end %>
+</div>
