@@ -1,28 +1,32 @@
 .button-m {
-
+  padding: 8px 24px;
+  color: #000;
   border : {
     style: solid;
     color: $medium-gray;
     width: 1px;
     radius: 3px;
   }
-  // width: 80px;
-  // height: 30px;
-  // display: flex;
-  // justify-content: center;
-  padding: 8px 24px;
-  align-items: center;
   font : {
     family: 'Rift W05 Bold', 'Rift';
     size: 13px;
     weight: bold;
   }
-  color: #000;
-;
+
+  &--is-red {
+    align-self: stetch;
+    border-style: none;
+    background-color: $red;
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+  }
 
   &:hover {
     text-decoration: none;
-    color: #606060;
+    // color: #606060;
   }
 }
 
