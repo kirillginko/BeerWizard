@@ -1,0 +1,59 @@
+body {
+    max-width: 320px;
+    // z-index: 10;
+}
+
+.beer {
+  background-color: $lager;
+
+  // &::after {
+  //   content: '';
+  //   background-color: red;
+  //   height: 100px;
+  //   width: 100%;
+  //   display: block;
+  //   position: relative;
+  //   top: -100px;
+  //   // z-index: 1;
+  // }
+
+  &__topnav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__main-infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__vignette {
+    width: 50%;
+    // border: solid 1px red;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  img {
+    // border: solid 1px green;
+  }
+
+  &__details {
+    width: 50%;
+    // border: solid 1px green;
+  }
+
+  &__bookmark {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  &__description {
+    // padding: 24px;
+  }
+
+  p {
+    margin: 4px 0 0 0;
+  }
+}

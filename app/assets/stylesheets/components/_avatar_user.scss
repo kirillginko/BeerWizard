@@ -1,10 +1,10 @@
 .avatar_s {
   object-fit: cover;
-  width: 29px;
-  height: 29px;
-  border-radius: 14.5px;
-  border: 1px solid white;
-  border: solid 3px rgba(255, 255, 255, .3);
+  width: 44px;
+  height: 44px;
+  border-radius: 100% ;
+  // border: 1px solid white;
+  border: solid 6px rgba(255, 255, 255, .3);
 }
 
 /*
@@ -22,8 +22,8 @@
 */
 
 .avatar_m {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid white;
   border: solid 4px rgba(255, 255, 255, .3);
