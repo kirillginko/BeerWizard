@@ -1,3 +1,5 @@
+<!-- Beer card /beer/#id -->
+
 <section class="beer">
   <div class="bw-container bw-padding-top ">
     <div class="beer__topnav">
@@ -6,10 +8,7 @@
          <%= inline_svg_tag "left-arrow.svg"%>
         </div>
       <% end %>
-      <div class="avatar__box">
-        <div class="avatar__box--has-badge"></div>
-        <%= image_tag ("user_avatar.png"), class:"avatar_s" %>
-      </div>
+    <%= render 'shared/avatar' %>
     </div>
     <div class="beer__main-infos">
       <div class="beer__vignette">
@@ -84,7 +83,7 @@
     </div>
   </div>
   <section class="beer__buttons bw-margin-medium-top">
-    <div class="bw-container bw-flex">
+    <div class="bw-container bw-flex bw-margin-medium-bottom">
         <%= link_to "Add review", root_path, class: "button-m button-m--is-half" %>
         <div class="bw-space"></div>
         <%= link_to "Share", root_path, class: "button-m button-m--is-half" %>

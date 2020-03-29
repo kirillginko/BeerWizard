@@ -1,45 +1,20 @@
-<div class="container mt-4">
-
-  <h1>Beers Index</h1>
-
-  <!-- filters -->
-
+<div class="bw-container bw-bg-light-gray bw-padding-top">
+<!--   <h1>Beers Index</h1>
+ -->  <!-- filters -->
 
   <!--Beer Search -->
-
-  <%= render 'shared/searchbar' %>
-
-  <!-- Beer card -->
-
-  <div id= "beers_index">
-
-    <%= render 'beers/card', beers: @beers %>
-
+  <div class="beer__topnav bw-padding-bottom">
+    <%= link_to "#" do %>
+      <div class="back-button">
+       <%= inline_svg_tag "left-arrow.svg"%>
+      </div>
+    <% end %>
+    <%= render 'shared/avatar' %>
   </div>
-
-
-
-<!-- review scripts w raty to rate -->
-<script>
-$(document).ready(function() {
-  $('.review-rating').raty({
-      readOnly: true,
-      score: function() {
-          return $(this).attr('data-score');
-      },
-      path: '/assets/'
-  });
-});
-</script>
-<!-- review scripts w raty to average -->
-<script>
-$(document).ready(function() {
-  $('.average-review-rating').raty({
-      readOnly: true,
-      path: '/assets/',
-      score: function() {
-          return $(this).attr('data-score');
-      },
-  });
-});
-</script>
+  <%= render 'shared/searchbar' %>
+</div>
+  <!-- Beer card -->
+  <div id= "beers_index">
+    <%= render 'beers/card', beers: @beers %>
+  </div>
+<%= render 'shared/bottomnav' %>

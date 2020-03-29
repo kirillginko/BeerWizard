@@ -1,0 +1,49 @@
+
+<div class ="mt-2 mb-4">
+  <% if @beers.count != 60 %>
+    <em><%= @beers.count %> Beers found for: <%= @beerquery %></em>
+  <% end %>
+</div>
+
+<!-- Beer Card -->
+
+  <% beers.each do |beer| %>
+    <%= link_to beer_path(beer) do %>
+    <h4><%= beer.name %></h4>
+  <% end %>
+
+<!-- average rating w raty---------------->
+
+  <p>Average Rating: </p>
+    <div class="average-review-rating" id="average-review-rating<%= beer.id %>" data-score=
+      <%= beer.average_review %>></div>
+    <span>Based on <%= beer.reviews.count %> reviews</span>
+  <br>
+
+<!----- Beer Card -------->
+
+  <% if beer.avatar.attached? %>
+    <%= cl_image_tag beer.avatar.key, width: 300, height: 400, crop: :fill %>
+      <% else %>
+        <%= image_tag 'BeerWizardLogo.png',  width: 150, height: 150, crop: :fill %>
+          <% end %>
+          <p><small><b>Description:</b> <%= beer.description %></small></p>
+          <p><small><b>Brewery:</b> <%= beer.brewery %></small></p>
+          <p><small><b>Style:</b> <%= beer.style %></small></p>
+          <p><small><b>Type:</b> <%= beer.beer_type %></small></p>
+          <p><small><b>Abv:</b> <%= beer.abv %></small></p>
+          <p><small><b>IBU:</b> <%= beer.ibu %></small></p>
+          <p><small><b>Pairings:</b> <%= beer.pairing %></small></p>
+        <p><small class="text-muted"><%=beer.created_at.strftime("%b %d, %Y")%></small></p>
+
+<!-- Beer like Heart and Ajax likes display -->
+
+<div>
+  <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
+    <span><i class="fas fa-heart pl-4"></i></span>
+      <% end %>
+    <span class="likes-count-" id="likes-count-<%= beer.id %>"><%= render 'beers/vote', beer: beer %></span>
+    <hr>
+  </div>
+<% end %>
+</div>
