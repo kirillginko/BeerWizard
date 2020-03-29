@@ -11,6 +11,8 @@ SET row_security = off;
 
 SET default_tablespace = '';
 
+SET default_with_oids = false;
+
 --
 -- Name: active_storage_attachments; Type: TABLE; Schema: public; Owner: -
 --
@@ -429,8 +431,7 @@ CREATE TABLE public.users (
     avatar character varying,
     name character varying,
     photo character varying,
-    location character varying,
-    city character varying
+    location character varying
 );
 
 
@@ -973,7 +974,6 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200327182338'),
 ('20200327182339'),
 ('20200328152709'),
-('20200328152857'),
-('20200328183729');
+('20200328152857');
 
 
