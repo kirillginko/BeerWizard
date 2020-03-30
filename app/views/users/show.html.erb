@@ -1,17 +1,19 @@
 
 <div class="user-profile">
-  <div class="user-profile__content">
-    <div class="user-profile__avatar">
-      <%= render 'shared/avatar-l' %>
-    </div>
-    <div class="user-profile__infos">
-      <% if  @user != current_user %>
-        <h2><%= @user.name%>'s Profile</h2>
-      <% else  %>
-        <h2><%= @user.name%></h2>
-        <p><%= @user.location%></p>
-      <% end %>
-    </div>
+  <div class="user-profile__container">
+      <div class="user-profile__content">
+        <div class="user-profile__avatar">
+          <%= render 'shared/avatar-l' %>
+        </div>
+        <div class="user-profile__infos">
+          <% if  @user != current_user %>
+            <h2><%= @user.name%>'s Profile</h2>
+          <% else  %>
+            <h2><%= @user.name%></h2>
+            <p><%= @user.location%></p>
+          <% end %>
+        </div>
+      </div>
   </div>
   <ul uk-switcher="animation: uk-animation-fade" class="user-profile__numbers">
     <%= link_to "#" do %>
@@ -34,8 +36,9 @@
     <% end %>
   </ul>
   <ul class="uk-switcher">
-    <li class="user-profile__list-item">
-          <% @user.following.each do |follow|%>
+    <li class="user-profile__list-item bw-container">
+        <% @user.following.each do |follow|%>
+          <div class="card_social">
             <%= link_to user_path(follow) do %>
             <div class="card_social__avatar">
               <% if @user.avatar.attached? %>
@@ -44,8 +47,17 @@
                   <%= image_tag 'BeerWizardLogo.png', class: "avatar_s" %>
               <% end %>
             </div>
+            <div class="card_social__user">
+              <p class="card_social__id"><%= link_to user_path(@user) do %>
+                <%= follow.name %><% end %>
+              </p>
+              <p class="card_social__city"><%= link_to user_path(@user) do %>
+                <%= @user.location %><% end %>
+              </p>
+            </div>
           <% end %>
-        <% end %>
+        </div>
+      <% end %>
     </li>
     <li>Monsieur</li>
     <li>Gustave</li>
