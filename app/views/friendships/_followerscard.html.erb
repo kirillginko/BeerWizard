@@ -1,0 +1,9 @@
+      <% @user.followers.each do |follower|%>
+        <% if follower.avatar.attached? %>
+          <p><small><%= cl_image_tag follower.avatar.key, width: 50, height: 50 %></small> </p>
+            <% else %>
+          <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
+        <% end %>
+      <p><%= follower.name %></p>
+      <p><%= follower.location %></p>
+    <% end %>
