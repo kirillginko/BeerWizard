@@ -37,8 +37,11 @@
             <%= user.name %><% end %>
           </p>
           <p class="card_social__city"><%= link_to user_path(user) do %>
-            <%= user.location %><% end %>
-          </p>
+            <%= user.location %><% end %></p>
+          <span class="card_social__id" id="follow_count_<%= user.id%>">
+            <%= render 'friendships/follow_count', user: user %>
+          </span>
+          <p><small class="text-muted">User Since: <%= user.created_at.strftime("%b %d, %Y")%></small></p>
         </div>
       </div>
       <% if  user != current_user %>

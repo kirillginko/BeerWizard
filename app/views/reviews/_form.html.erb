@@ -1,10 +1,9 @@
 <%= simple_form_for([ beer, review ], remote: true) do |form| %>
-  Add a review:
+  <p><%= form.button :submit, class: "button-m" %></p>
   <div id="rating-form">
   </div>
-  <%= form.input :title, as: :string %>
-  <%= form.input :description, as: :string %>
-  <%= form.button :submit, class: "btn btn-danger" %>
+  <p><%= form.input :title, as: :string %></p>
+  <p><%= form.input :description, as: :string %></p>
   <% end %>
 
 <script>
