@@ -19,7 +19,9 @@
   object-fit: cover;
   width: 44px;
   height: 44px;
-  border-radius: 100% ;
+  background-size: cover;
+  border-radius: 50%;
+  background-position: top center;
   border: solid 6px rgba(255, 255, 255, .3);
 }
 
@@ -31,17 +33,22 @@
 }
 
 .avatar_m {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
+
+  width: 75px;
+  height: 75px;
+  background-size: cover;
+  border-radius: 50%;
+  background-position: top center;
   border: solid 4px rgba(255, 255, 255, .3);
 }
 
 .avatar_l {
-  object-fit: cover;
-  width: 101px;
-  height: 101px;
-  border-radius: 100%;
+
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  border-radius: 50%;
+  background-position: top center;
   border: solid 8px rgba(255, 255, 255, .3);
 }
 
@@ -49,6 +56,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  vertical-align: middle;
   border: solid 8px rgba(255, 255, 255, .3);
 }
 
