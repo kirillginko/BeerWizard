@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 body {
   background-color: #fff;
-  max-width: 320px;
+  max-width: 375px;
 }
 
 p, td {
@@ -12,6 +12,7 @@ p, td {
   }
   color: $dark-gray;
   line-height: 22px;
+  margin: 16px 0;
 }
 
 h1 {
@@ -48,7 +49,7 @@ h3, th {
 
 h4 {
   font: {
-    family: 'Rift W05 Bold', 'Rift';
+    family: 'Rift W05', 'Rift';
     weight: normal;
     size: 16px;
   }
@@ -84,6 +85,36 @@ h6 {
   color: #000;
 }
 
+.review-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin: 8px 0 0 0;
+}
+
 .show_row {
   display: flex;
+}
+
+.average-review-rating img {
+
+  width: 17px;
+  height: 17px;
+}
+
+.average-review-rating-s img {
+
+  width: 15px;
+  height: 15px;
+}
+
+
+.review-rating img {
+
+    width: 17px;
+    height: 17px;
+}
+
+.review-description {
+  margin-top: 8px;
 }

@@ -1,0 +1,7 @@
+<div class="avatar__box">
+  <% if current_user.avatar.attached? %>
+    <%= cl_image_tag current_user.avatar.key, class: "avatar_l" %>
+  <% else %>
+    <%= image_tag 'BeerWizardLogo.png', class: "avatar_l" %>
+  <% end %>
+</div>

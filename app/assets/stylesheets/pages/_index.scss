@@ -13,7 +13,34 @@
   padding-top: 24px;
 }
 
+.bw-padding-bottom {
+  padding-bottom: 24px;
+}
+
 .bw-flex {
   display: flex;
   justify-content: center;
+}
+
+.bw-flex-start {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: red;
+}
+
+.bw-space {
+  width: 10%;
+}
+
+.bw-margin-medium-top {
+  margin-top: 24px;
+}
+
+.bw-margin-medium-bottom {
+  margin-bottom: 24px;
+}
+
+.bw-bg-light-gray {
+  background-color: $light-gray;
 }
