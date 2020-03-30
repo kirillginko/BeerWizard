@@ -2,60 +2,23 @@
 
 
 <!-- User Profile -->
-
-<div class="user-profile">
-  <div class="user-profile__content">
-    <div class="user-profile__avatar">
-  <% if @user.avatar.attached? %>
-    <p><%= cl_image_tag @user.avatar.key, class: "avatar_l"%></p>
-  <% else %>
-    <p><%= image_tag 'BeerWizardLogo.png',  width: 250, height: 250, crop: :fill %></p>
-    <% end %>
-    </div>
-    <div class="user-profile__infos">
-    <% if  @user != current_user %>
-    <h2><%= @user.name%></h2>
-  <% else  %>
-    <h2>My Profile</h2>
-  <% end %>
-      <p><%=@user.location%></p>
-    </div>
-  </div>
-  <div class="user-profile__numbers">
-    <%= link_to "#" do %>
-    <div class="user-profile__reviews">
-      <h5>Reviews</h5>
-      <p><%=@user.reviews.count%></p>
-    <% end %>
-    </div>
-    <%= link_to "#" do %>
-    <div class="user-profile__followers">
-      <h5>Followers</h5>
-      <p class="user-profile__bold-numbers"><%=@user.followers.count%></p>
-    </div>
-    <% end %>
-    <%= link_to "#" do %>
-    <div class="user-profile__follows">
-      <h5>Follows</h5>
-      <p class="user-profile__bold-numbers"><%=@user.following.count%></p>
-    </div>
-    <% end %>
-  </div>
-</div>
-
 <div class="user-profile">
   <div class="user-profile__container">
       <div class="user-profile__content">
         <div class="user-profile__avatar">
-          <%= render 'shared/avatar-l' %>
+          <% if @user.avatar.attached? %>
+            <p><%= cl_image_tag @user.avatar.key, class: "avatar_l"%></p>
+          <% else %>
+            <p><%= image_tag 'BeerWizardLogo.png',  width: 250, height: 250, crop: :fill %></p>
+          <% end %>
         </div>
         <div class="user-profile__infos">
           <% if  @user != current_user %>
-            <h2><%= @user.name%>'s Profile</h2>
-          <% else  %>
             <h2><%= @user.name%></h2>
-            <p><%= @user.location%></p>
+          <% else  %>
+            <h2>My Profile</h2>
           <% end %>
+          <p><%= @user.location%></p>
         </div>
       </div>
   </div>
@@ -79,41 +42,27 @@
     </li>
     <% end %>
   </ul>
+
   <ul class="uk-switcher">
     <li class="user-profile__list-item bw-container">
-        <% @user.following.each do |follow|%>
-          <div class="card_social">
-            <%= link_to user_path(follow) do %>
-            <div class="card_social__avatar">
-              <% if @user.avatar.attached? %>
-                <%= cl_image_tag follow.avatar.key, class: "avatar_s--has-no-border" %>
-              <% else %>
-                  <%= image_tag 'BeerWizardLogo.png', class: "avatar_s" %>
-              <% end %>
-            </div>
-            <div class="card_social__user">
-              <p class="card_social__id"><%= link_to user_path(@user) do %>
-                <%= follow.name %><% end %>
-              </p>
-              <p class="card_social__city"><%= link_to user_path(@user) do %>
-                <%= @user.location %><% end %>
-              </p>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
+    <%= render "reviews/reviewcard" %>
     </li>
-    <li>Monsieur</li>
-    <li>Gustave</li>
+    <li>
+      <%= render "friendships/followerscard" %>
+    </li>
+    <li>
+      <%= render "friendships/followingcard" %>
+    </li>
   </ul>
 </div>
 
 <ul class="uk-switcher">
     <li class="user-profile__list-item">
           <% @user.following.each do |follow|%>
-            <%= link_to user_path(follow) do %>
+      </li>
+        <li><%= link_to user_path(follow) do %>
             <% if @user.avatar.attached? %>
-              <p><small><%= cl_image_tag follow.avatar.key, width: 50, height: 50, crop: :fill %></small> </p>
+              <p><small><%= cl_image_tag follow.avatar.key, class: "avatar_l" %></small> </p>
                 <%= follow.name %>
             <% else %>
               <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
@@ -121,8 +70,7 @@
             <% end %>
           <% end %>
         <% end %>
-    </li>
-    <li>Monsieur</li>
+        </li>
     <li>Gustave</li>
   </ul>
 
@@ -168,6 +116,7 @@
           <% end %>
             <p><small><b>Brewery:</b> <%= liked_item.brewery %></small></p>
           <p><small><b>Description:</b> <%= liked_item.description %></small></p>
+
         <!-- avarage rating -->
 
     <div class="average-review-rating" id="average-review-rating" data-score=
