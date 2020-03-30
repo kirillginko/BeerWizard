@@ -23,17 +23,25 @@
   border: solid 6px rgba(255, 255, 255, .3);
 }
 
+.avatar_s--has-no-border {
+  object-fit: cover;
+  width: 38px;
+  height: 38px;
+  border-radius: 100% ;
+}
+
 .avatar_m {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 100%;
   border: solid 4px rgba(255, 255, 255, .3);
 }
 
 .avatar_l {
+  object-fit: cover;
   width: 101px;
   height: 101px;
-  border-radius: 50%;
+  border-radius: 100%;
   border: solid 8px rgba(255, 255, 255, .3);
 }
 

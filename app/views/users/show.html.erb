@@ -1,37 +1,77 @@
-<div class="container mt-4">
-    <% if  @user != current_user %>
-    <h2><%= @user.name%>'s Profile</h2>
-  <% else  %>
-    <h2>My Profile</h2>
-  <% end %>
-    <div class="mt-4">
 
-<!--- follow button -->
-
-<div class='follow_button' id="follow_btn_<%= @user.id %>">
-  <%= render 'friendships/follow_button', user: @user %>
+<div class="user-profile">
+  <div class="user-profile__content">
+    <div class="user-profile__avatar">
+      <%= render 'shared/avatar-l' %>
     </div>
-
-<!-- followers count -->
-
-<div class='follow_count mt-2' id="follow_count">
-  <%= render 'friendships/follow_count', user: @user %>
+    <div class="user-profile__infos">
+      <% if  @user != current_user %>
+        <h2><%= @user.name%>'s Profile</h2>
+      <% else  %>
+        <h2><%= @user.name%></h2>
+        <p><%= @user.location%></p>
+      <% end %>
     </div>
+  </div>
+  <ul uk-switcher="animation: uk-animation-fade" class="user-profile__numbers">
+    <%= link_to "#" do %>
+    <li class="user-profile__reviews">
+      <h5>Reviews</h5>
+      <p><%= @user.reviews.size %></p>
+    <% end %>
+    </li>
+    <%= link_to "#" do %>
+    <li class="user-profile__followers">
+      <h5>Followers</h5>
+      <p class="user-profile__bold-numbers"><%= @user.followers.count %></p>
+    </li>
+    <% end %>
+    <%= link_to "#" do %>
+    <li class="user-profile__follows">
+      <h5>Following</h5>
+      <p class="user-profile__bold-numbers"><%= @user.following.count %></p>
+    </li>
+    <% end %>
+  </ul>
+  <ul class="uk-switcher">
+    <li class="user-profile__list-item">
+          <% @user.following.each do |follow|%>
+            <%= link_to user_path(follow) do %>
+            <div class="card_social__avatar">
+              <% if @user.avatar.attached? %>
+                <%= cl_image_tag follow.avatar.key, class: "avatar_s--has-no-border" %>
+              <% else %>
+                  <%= image_tag 'BeerWizardLogo.png', class: "avatar_s" %>
+              <% end %>
+            </div>
+          <% end %>
+        <% end %>
+    </li>
+    <li>Monsieur</li>
+    <li>Gustave</li>
+  </ul>
+</div>
+
+<ul class="uk-switcher">
+    <li class="user-profile__list-item">
+          <% @user.following.each do |follow|%>
+            <%= link_to user_path(follow) do %>
+            <% if @user.avatar.attached? %>
+              <p><small><%= cl_image_tag follow.avatar.key, width: 50, height: 50, crop: :fill %></small> </p>
+                <%= follow.name %>
+            <% else %>
+              <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
+                  <%= follow.name %>
+            <% end %>
+          <% end %>
+        <% end %>
+    </li>
+    <li>Monsieur</li>
+    <li>Gustave</li>
+  </ul>
 
     <!-- User Followers -->
- <div class="row justify-content-around">
-    <% @user.following.each do |follow|%>
-      <%= link_to user_path(follow) do %>
-      <% if @user.avatar.attached? %>
-        <p><small><%= cl_image_tag follow.avatar.key, width: 50, height: 50, crop: :fill %></small> </p>
-          <%= follow.name %>
-      <% else %>
-        <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
-            <%= follow.name %>
-      <% end %>
-    <% end %>
-  <% end %>
-</div>
+
 
     <hr>
 
