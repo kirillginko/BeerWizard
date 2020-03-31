@@ -137,9 +137,9 @@
         <% @user.reviews.each do |reviews| %>
         <%= link_to beer_path(reviews.beer) do %>
         <div class="review-rating" data-score="<%= reviews.stars %>"></div>
-        <p><%= reviews.beer.name%></p>
+        <p><%= reviews.user.name%></p>
        <% if reviews.beer.avatar.attached? %>
-          <%= cl_image_tag review.beer.avatar.key, width: 150, height: 150, crop: :fill %>
+          <%= cl_image_tag reviews.beer.avatar.key, width: 80, height: 80 %>
         <% else %>
           <%= image_tag '/assets/Sir-Wallac-Hivernale-07a26e9c9dcb449a374caa9eae5f80950a683b3518e0c65d1561d12293915e27.png',  width: 50, height: 50, crop: :fill %>
         <% end %>
