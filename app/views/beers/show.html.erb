@@ -12,7 +12,11 @@
     </div>
     <div class="beer__main-infos">
       <div class="beer__vignette">
-        <%= image_tag "Sir-Wallac-Hivernale.png", width: "151px" %>
+        <% if @beer.avatar.attached? %>
+                  <%= cl_image_tag @beer.avatar.key %>
+                <% else %>
+                    <%= image_tag "Sir-Wallac-Hivernale.png" %>
+                <% end %>
       </div>
       <div class="beer__details">
         <div class="beer__details-top">

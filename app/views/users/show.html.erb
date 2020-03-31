@@ -16,23 +16,23 @@
       </div>
   </div>
   <ul uk-switcher="animation: uk-animation-fade" class="user-profile__numbers">
-    <%= link_to "#" do %>
+    <%= link_to "#" do %>  <!-- --->
     <li class="user-profile__reviews">
       <h5>Reviews</h5>
       <p><%= @user.reviews.size %></p>
     <% end %>
-    </li>
+    </li><!-- --->
     <%= link_to "#" do %>
-    <li class="user-profile__followers">
+    <li class="user-profile__followers"><!-- --->
       <h5>Followers</h5>
       <p class="user-profile__bold-numbers"><%= @user.followers.count %></p>
-    </li>
+    </li><!-- --->
     <% end %>
     <%= link_to "#" do %>
-    <li class="user-profile__follows">
+    <li class="user-profile__follows"><!-- --->
       <h5>Following</h5>
       <p class="user-profile__bold-numbers"><%= @user.following.count %></p>
-    </li>
+    </li><!-- --->
     <% end %>
   </ul>
   <ul class="uk-switcher">
@@ -54,13 +54,22 @@
               <p class="card_social__city"><%= link_to user_path(@user) do %>
                 <%= @user.location %><% end %>
               </p>
+              <span id="follow_btn_<%= @user.id %>">
+                <%= render 'friendships/follow_button', user: @user %>
+              </span>
             </div>
           <% end %>
         </div>
       <% end %>
     </li>
-    <li>Monsieur</li>
-    <li>Gustave</li>
+    <li>
+     <% @user.following.each do |follow|%>
+
+      <% end %>
+    </li>
+    <li>
+
+    </li>
   </ul>
 </div>
 
