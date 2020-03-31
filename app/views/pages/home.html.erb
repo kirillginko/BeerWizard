@@ -1,250 +1,3 @@
-
-<!-- buttons -->
-
-<button type="button" class="btn btn-secondary mt-4" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-  Beer Type
-</button>
-
-<p></p>
-<a href="#" class="button-m">Follow</a>
-
-<!-- avatar -->
-
-<p></p>
-<div class="show_row">
-  <%= image_tag ("user_avatar.png"), class:"avatar_s" %>
-  <%= image_tag ("user_avatar.png"), class:"avatar_m" %>
-  <%= image_tag ("user_avatar.png"), class:"avatar_l" %>
-</div>
-
-<!-- card social -->
-
-<p></p>
-<div class="card_social">
-  <div class="card_social__avatar"><%= image_tag "user_avatar.png", class:"avatar_m" %></div>
-  <div>
-    <div class="card_social__id">Martin Picard</div>
-    <div class="card_social__location">Montréal, QC</div>
-  </div>
-  <a href="#" class="button-m">FOLLOW</a>
-</div>
-
-<!-- card review -->
-
-<p></p>
-<div class="card_review">
-  <div class="card_review__comment">Excellente bière !</div>
-  <div class="rating">
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-    </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-</div>
-  <div class="card_review__description">
-    <div class="card_review__avatar"><%= image_tag "user_avatar.png", class:"avatar_m" %></div>
-    <div>
-      <p class="card_review__id">Martin Picard</p>
-      <div class="card_review__location">Montréal, QC</div>
-    </div>
-  </div>
-</div>
-
-<!-- beer card-->
-
-<p></p>
-<div class="beer-background">
-  <div class="card_beer">
-    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
-    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
-  </div>
-  <div class="card_beer">
-    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
-    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
-  </div>
-  <div class="card_beer">
-    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
-    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
-  </div>
-    <div class="card_beer">
-    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
-    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
-  </div>
-  <div class="card_beer">
-    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
-    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
-  </div>
-  <div class="card_beer">
-    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
-    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
-  </div>
-  <div class="card_beer">
-    <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
-    <div class="card_beer__heart"><%= link_to "#" do %> <%= inline_svg_tag "heart_full.svg" %><% end %></div>
-  </div>
-</div>
-
-<!-- Navbar -->
-
-<p></p>
-<div class="navbar__">
-  <div class="navbar__bg">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "Home.svg", class: 'navbar__icons' %>
-    <% end %>
-  </div>
-  <div class="navbar__bg">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "Barcode.svg", class: 'navbar__icons' %>
-    <% end %>
-  </div>
-  <div class="navbar__bg">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "Bell.svg", class: 'navbar__icons' %>
-    <% end %>
-  </div>
-  <div class="navbar__bg">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "Search.svg", class: 'navbar__icons' %>
-    <% end %>
-  </div>
-</div>
-
-<!-- Text paragraph -->
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsum, ipsam voluptatem! Quibusdam quos adipisci at ipsa qui dolor autem dicta et vel atque eos, assumenda officiis sint corrupti excepturi.</p>
-
-<!-- ABV -->
-
-<p class="abv">6.5%</p>
-
-<!-- H1 -->
-
-<h1>Lorem ipsum dolor sit amet.</h1>
-
-<!-- H2 -->
-<h2>Martin Picard</h2>
-
-<!-- H3 -->
-
-<h3>IBU</h3>
-
-<!-- H$ -->
-
-<h4>New England IPA</h4>
-
-<!-- H5 -->
-
-<h5>Reviews</h5>
-
-<!-- Bookmark button -->
-
-<div class="show_row">
-  <div class="circle">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "heart_stroke.svg", class: "circle__bookmark"%>
-    <% end %>
-  </div>
-  <div class="circle">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "bookmark_stroke.svg", class: "circle__bookmark"%>
-    <% end %>
-  </div>
-  <div class="circle">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "heart_full.svg", class: "circle__bookmark circle__bookmark--is-checked"%>
-    <% end %>
-  </div>
-  <div class="circle">
-    <%= link_to "#" do %>
-    <%= inline_svg_tag "bookmark_full.svg", class: "circle__bookmark circle__bookmark--is-checked"%>
-    <% end %>
-  </div>
-</div>
-
-<!-- Accordion -->
-
-<div class="accordion">
-  <ul uk-accordion>
-    <li>
-      <a href="#" class="uk-accordion-title accordion__title"><h5>Beer description</h5></a>
-      <div class="uk-accordion-content accordion__content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error numquam eaque minima totam illum a maxime impedit fugit non nam doloribus, beatae ratione dicta, explicabo necessitatibus at possimus? Illum, reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ullam exercitationem necessitatibus molestias magni reiciendis itaque vel, corrupti aspernatur nihil alias possimus veniam distinctio asperiores fuga. Maxime blanditiis facilis dolorum.</p>
-      </div>
-    </li>
-    <li>
-      <a href="#" class="uk-accordion-title accordion__title"><h5>Review <span class="accordion__counter">173</span></h5></a>
-      <div class="uk-accordion-content accordion__content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error numquam eaque minima totam illum a maxime impedit fugit non nam doloribus, beatae ratione dicta, explicabo necessitatibus at possimus? Illum, reiciendis!</p>
-      </div>
-    </li>
-  </ul>
-</div>
-
-<!-- User Profile -->
-
-<div class="user-profile">
-  <div class="user-profile__content">
-    <div class="user-profile__avatar">
-      <%= image_tag ("user_avatar.png"), class:"avatar_l" %>
-    </div>
-    <div class="user-profile__infos">
-      <h2>Martin Picard</h2>
-      <p>Montréal, QC</p>
-    </div>
-  </div>
-  <div class="user-profile__numbers">
-    <%= link_to "#" do %>
-    <div class="user-profile__reviews">
-      <h5>Reviews</h5>
-      <p>52</p>
-    <% end %>
-    </div>
-    <%= link_to "#" do %>
-    <div class="user-profile__followers">
-      <h5>Followers</h5>
-      <p class="user-profile__bold-numbers">35</p>
-    </div>
-    <% end %>
-    <%= link_to "#" do %>
-    <div class="user-profile__follows">
-      <h5>Follows</h5>
-      <p class="user-profile__bold-numbers">290</p>
-    </div>
-    <% end %>
-  </div>
-</div>
-
 <!-- Search Query Buttons -->
 
 <div class="beer_type">
@@ -258,110 +11,85 @@
   <%= link_to "Saison", {controller: "beers", query: "Saison"}, class: "beer-type__button"%>
   <%= link_to "Belgian", {controller: "beers", query: "Belgian"}, class: "beer-type__button"%>
 </div>
+<!-- Search bar --->
+
+  <%= form_tag beers_path, method: :get, id: "query", class: "search-bar" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    placeholder: "Find a Beer"%>
+  <% end %>
+<!---------->
+
+<h2> Top Rated </h2>
+<% @beers.limit(4).each do |beer| %>
+<%= link_to beer_path(beer) do %>
+<p></p>
+<div class="beer-background">
+<div class="card_beer">
+  <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+  <div class="card_beer__content">
+      <p class="card_beer__title"><%= beer.name %></p>
+      <p class="card_beer__infos"><%= beer.beer_type %>, <%= beer.abv %></p>
+    </div>
+    <div class="average-review-rating average-review-rating-s" id="average-review-rating<%= beer.id %>" data-score=<%= beer.average_review %>>
+    </div>
+    <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
+      <span><i class="fas fa-heart pl-4"></i></span>
+    <% end %>
+    <span class="likes-count-" id="likes-count-<%= beer.id %>">
+  <%= render 'beers/vote', beer: beer %></span>
+  </div>
+</div>
+
+<% end %>
+<% end %>
+
+<h2> Recent Users </h2>
+
+
+
+<!-- Navbar -->
+
+<!-- Text paragraph -->
+
+
+
+<!-- Bookmark button -->
+
+<!-- Accordion -->
+
+
+<!-- User Profile -->
+
+
+<!-- Search Query Buttons -->
+
 
 <!-- Back button -->
 
-<%= link_to "#" do %>
-<div class="back-button">
- <%= inline_svg_tag "left-arrow.svg"%>
-</div>
-<% end %>
 
-<!-- Stars -->
-
-<p></p>
-<div class="rating">
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-  <div class="rating__box">
-    <%= link_to "#" do %>
-    <div class="rating__star">
-      <%= inline_svg_tag "star.svg" %>
-    </div>
-    <% end %>
-  </div>
-</div>
-
-<p></p>
-<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="India Pale Ale, a hoppy style of beer within the pale ale category.">
-    <%= link_to "IPA", controller: "beers", query: "IPA"%>
-    </button>
-
-<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="A sour German wheat beer, typically brewed with salt and coriander seeds.">
-    <%= link_to "Gose", controller: "beers", query: "Gose"%>
-    </button>
-
-<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="A kind of strong, dark beer brewed with roasted malt or barley.">
-    <%= link_to "Stout", controller: "beers", query: "Stout"%>
-    </button>
-
-<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="A type of light-colored beer strongly flavored with hops.">
-    <%= link_to "Pale Ale", controller: "beers", query: "Pale Ale"%>
-    </button>
-
-<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="Deep amber to brown in colour. Caramel and chocolate flavours are evident.">
-    <%= link_to "Brown Ale", controller: "beers", query: "Brown Ale"%>
-    </button>
-
-<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="Lager beer uses a process of cool fermentation, followed by maturation in cold storage. The German word Lager means storeroom or warehouse.">
-    <%= link_to "Lager", controller: "beers", query: "Lager"%>
-    </button>
-
-<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="A lager beer with a strong hop flavor, originally brewed at Pilsen in Bohemia (now the Czech Republic), and traditionally served in a tall glass tapered at the bottom.">
-    <%= link_to "Pilsner", controller: "beers", query: "Pilsner"%>
-    </button>
-
-<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="Saison is a pale ale that is highly carbonated, fruity, spicy, and often bottle conditioned.">
-    <%= link_to "Saison", controller: "beers", query: "Saison"%>
-    </button>
-
-<button type="button" class="btn btn-outline-primary mt-4" data-toggle="tooltip" data-placement="bottom" title="Belgian beers are primarily ales (as opposed to lagers) with a heavy emphasis on malts and a lot of fruity yeast flavors.">
-    <%= link_to "Belgian", controller: "beers", query: "Belgian"%>
-    </button>
-
-
-<!-- Card User -->
-<div class="beer-background">
-  <div class="card-user">
-    <%= image_tag ("user_avatar.png"), class:"avatar_l card-user__no-border " %>
-    <p>Étienne Lamoureux</p>
-    <%= link_to "Follow", root_path, class:"button-m button-m--is-red" %>
-  </div>
-</div>
 
 
 <script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip({
-    delay: { "show": 300, "hide": 100 }
+$(document).ready(function() {
+  $('.review-rating').raty({
+      readOnly: true,
+      score: function() {
+          return $(this).attr('data-score');
+      },
+      path: '/assets/'
   });
-
-
-})
+});
+</script>
+<!-- review scripts w raty to average -->
+<script>
+$(document).ready(function() {
+  $('.average-review-rating').raty({
+      readOnly: true,
+      path: '/assets/',
+      score: function() {
+          return $(this).attr('data-score');
+      },
+  });
+});
 </script>

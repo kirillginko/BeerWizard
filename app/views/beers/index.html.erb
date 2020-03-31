@@ -20,3 +20,27 @@
     <%= render 'beers/card', beers: @beers %>
   </div>
 <%= render 'shared/bottomnav' %>
+
+<script>
+$(document).ready(function() {
+  $('.review-rating').raty({
+      readOnly: true,
+      score: function() {
+          return $(this).attr('data-score');
+      },
+      path: '/assets/'
+  });
+});
+</script>
+<!-- review scripts w raty to average -->
+<script>
+$(document).ready(function() {
+  $('.average-review-rating').raty({
+      readOnly: true,
+      path: '/assets/',
+      score: function() {
+          return $(this).attr('data-score');
+      },
+  });
+});
+</script>
