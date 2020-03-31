@@ -9,7 +9,11 @@
     <% end %>
   </div>
   <div class="navbar__bg">
-    <%= link_to user_path(current_user) do %>
+    <% if user_signed_in? %>
+<!--     <%= link_to user_path(current_user) %>
+ -->    <%= link_to inline_svg_tag "Barcode.svg", class: 'navbar__icons' %>
+    <% else %>
+    <% link_to root_path %>
     <%= inline_svg_tag "Barcode.svg", class: 'navbar__icons' %>
     <% end %>
   </div>
