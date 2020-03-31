@@ -43,9 +43,9 @@ file = URI.open("https://res.cloudinary.com/dfnvi7ruc/image/upload/v1585668282/B
   beer9.avatar.attach(io: file, filename: 'Double Fruit Punch IPA', content_type: "image/png")
   beer9.save!
 
-file = URI.open("url")
+file = URI.open("https://res.cloudinary.com/dfnvi7ruc/image/upload/v1585668284/BeerWizard%20Beers/IIPA_x56i2y.png")
   beer10 = Beer10.find(10)
-  beer10.avatar.attach(io: file, filename: 'Frampton brasse', content_type: "image/png")
+  beer10.avatar.attach(io: file, filename: 'IIPA', content_type: "image/png")
   beer10.save!
 
 file = URI.open("https://res.cloudinary.com/dfnvi7ruc/image/upload/v1585668284/BeerWizard%20Beers/IPA_de_la_nouvelle-france_aufguy.png")
