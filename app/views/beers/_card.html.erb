@@ -2,7 +2,7 @@
   <% beers.each do |beer| %>
     <%= link_to beer_path(beer) do %>
     <div class="card_beer">
-      <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+      <div class="card_beer__beer"><%= cl_image_tag beer.avatar.key %></div>
       <div class="card_beer__heart"><%= link_to "#" do %><%= inline_svg_tag "heart_full.svg" %><% end %></div>
       <div class="card_beer__content">
         <p class="card_beer__title"><%= beer.name %></p>
