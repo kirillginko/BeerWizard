@@ -6,8 +6,8 @@
           <%= cl_image_tag review.beer.avatar.key, width: 150, height: 150, crop: :fill %>
         <% else %>
           <%= image_tag '/assets/Sir-Wallac-Hivernale-07a26e9c9dcb449a374caa9eae5f80950a683b3518e0c65d1561d12293915e27.png',  width: 50, height: 50, crop: :fill %>
-        <% end %>
       <p><b><%= reviews.title %></b></p>
     <p><small><%= reviews.description %></small></p>
+    <% end %>
   <% end %>
 <% end %>
