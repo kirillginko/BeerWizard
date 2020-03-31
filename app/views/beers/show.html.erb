@@ -21,7 +21,7 @@
     </div>
     <div class="beer__main-infos">
       <div class="beer__vignette">
-        <%= image_tag "Sir-Wallac-Hivernale.png", width: "151px" %>
+        <%= cl_image_tag @beer.avatar.key%>
       </div>
       <div class="beer__details">
         <div class="beer__details-top">
