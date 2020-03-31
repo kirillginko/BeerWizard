@@ -21,6 +21,7 @@ class User < ApplicationRecord
 
   has_many :beers, through: :reviews
   has_many :reviews, dependent: :destroy
+  has_many :bookmarks
 
 
   has_many :active_friendships, class_name: "Friendship", foreign_key: "follower_id", dependent: :destroy

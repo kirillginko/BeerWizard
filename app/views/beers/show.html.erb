@@ -3,12 +3,21 @@
 <section class="beer">
   <div class="bw-container bw-padding-top ">
     <div class="beer__topnav">
-      <%= link_to "#" do %>
-        <div class="back-button">
-         <%= inline_svg_tag "left-arrow.svg"%>
-        </div>
+
+      <%= link_to beers_path do %>
+      <div class="back-button">
+       <%= inline_svg_tag "left-arrow.svg"%>
+
+      </div>
       <% end %>
-    <%= render 'shared/avatar' %>
+  <%= link_to user_path(current_user) do%>
+  <% if current_user.avatar.attached? %>
+    <%= cl_image_tag current_user.avatar.key, class:"avatar_s" %>
+      <% else %>
+        <%= image_tag 'BeerWizardLogo.png',  class: "avatar_s" %>
+      <% end %>
+    <% end %>
+
     </div>
     <div class="beer__main-infos">
       <div class="beer__vignette">
@@ -27,12 +36,13 @@
         </div>
         <div class="beer__bookmark">
           <div class="circle">
-            <%= link_to "#" do %>
-            <%= inline_svg_tag "heart_stroke.svg", id:'test', onclick: 'change();', class: "circle__bookmark"%>
+
+          <%= link_to like_beer_path(@beer), class: "like-btn", method: :put, remote: :true do %>
+            <%= inline_svg_tag "heart_stroke.svg", class: "circle__bookmark"%>
             <% end %>
           </div>
           <div class="circle">
-            <%= link_to "#" do %>
+            <%= link_to bookmarks_update_path(beer: @beer), method: :get, remote: true do %>
             <%= inline_svg_tag "bookmark_stroke.svg", class: "circle__bookmark"%>
             <% end %>
           </div>
@@ -68,39 +78,74 @@
           </div>
         </li>
         <li>
-          <a href="#" class="uk-accordion-title accordion__title"><h5>Review <span class="accordion__counter"><%= @beer.reviews.count %></span></h5></a>
-          <div class="uk-accordion-content accordion__content">
-            <div id="reviews">
-              <% if @beer.reviews.blank? %>
-                <p class="">Be the first to leave a review for <%= @beer.name %> Beer!</p>
-              <% else %>
-                <% @beer.reviews.each do |review| %>
-<!--                   <hr>
- -->                <%= render 'reviews/show', review: review %>
-<!--                 <%= render 'reviews/form', beer: @beer, review: @review %>
- -->                <% end %>
+
+          <a href="#" class="uk-accordion-title accordion__title">
+          <h5>Review <span class="accordion__counter"><%= @beer.reviews.count %></span></h5></a>
+            <div class="uk-accordion-content accordion__content">
+              <p><% @beer.reviews.each do |review| %></p>
+                <div id="reviews">
+                <%= render 'reviews/show', review: review %>
+              </div>
               <% end %>
-            </div>
+
           </div>
         </li>
       </ul>
     </div>
   </div>
+
+  <section class="beer__buttons uk-margin-medium-top">
+    <div class="bw-container bw-flex">
+      <div class="uk-margin-left">
+        <p><%= render 'reviews/form', beer: @beer, review: @review %></p>
+      </div>
+      <div class="uk-margin-left">
+        <%= link_to "Share", root_path, class: "button-m" %>
+
+
+
+
+
+    </div>
+
   <section class="beer__buttons bw-margin-medium-top">
     <div class="bw-container bw-flex bw-margin-medium-bottom">
         <%= link_to "Add review", root_path, class: "button-m button-m--is-half" %>
         <div class="bw-space"></div>
         <%= link_to "Share", root_path, class: "button-m button-m--is-half" %>
+
     </div>
+
+
   </section>
 </section>
 <%= render 'shared/bottomnav' %>
 
-<div class="container mt-2 ">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
 
 <!-- Review Average Rating -->
+
+
+
+
+
+<!-- review likes w ajax rendering like/unlike -->
+
+
+
+
+<!-- review form w ajax  -->
+
+
+
+<!-- Beer edit for debuging beer info will remove in final -->
+<hr>
+
+    <%=link_to "edit beer", edit_beer_path, class: "btn btn-primary mt-2" %>
+    </div>
+  </div>
+</div>
+
+<!-- review scripts w raty -->
 
 <!-- <h2><%= @beer.name %></h2>
   <h4>Average Rating</h4>
@@ -125,6 +170,7 @@
   <% end %>
  <span class="likes-count" id="likes-count-<%= @beer.id %>"><%= render 'beers/vote', beer: @beer %></span>
  -->
+
 <!-- review scripts w raty to rate -->
 <script>
 $(document).ready(function() {

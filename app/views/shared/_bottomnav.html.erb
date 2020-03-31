@@ -1,22 +1,25 @@
-<!-- Navbar -->
+
+<!-- Bottom Navbar -->
+<p></p>
+
 <div class="navbar__">
   <div class="navbar__bg">
-    <%= link_to "#" do %>
+    <%= link_to root_path do %>
     <%= inline_svg_tag "Home.svg", class: 'navbar__icons' %>
     <% end %>
   </div>
   <div class="navbar__bg">
-    <%= link_to "#" do %>
+    <%= link_to user_path(current_user) do %>
     <%= inline_svg_tag "Barcode.svg", class: 'navbar__icons' %>
     <% end %>
   </div>
   <div class="navbar__bg">
-    <%= link_to "#" do %>
+    <%= link_to users_path do %>
     <%= inline_svg_tag "Bell.svg", class: 'navbar__icons' %>
     <% end %>
   </div>
   <div class="navbar__bg">
-    <%= link_to "#" do %>
+    <%= link_to beers_path do %>
     <%= inline_svg_tag "Search.svg", class: 'navbar__icons' %>
     <% end %>
   </div>

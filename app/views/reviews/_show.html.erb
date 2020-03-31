@@ -7,8 +7,16 @@
     <%= image_tag 'BeerWizardLogo.png', :width=> 50, :height=> 50 %>
   <% end %>
 
-    <%= review.user.name %>
-    <p class="review-description"><%= review.description %></p>
+
+    <%= review.user.name %>-
+    <div class="mt-4">
+    <p><b><%= review.title %></b></p>
+    <p><small>"<%= review.description %>"</small></p>
+</div>
+    <!--user edit review -->
+    <% if user_signed_in? %>
+    <% if review.user_id == current_user.id %>
+
 
     <!--user edit review -->
 

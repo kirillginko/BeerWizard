@@ -13,6 +13,7 @@ end
 
   def show
     @review = Review.new
+    @bookmark_exists = Bookmark.where(beer: @beer, user: current_user) == [] ? false : true
   end
 
   def edit; end

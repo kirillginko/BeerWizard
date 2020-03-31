@@ -175,6 +175,38 @@ ALTER SEQUENCE public.beers_id_seq OWNED BY public.beers.id;
 
 
 --
+-- Name: bookmarks; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.bookmarks (
+    id bigint NOT NULL,
+    beer_id bigint,
+    user_id bigint,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: bookmarks_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.bookmarks_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: bookmarks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.bookmarks_id_seq OWNED BY public.bookmarks.id;
+
+
+--
 -- Name: follows; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -521,6 +553,13 @@ ALTER TABLE ONLY public.beers ALTER COLUMN id SET DEFAULT nextval('public.beers_
 
 
 --
+-- Name: bookmarks id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.bookmarks ALTER COLUMN id SET DEFAULT nextval('public.bookmarks_id_seq'::regclass);
+
+
+--
 -- Name: follows id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -621,6 +660,14 @@ ALTER TABLE ONLY public.beer_locations
 
 ALTER TABLE ONLY public.beers
     ADD CONSTRAINT beers_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: bookmarks bookmarks_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.bookmarks
+    ADD CONSTRAINT bookmarks_pkey PRIMARY KEY (id);
 
 
 --
@@ -743,6 +790,20 @@ CREATE INDEX index_beer_locations_on_location_id ON public.beer_locations USING 
 --
 
 CREATE INDEX index_beers_on_user_id ON public.beers USING btree (user_id);
+
+
+--
+-- Name: index_bookmarks_on_beer_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_bookmarks_on_beer_id ON public.bookmarks USING btree (beer_id);
+
+
+--
+-- Name: index_bookmarks_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_bookmarks_on_user_id ON public.bookmarks USING btree (user_id);
 
 
 --
@@ -886,6 +947,14 @@ CREATE INDEX taggings_taggable_context_idx ON public.taggings USING btree (tagga
 
 
 --
+-- Name: bookmarks fk_rails_22fad8d967; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.bookmarks
+    ADD CONSTRAINT fk_rails_22fad8d967 FOREIGN KEY (beer_id) REFERENCES public.beers(id);
+
+
+--
 -- Name: reviews fk_rails_4f25164fa7; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -934,6 +1003,14 @@ ALTER TABLE ONLY public.taggings
 
 
 --
+-- Name: bookmarks fk_rails_c1ff6fa4ac; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.bookmarks
+    ADD CONSTRAINT fk_rails_c1ff6fa4ac FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
 -- Name: active_storage_attachments fk_rails_c3b3935057; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -974,6 +1051,10 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200327182338'),
 ('20200327182339'),
 ('20200328152709'),
-('20200328152857');
+('20200328152857'),
+('20200328183729'),
+('20200329184133');
+
+
 
 
