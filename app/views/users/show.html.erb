@@ -35,20 +35,22 @@
     <%= link_to "#" do %>
     <li class="user-profile__follows">
       <h5>Following</h5>
-      <p class="user-profile__bold-numbers"><%= @user.following.count %></p>
+      <p class="user-profile__bold-numbers" id="follow_profile_">
+        <%= @user.following.count %>
+        </p>
     </li>
     <% end %>
   </ul>
 
   <ul class="uk-switcher">
-    <li class="user-profile__list-item bw-container">
-    <%= render "reviews/reviewcard" %>
+    <li>
+      <%= render "reviews/reviewcard", class: "user-profile__list-item bw-container" %>
     </li>
     <li>
-      <%= render "friendships/followerscard" %>
+      <%= render "friendships/followerscard", class: "user-profile__list-item bw-container" %>
     </li>
     <li>
-      <%= render "friendships/followingcard" %>
+      <%= render "friendships/followingcard", class: "user-profile__list-item bw-container" %>
     </li>
   </ul>
 </div>
@@ -151,10 +153,6 @@
   </ul>
 </div>
 
-<div class= "mt-2">
-      <br>
-    <%= link_to "edit profile", edit_user_path %>
-  </div>
-</div>
+
 
 <!-- Review Ratings Raty Script -->
