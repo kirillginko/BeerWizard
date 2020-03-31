@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-
   def bookmark_text
     return @bookmark_exists ? "Save" : "Unsave"
   end
