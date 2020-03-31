@@ -1,5 +1,5 @@
-  <% @user.reviews.each do |reviews| %>
-    <%= link_to beer_path(reviews.beer) do %>
+  <% @user.reviews.limit(4).each do |reviews| %>
+    <%= link_to beer_path(reviews.beer)do %>
       <div class="review-rating" data-score="<%= reviews.stars %>"></div>
         <p><%= reviews.beer.name%></p>
         <% if reviews.beer.avatar.attached? %>

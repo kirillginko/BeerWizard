@@ -1,9 +1,35 @@
-      <% @user.following.each do |following|%>
-        <% if following.avatar.attached? %>
-          <p><small><%= cl_image_tag following.avatar.key, width: 50, height: 50 %></small> </p>
-            <% else %>
-          <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
-        <% end %>
-      <p><%= following.name %></p>
-      <p><%= following.location %></p>
-    <% end %>
+
+  <% @user.following.limit(4).each do |following| %>
+    <div class="card_social">
+      <div class="card_social__info">
+        <div class="card_social__avatar">
+          <% if following.avatar.attached? %>
+            <%= cl_image_tag following.avatar.key, class: "avatar_l" %>
+          <% else %>
+            <%= image_tag 'BeerWizardLogo.png', class: "avatar_s" %>
+          <% end %>
+        </div>
+        <div class="card_social__user">
+          <p class="card_social__id">
+            <%= link_to user_path(following) do %>
+            <%= following.name %>
+            <% end %>
+          </p>
+          <p class="card_social__city">
+            <%= link_to user_path(following) do %>
+              <%= following.location %>
+            <% end %>
+            </p>
+          <span class="card_social__id" id="follow_count_<%= following.id%>">
+            <%= render 'friendships/follow_count', user: following %>
+          </span>
+          <p><small class="text-muted">User Since: <%= following.created_at.strftime("%b %d, %Y")%></small></p>
+        </div>
+      </div>
+      <% if  following != current_user %>
+      <span id="follow_btn_<%= following.id%>">
+        <%= render 'friendships/follow_button', user: following %>
+      </span>
+      <% end %>
+    </div>
+  <% end %>

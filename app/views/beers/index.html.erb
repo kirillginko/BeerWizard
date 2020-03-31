@@ -4,12 +4,14 @@
 
   <!--Beer Search -->
   <div class="beer__topnav bw-padding-bottom">
-    <%= link_to "#" do %>
+    <%= link_to root_path do %>
       <div class="back-button">
        <%= inline_svg_tag "left-arrow.svg"%>
       </div>
     <% end %>
-    <%= render 'shared/avatar' %>
+    <%= link_to user_path(current_user) do%>
+  <%= render 'shared/avatar' %>
+  <% end %>
   </div>
   <%= render 'shared/searchbar' %>
 </div>

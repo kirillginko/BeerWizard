@@ -4,17 +4,14 @@
 
 <div class="navbar__">
   <div class="navbar__bg">
+    <% if user_signed_in? %>
     <%= link_to root_path do %>
     <%= inline_svg_tag "Home.svg", class: 'navbar__icons' %>
     <% end %>
   </div>
   <div class="navbar__bg">
-    <% if user_signed_in? %>
-<!--     <%= link_to user_path(current_user) %>
- -->    <%= link_to inline_svg_tag "Barcode.svg", class: 'navbar__icons' %>
-    <% else %>
-    <% link_to root_path %>
-    <%= inline_svg_tag "Barcode.svg", class: 'navbar__icons' %>
+    <%= link_to user_path(current_user) do %>
+    <%= link_to inline_svg_tag "Barcode.svg", class: 'navbar__icons' %>
     <% end %>
   </div>
   <div class="navbar__bg">
@@ -26,6 +23,13 @@
     <%= link_to beers_path do %>
     <%= inline_svg_tag "Search.svg", class: 'navbar__icons' %>
     <% end %>
+  <% else %>
+    <div class="navbar__bg">
+      <%= link_to "Login", new_user_session_path, class: "btn btn-primary mr-1" %>
+        <div class="navbar__bg">
+          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-danger" %>
+        </li>
+      <% end %>
   </div>
 </div>
 
