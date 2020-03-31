@@ -45,7 +45,7 @@
 
   <ul class="uk-switcher">
     <li>
-      <%= render "reviews/reviewcard", class: "user-profile__list-item bw-container" %>
+
     </li>
     <li>
       <%= render "friendships/followerscard", class: "user-profile__list-item bw-container" %>
@@ -121,7 +121,7 @@
       <%= liked_item.average_review %>></div>
         <span><small><b>Based on <%= liked_item.reviews.count %> reviews</b></small></span>
             <p><%= liked_item.name%></p>
-
+            <p><small><b>Type:</b> <%= liked_item.beer_type %></small></p>
             <p><small><b>Brewery:</b> <%= liked_item.brewery %></small></p>
           <p><small><b>Description:</b> <%= liked_item.description %></small></p>
           <% end %>
@@ -134,15 +134,15 @@
     <li>
       <a href="#" class="uk-accordion-title accordion__title"><h5>Reviews <span class="accordion__counter"><%=@user.reviews.count%></span></h5></a>
       <div class="uk-accordion-content accordion__content">
-        <% @user.reviews.limit(4).each do |reviews| %>
+        <% @user.reviews.limit(8).each do |reviews| %>
         <%= link_to beer_path(reviews.beer) do %>
         <div class="review-rating" data-score="<%= reviews.stars %>"></div>
-        <p><%= reviews.user.name%></p>
        <% if reviews.beer.avatar.attached? %>
           <%= cl_image_tag reviews.beer.avatar.key, width: 80, height: 80 %>
         <% else %>
           <%= image_tag '/assets/Sir-Wallac-Hivernale-07a26e9c9dcb449a374caa9eae5f80950a683b3518e0c65d1561d12293915e27.png',  width: 50, height: 50, crop: :fill %>
         <% end %>
+        <p><%= reviews.user.name%></p>
         <p><b><%= reviews.title %></b></p>
         <p><small><%= reviews.description %></small></p>
         <% end %>
