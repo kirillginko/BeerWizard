@@ -26,7 +26,7 @@
 <p></p>
 <div class="beer-background">
 <div class="card_beer">
-  <div class="card_beer__beer"><%= image_tag "Sir-Wallac-Hivernale.png" %></div>
+  <div class="card_beer__beer"><%= cl_image_tag beer.avatar.key %></div>
   <div class="card_beer__content">
       <p class="card_beer__title"><%= beer.name %></p>
       <p class="card_beer__infos"><%= beer.beer_type %>, <%= beer.abv %></p>
@@ -46,7 +46,35 @@
 
 <h2> Recent Users </h2>
 
-
+<% @users.limit(4).each do |user| %>
+    <div class="card_social">
+      <div class="card_social__info">
+        <div class="card_social__avatar"><% if user.avatar.attached? %>
+            <%= cl_image_tag user.avatar.key, class: "avatar_l" %>
+          <% else %>
+            <%= image_tag 'BeerWizardLogo.png', class: "avatar_s" %>
+          <% end %>
+        </div>
+        <div class="card_social__user">
+          <p class="card_social__id"><%= link_to user_path(user) do %>
+            <%= user.name %><% end %>
+          </p>
+          <p class="card_social__city"><%= link_to user_path(user) do %>
+            <%= user.location %><% end %></p>
+          <span class="card_social__id" id="follow_count_<%= user.id%>">
+            <%= render 'friendships/follow_count', user: user %>
+          </span>
+          <p><small class="text-muted">User Since: <%= user.created_at.strftime("%b %d, %Y")%></small></p>
+        </div>
+      </div>
+      <% if  user != current_user %>
+      <span id="follow_btn_<%= user.id%>">
+        <%= render 'friendships/follow_button', user: user %>
+      </span>
+      <% end %>
+    </div>
+  <% end %>
+<hr>
 
 <!-- Navbar -->
 
