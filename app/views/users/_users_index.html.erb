@@ -3,12 +3,14 @@
 <!-- Header back buton & user avatar -->
 
 <div class="beer__topnav bw-padding-bottom">
-  <%= link_to "#" do %>
+  <%= link_to root_path do %>
     <div class="back-button">
      <%= inline_svg_tag "left-arrow.svg"%>
     </div>
   <% end %>
+  <%= link_to user_path(current_user) do%>
   <%= render 'shared/avatar' %>
+  <% end %>
 </div>
 
 <!-- searchbar -->
@@ -22,7 +24,7 @@
     <div class="card_social">
       <div class="card_social__info">
         <div class="card_social__avatar"><% if user.avatar.attached? %>
-            <%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
+            <%= cl_image_tag user.avatar.key, class: "avatar_l" %>
           <% else %>
             <%= image_tag 'BeerWizardLogo.png', class: "avatar_s" %>
           <% end %>
