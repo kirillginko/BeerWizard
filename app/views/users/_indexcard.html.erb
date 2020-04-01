@@ -5,9 +5,9 @@
   <div class="card_social">
     <div class="card_social__info">
       <div class="card_social__avatar"><% if user.avatar.attached? %>
-          <%= cl_image_tag user.avatar.key, class: "avatar_s" %>
+          <%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
         <% else %>
-          <%= image_tag 'BeerWizardLogo.png', class: "avatar_s" %>
+          <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
         <% end %>
       </div>
       <div class="card_social__user">
