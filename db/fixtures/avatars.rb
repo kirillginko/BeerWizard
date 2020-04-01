@@ -48,17 +48,17 @@ file = URI.open("https://images.unsplash.com/photo-1496203695688-3b8985780d6a?ix
   user10.avatar.attach(io: file, filename: 'Melissa', content_type: "image/png")
   user10.save!
 
-file = URI.open("https://images.unsplash.com/photo-1492447216082-4726bf04d1d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+file = URI.open("https://res.cloudinary.com/dfnvi7ruc/image/upload/v1585701942/Profil%20Avatar/eric_avatar_wsmilg.png")
   user11 = User.find(11)
   user11.avatar.attach(io: file, filename: 'Eric', content_type: "image/png")
   user11.save!
 
-file = URI.open("https://images.unsplash.com/photo-1567784177951-6fa58317e16b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+file = URI.open("https://res.cloudinary.com/dfnvi7ruc/image/upload/v1585705051/Profil%20Avatar/guillaume_avatar_jybi6w.png")
   user12 = User.find(12)
   user12.avatar.attach(io: file, filename: 'Guillaume', content_type: "image/png")
   user12.save!
 
-file = URI.open("https://images.unsplash.com/photo-1513112173661-7d94f576d0c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+file = URI.open("https://res.cloudinary.com/dfnvi7ruc/image/upload/v1585701942/Profil%20Avatar/kirill_avatar_malkve.png")
   user13 = User.find(13)
   user13.avatar.attach(io: file, filename: 'Kirill', content_type: "image/png")
   user13.save!
