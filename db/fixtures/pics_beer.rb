@@ -1,3 +1,6 @@
+puts "hello"
+puts beer1 = Beer.find(1)
+
 file = URI.open("https://res.cloudinary.com/dfnvi7ruc/image/upload/v1585668281/BeerWizard%20Beers/urubu_citra-galaxy-mosai%CC%88c_fwdac8.png")
   beer1 = Beer.find(1)
   beer1.avatar.attach(io: file, filename: 'Urubu Citra-Galaxy-Mosaïc', content_type: "image/png")
