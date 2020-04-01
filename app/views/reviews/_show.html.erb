@@ -2,13 +2,13 @@
   <div class="review-rating" data-score="<%= review.stars %>"></div>
   <p class="review-title"><%= review.title %></p>
   <% if review.user.avatar.attached? %>
-    <%= cl_image_tag review.user.avatar.key, :gravity=>"face", :class=>"avatar_m" %>
+    <%= cl_image_tag review.user.avatar.key, class: "avatar_s--has-no-border" %>
   <% else %>
-    <%= image_tag 'BeerWizardLogo.png', :width=> 50, :height=> 50 %>
+    <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
   <% end %>
 
 
-    <%= review.user.name %>-
+    <%= review.user.name %>
     <div class="mt-4">
     <p><b><%= review.title %></b></p>
     <p><small>"<%= review.description %>"</small></p>

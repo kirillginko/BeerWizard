@@ -44,15 +44,18 @@
 <% end %>
 <% end %>
 
-<h2> Recent Users </h2>
+<!-- Recent Users x 4 -->
 
-<% @users.limit(4).each do |user| %>
+<div class="container mt-4">
+  <div id="user_index">
+  <h2>RECENT USERS</h2>
+  <% @users.limit(4).each do |user| %>
     <div class="card_social">
       <div class="card_social__info">
         <div class="card_social__avatar"><% if user.avatar.attached? %>
-            <%= cl_image_tag user.avatar.key, class: "avatar_l" %>
+            <%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
           <% else %>
-            <%= image_tag 'BeerWizardLogo.png', class: "avatar_s" %>
+            <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
           <% end %>
         </div>
         <div class="card_social__user">
@@ -61,10 +64,6 @@
           </p>
           <p class="card_social__city"><%= link_to user_path(user) do %>
             <%= user.location %><% end %></p>
-          <span class="card_social__id" id="follow_count_<%= user.id%>">
-            <%= render 'friendships/follow_count', user: user %>
-          </span>
-          <p><small class="text-muted">User Since: <%= user.created_at.strftime("%b %d, %Y")%></small></p>
         </div>
       </div>
       <% if  user != current_user %>
@@ -74,7 +73,58 @@
       <% end %>
     </div>
   <% end %>
-<hr>
+  </div>
+ </div>
+
+<br>
+<br>
+<br>
+
+<!-- INDEX REVIEWS -->
+<!-- Header-->
+<div class="container mt-4">
+  <div id="user_index">
+  <h2>REVIEWS INDEX</h2>
+    <div class="beer__topnav bw-padding-bottom">
+      <%= link_to root_path do %>
+        <div class="back-button">
+         <%= inline_svg_tag "left-arrow.svg"%>
+        </div>
+      <% end %>
+      <%= link_to user_path(current_user) do%>
+      <%= render 'shared/avatar' %>
+      <% end %>
+    </div>
+  </div>
+
+<!-- Reviews cards -->
+
+  <div id="user_index">
+  <% @users.each do |user| %>
+      <div class="card_review">
+        <p class="card_review__comment">Excellente bière !</p>
+        <div class="card_review__rating">ÉTOILE</div>
+        <div class="card_review__info">
+          <div class="card_review__avatar"><% if user.avatar.attached? %>
+              <%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
+            <% else %>
+              <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
+            <% end %>
+          </div>
+          <div class="card_review__user">
+            <p class="card_review__id"><%= link_to user_path(user) do %>
+              <%= user.name %><% end %>
+            </p>
+            <p class="card_review__city"><%= link_to user_path(user) do %>
+              <%= user.location %><% end %>
+            </p>
+          </div>
+        </div>
+      </div>
+  <% end %>
+  </div>
+</div>
+
 
 <!-- Navbar -->
 
