@@ -80,7 +80,7 @@
 <br>
 <br>
 
-<!-- Index reviews -->
+<!-- INDEX REVIEWS -->
 <!-- Header-->
 <div class="container mt-4">
   <div id="user_index">
@@ -98,30 +98,33 @@
   </div>
 
 <!-- Reviews cards -->
+
   <div id="user_index">
   <% @users.each do |user| %>
-    <div class="card_review">
-    </div>
-    <div class="card_social">
-      <div class="card_social__info">
-        <div class="card_social__avatar"><% if user.avatar.attached? %>
-            <%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
-          <% else %>
-            <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
-          <% end %>
-        </div>
-        <div class="card_social__user">
-          <p class="card_social__id"><%= link_to user_path(user) do %>
-            <%= user.name %><% end %>
-          </p>
-          <p class="card_social__city"><%= link_to user_path(user) do %>
-            <%= user.location %><% end %></p>
+      <div class="card_review">
+        <p class="card_review__comment">Excellente bière !</p>
+        <div class="card_review__rating">ÉTOILE</div>
+        <div class="card_review__info">
+          <div class="card_review__avatar"><% if user.avatar.attached? %>
+              <%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
+            <% else %>
+              <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
+            <% end %>
+          </div>
+          <div class="card_review__user">
+            <p class="card_review__id"><%= link_to user_path(user) do %>
+              <%= user.name %><% end %>
+            </p>
+            <p class="card_review__city"><%= link_to user_path(user) do %>
+              <%= user.location %><% end %>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
   <% end %>
   </div>
 </div>
+
 
 <!-- Navbar -->
 
