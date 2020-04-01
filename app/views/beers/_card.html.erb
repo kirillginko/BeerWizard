@@ -2,20 +2,29 @@
   <% beers.each do |beer| %>
     <%= link_to beer_path(beer) do %>
     <div class="card_beer">
-      <div class="card_beer__beer"><%= cl_image_tag beer.avatar.key %></div>
-      <div class="card_beer__heart"><%= link_to "#" do %><%= inline_svg_tag "heart_full.svg" %><% end %></div>
+      <div class="card_beer__beer">
+        <%= cl_image_tag beer.avatar.key %>
+      </div>
+      <div class="card_beer__heart">
+        <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
+          <%= inline_svg_tag "Heart_full.svg" %>
+        <% end %>
+      </div>
       <div class="card_beer__content">
         <p class="card_beer__title"><%= beer.name %></p>
         <p class="card_beer__infos"><%= beer.beer_type %>, <%= beer.abv %></p>
 
         <div class="average-review-rating average-review-rating-s" id="average-review-rating<%= beer.id %>" data-score=<%= "10" %>>
           </div>
+<<<<<<< HEAD
 
             <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
           <span><i class="fas fa-heart pl-4"></i></span>
             <% end %>
            <span class="likes-count-" id="likes-count-<%= beer.id %>">
             <%= render 'beers/vote', beer: beer %></span>
+=======
+>>>>>>> 951bd5bc4a11f6e9bab783a2e7bd4a732942f54a
       </div>
     </div>
     <% end %>

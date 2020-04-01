@@ -14,7 +14,7 @@
           <% if  @user != current_user %>
             <h2><%= @user.name%></h2>
           <% else  %>
-            <h2>My Profile</h2>
+            <h2><%= @user.name%></h2>
           <% end %>
           <p><%= @user.location%></p>
         </div>
@@ -22,19 +22,19 @@
   </div>
   <ul uk-switcher="animation: uk-animation-fade" class="user-profile__numbers">
     <%= link_to "#" do %>
-    <li class="user-profile__reviews">
+    <li class="user-profile__reviews-btn">
       <h5>Reviews</h5>
       <p><%= @user.reviews.size %></p>
     <% end %>
     </li>
     <%= link_to "#" do %>
-    <li class="user-profile__followers">
+    <li class="user-profile__followers-btn">
       <h5>Followers</h5>
       <p class="user-profile__bold-numbers"><%= @user.followers.count %></p>
     </li>
     <% end %>
     <%= link_to "#" do %>
-    <li class="user-profile__follows">
+    <li class="user-profile__follows-btn">
       <h5>Following</h5>
       <p class="user-profile__bold-numbers" id="follow_profile_">
         <%= @user.following.count %>
@@ -43,47 +43,18 @@
     <% end %>
   </ul>
 
-  <ul class="uk-switcher">
+  <ul class="user-profile__switcher-content uk-switcher bw-container">
     <li>
-
+      <%= render "reviews/reviewcard", class: "user-profile__list-item" %>
     </li>
     <li>
-      <%= render "friendships/followerscard", class: "user-profile__list-item bw-container" %>
+      <%= render "friendships/followerscard", class: "user-profile__list-item" %>
     </li>
-    <li>
-      <%= render "friendships/followingcard", class: "user-profile__list-item bw-container" %>
+    <li class="user-profile__followers">
+      <%= render "friendships/followingcard", class: "user-profile__list-item" %>
     </li>
   </ul>
 </div>
-
-<ul class="uk-switcher">
-    <li class="user-profile__list-item">
-          <% @user.following.each do |follow|%>
-      </li>
-        <li><%= link_to user_path(follow) do %>
-            <% if @user.avatar.attached? %>
-              <p><small><%= cl_image_tag follow.avatar.key, class: "avatar_l" %></small> </p>
-                <%= follow.name %>
-            <% else %>
-              <%= image_tag 'BeerWizardLogo.png',  width: 50, height: 50, crop: :fill %>
-                  <%= follow.name %>
-            <% end %>
-          <% end %>
-        <% end %>
-        </li>
-    <li>Gustave</li>
-  </ul>
-
-    <!-- User Followers -->
-
-
-
-
-<!--- follow button -->
-
-  <div class="mt-4" id="follow_btn_<%= @user.id %>">
-    <p><%= render 'friendships/follow_button', user: @user %></p>
-  </div>
 
 
 
@@ -96,7 +67,7 @@
       <div class="uk-accordion-content accordion__content">
         <% current_user.bookmarks.each do |bookmark| %>
         <%= link_to beer_path(bookmark.beer) do %>
-        <%= cl_image_tag bookmark.beer.avatar.key, width: 80, height: 80 %>
+        <%= cl_image_tag bookmark.beer.avatar.key %>
 
         <!-- avarage rating -->
               <div class="average-review-rating" id="average-review-rating" data-score=
@@ -121,7 +92,7 @@
       <%= liked_item.average_review %>></div>
         <span><small><b>Based on <%= liked_item.reviews.count %> reviews</b></small></span>
             <p><%= liked_item.name%></p>
-            <p><small><b>Type:</b> <%= liked_item.beer_type %></small></p>
+
             <p><small><b>Brewery:</b> <%= liked_item.brewery %></small></p>
           <p><small><b>Description:</b> <%= liked_item.description %></small></p>
           <% end %>
@@ -134,15 +105,15 @@
     <li>
       <a href="#" class="uk-accordion-title accordion__title"><h5>Reviews <span class="accordion__counter"><%=@user.reviews.count%></span></h5></a>
       <div class="uk-accordion-content accordion__content">
-        <% @user.reviews.limit(8).each do |reviews| %>
+        <% @user.reviews.limit(4).each do |reviews| %>
         <%= link_to beer_path(reviews.beer) do %>
         <div class="review-rating" data-score="<%= reviews.stars %>"></div>
+        <p><%= reviews.user.name%></p>
        <% if reviews.beer.avatar.attached? %>
           <%= cl_image_tag reviews.beer.avatar.key, width: 80, height: 80 %>
         <% else %>
           <%= image_tag '/assets/Sir-Wallac-Hivernale-07a26e9c9dcb449a374caa9eae5f80950a683b3518e0c65d1561d12293915e27.png',  width: 50, height: 50, crop: :fill %>
         <% end %>
-        <p><%= reviews.user.name%></p>
         <p><b><%= reviews.title %></b></p>
         <p><small><%= reviews.description %></small></p>
         <% end %>
