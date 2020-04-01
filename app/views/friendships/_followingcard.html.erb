@@ -4,9 +4,9 @@
       <div class="card_social__info">
         <div class="card_social__avatar">
           <% if following.avatar.attached? %>
-            <%= cl_image_tag following.avatar.key, class: "avatar_l" %>
+            <%= cl_image_tag following.avatar.key, class: "avatar_s--has-no-border" %>
           <% else %>
-            <%= image_tag 'BeerWizardLogo.png', class: "avatar_s" %>
+            <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
           <% end %>
         </div>
         <div class="card_social__user">
@@ -20,10 +20,6 @@
               <%= following.location %>
             <% end %>
             </p>
-          <span class="card_social__id" id="follow_count_<%= following.id%>">
-            <%= render 'friendships/follow_count', user: following %>
-          </span>
-          <p><small class="text-muted">User Since: <%= following.created_at.strftime("%b %d, %Y")%></small></p>
         </div>
       </div>
       <% if  following != current_user %>

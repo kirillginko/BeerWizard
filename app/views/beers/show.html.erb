@@ -32,7 +32,6 @@
         </div>
         <div class="beer__bookmark">
           <div class="circle">
-
           <%= link_to like_beer_path(@beer), class: "like-btn", method: :put, remote: :true do %>
             <%= inline_svg_tag "heart_stroke.svg", class: "circle__bookmark"%>
             <% end %>
@@ -97,36 +96,11 @@
       </div>
 <!--       <div class="uk-margin-left">
         <%= link_to "Share", root_path, class: "button-m" %> -->
-
-
-
-
-
     </div>
-
-
-
   </section>
 </section>
 <%= render 'shared/bottomnav' %>
 
-
-<!-- Review Average Rating -->
-
-
-
-
-
-<!-- review likes w ajax rendering like/unlike -->
-
-
-
-
-<!-- review form w ajax  -->
-
-
-
-<!-- Beer edit for debuging beer info will remove in final -->
 <hr>
 
     <%=link_to "edit beer", edit_beer_path, class: "btn btn-primary mt-2" %>

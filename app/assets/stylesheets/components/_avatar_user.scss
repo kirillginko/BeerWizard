@@ -36,8 +36,8 @@
 
   width: 75px;
   height: 75px;
-  background-size: cover;
-  border-radius: 50%;
+  object-fit: cover;
+  border-radius: 100%;
   background-position: top center;
   border: solid 4px rgba(255, 255, 255, .3);
 }
@@ -46,8 +46,8 @@
 
   width: 120px;
   height: 120px;
-  background-size: cover;
-  border-radius: 50%;
+  object-fit: cover;
+  border-radius: 100%;
   background-position: top center;
   border: solid 8px rgba(255, 255, 255, .3);
 }
@@ -55,6 +55,7 @@
 .avatar_user {
   width: 60px;
   height: 60px;
+  object-fit: cover;
   border-radius: 50%;
   vertical-align: middle;
   border: solid 8px rgba(255, 255, 255, .3);
