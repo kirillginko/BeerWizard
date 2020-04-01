@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
 
+
   &__container {
     display: flex;
     justify-content: center;
@@ -12,7 +13,7 @@
   }
 
   &__list-item {
-    width: 375px;
+    // width: 375px;
     background-color: #fff;
   }
 
@@ -34,10 +35,9 @@
     display: flex;
     justify-content: center;
     background-color: $red;
-
-    ul {
-      padding-bottom: 36px;
-    }
+    height: 100%;
+    padding: 0 0 36px 0;
+    margin: 0;
 
     a {
       text-decoration: none;
@@ -50,19 +50,24 @@
     }
   }
 
-  &__reviews {
+  &__switcher-content {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &__reviews-btn {
     text-align: center;
     border-right: solid 1px rgba(255, 255, 255, .3);
     padding: 0 24px
   }
 
-  &__followers {
+  &__followers-btn {
     text-align: center;
     border-right: solid 1px rgba(255, 255, 255, .3);
     padding: 0 24px
   }
 
-  &__follows {
+  &__follows-btn {
     text-align: center;
     padding: 0 24px
   }
@@ -84,8 +89,6 @@
 
   ul {
     list-style-type: none;
-    padding: 0 0 36px 0;
-    margin: 0;
   }
 }
 

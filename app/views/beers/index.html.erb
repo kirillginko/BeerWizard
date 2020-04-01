@@ -3,6 +3,7 @@
  -->  <!-- filters -->
 
   <!--Beer Search -->
+
   <div class="beer__topnav bw-padding-bottom">
     <%= link_to root_path do %>
       <div class="back-button">
@@ -10,14 +11,16 @@
       </div>
     <% end %>
     <%= link_to user_path(current_user) do%>
-  <%= render 'shared/avatar' %>
-  <% end %>
+      <%= render 'shared/avatar' %>
+    <% end %>
   </div>
   <%= render 'shared/searchbar' %>
 </div>
-  <!-- Beer card -->
+
+  <!-- Beer cardS -->
+
   <div id= "beers_index">
-  <%= render 'beers/card', beers: @beers %>
+    <%= render 'beers/card', beers: @beers %>
   </div>
 
 <%= render 'shared/bottomnav' %>
