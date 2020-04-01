@@ -44,7 +44,7 @@
 
   <ul class="uk-switcher">
     <li>
-      <%= render "reviews/reviewcard", class: "user-profile__list-item bw-container" %>
+
     </li>
     <li>
       <%= render "friendships/followerscard", class: "user-profile__list-item bw-container" %>
@@ -91,42 +91,41 @@
 <div class="accordion">
   <ul uk-accordion>
     <li>
-      <a href="#" class="uk-accordion-title accordion__title"><h5>Wanted List</h5></a>
+      <a href="#" class="uk-accordion-title accordion__title"><h5>Wanted List<span class="accordion__counter"><%=@user.bookmarks.count%></span></h5></a>
       <div class="uk-accordion-content accordion__content">
         <% current_user.bookmarks.each do |bookmark| %>
         <%= link_to beer_path(bookmark.beer) do %>
-        <% if bookmark.beer.avatar.attached? %>
-          <%= cl_image_tag bookmark.beer.avatar.key, width: 150, height: 150, crop: :fill %>
-        <% else %>
-          <%= image_tag '/assets/Sir-Wallac-Hivernale-07a26e9c9dcb449a374caa9eae5f80950a683b3518e0c65d1561d12293915e27.png',  width: 50, height: 50, crop: :fill %>
-        <% end %>
+        <%= cl_image_tag bookmark.beer.avatar.key, width: 80, height: 80 %>
+
+        <!-- avarage rating -->
+              <div class="average-review-rating" id="average-review-rating" data-score=
+      <%= bookmark.beer.average_review %>></div>
+        <span><small><b>Based on <%= bookmark.beer.reviews.count %> reviews</b></small></span>
+
         <p><%= bookmark.beer.name %></p>
         <p><b><small>Brewery: <%= bookmark.beer.brewery %></small></b></p>
+        <p><small><b>Description:</b> <%= bookmark.beer.description %></small></p>
         <% end %>
       <% end %>
     </div>
   </li>
   <li>
-      <a href="#" class="uk-accordion-title accordion__title"><h5>Favorites</h5></a>
+      <a href="#" class="uk-accordion-title accordion__title"><h5>Favorites<span class="accordion__counter"><%=@user.find_liked_items.count%></span></h5></a>
       <div class="uk-accordion-content accordion__content">
         <% current_user.find_liked_items.each do |liked_item|%>
-          <%= link_to beer_path(liked_item) do %>
-            <p><%= liked_item.name%></p>
-          <% end %>
-            <p><small><b>Brewery:</b> <%= liked_item.brewery %></small></p>
-          <p><small><b>Description:</b> <%= liked_item.description %></small></p>
-
+        <%= link_to beer_path(liked_item) do %>
+          <%= cl_image_tag liked_item.avatar.key, width: 80, height: 80 %>
         <!-- avarage rating -->
-
-    <div class="average-review-rating" id="average-review-rating" data-score=
+              <div class="average-review-rating" id="average-review-rating" data-score=
       <%= liked_item.average_review %>></div>
         <span><small><b>Based on <%= liked_item.reviews.count %> reviews</b></small></span>
+            <p><%= liked_item.name%></p>
+            <p><small><b>Type:</b> <%= liked_item.beer_type %></small></p>
+            <p><small><b>Brewery:</b> <%= liked_item.brewery %></small></p>
+          <p><small><b>Description:</b> <%= liked_item.description %></small></p>
+          <% end %>
+        <!-- avarage rating -->
         <br>
-        <% if liked_item.avatar.attached? %>
-          <%= cl_image_tag liked_item.beer.avatar.key, width: 150, height: 150, crop: :fill %>
-        <% else %>
-          <%= image_tag '/assets/Sir-Wallac-Hivernale-07a26e9c9dcb449a374caa9eae5f80950a683b3518e0c65d1561d12293915e27.png',  width: 50, height: 50, crop: :fill %>
-        <% end %>
       <% end %>
     </div>
   </li>
@@ -134,15 +133,15 @@
     <li>
       <a href="#" class="uk-accordion-title accordion__title"><h5>Reviews <span class="accordion__counter"><%=@user.reviews.count%></span></h5></a>
       <div class="uk-accordion-content accordion__content">
-        <% @user.reviews.each do |reviews| %>
+        <% @user.reviews.limit(8).each do |reviews| %>
         <%= link_to beer_path(reviews.beer) do %>
         <div class="review-rating" data-score="<%= reviews.stars %>"></div>
-        <p><%= reviews.user.name%></p>
        <% if reviews.beer.avatar.attached? %>
           <%= cl_image_tag reviews.beer.avatar.key, width: 80, height: 80 %>
         <% else %>
           <%= image_tag '/assets/Sir-Wallac-Hivernale-07a26e9c9dcb449a374caa9eae5f80950a683b3518e0c65d1561d12293915e27.png',  width: 50, height: 50, crop: :fill %>
         <% end %>
+        <p><%= reviews.user.name%></p>
         <p><b><%= reviews.title %></b></p>
         <p><small><%= reviews.description %></small></p>
         <% end %>
