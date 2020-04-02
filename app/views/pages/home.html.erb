@@ -1,3 +1,12 @@
+<!-- Search bar --->
+<div class="mt-2">
+  <%= form_tag beers_path, method: :get, id: "query", class: "search-bar" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    placeholder: "Find a Beer"%>
+  <% end %>
+</div>
+<!---------->
 <!-- Search Query Buttons -->
 
 <div class="beer_type">
@@ -11,123 +20,58 @@
   <%= link_to "Saison", {controller: "beers", query: "Saison"}, class: "beer-type__button"%>
   <%= link_to "Belgian", {controller: "beers", query: "Belgian"}, class: "beer-type__button"%>
 </div>
-<!-- Search bar --->
-
-  <%= form_tag beers_path, method: :get, id: "query", class: "search-bar" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    placeholder: "Find a Beer"%>
-  <% end %>
-<!---------->
-
 <h2> Top Rated </h2>
-<% @beers.limit(4).each do |beer| %>
-<%= link_to beer_path(beer) do %>
-<p></p>
-<div class="beer-background">
-<div class="card_beer">
-  <div class="card_beer__beer"><%= cl_image_tag beer.avatar.key %></div>
-  <div class="card_beer__content">
-      <p class="card_beer__title"><%= beer.name %></p>
-      <p class="card_beer__infos"><%= beer.beer_type %>, <%= beer.abv %></p>
-    </div>
-    <div class="average-review-rating average-review-rating-s" id="average-review-rating<%= beer.id %>" data-score=<%= beer.average_review %>>
-    </div>
-    <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
-      <span><i class="fas fa-heart pl-4"></i></span>
-    <% end %>
-    <span class="likes-count-" id="likes-count-<%= beer.id %>">
-  <%= render 'beers/vote', beer: beer %></span>
-  </div>
-</div>
-
-<% end %>
-<% end %>
-
-<!-- Recent Users x 4 -->
-
-<div class="container mt-4">
-  <div id="user_index">
-  <h2>RECENT USERS</h2>
-  <% @users.limit(4).each do |user| %>
-    <div class="card_social">
-      <div class="card_social__info">
-        <div class="card_social__avatar"><% if user.avatar.attached? %>
-            <%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
-          <% else %>
-            <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
-          <% end %>
-        </div>
-        <div class="card_social__user">
-          <p class="card_social__id"><%= link_to user_path(user) do %>
-            <%= user.name %><% end %>
-          </p>
-          <p class="card_social__city"><%= link_to user_path(user) do %>
-            <%= user.location %><% end %></p>
-        </div>
-      </div>
-      <% if  user != current_user %>
-      <span id="follow_btn_<%= user.id%>">
-        <%= render 'friendships/follow_button', user: user %>
-      </span>
-      <% end %>
-    </div>
-  <% end %>
-  </div>
- </div>
-
-<br>
-<br>
-<br>
-
-<!-- INDEX REVIEWS -->
-<!-- Header-->
-<div class="container mt-4">
-  <div id="user_index">
-  <h2>REVIEWS INDEX</h2>
-    <div class="beer__topnav bw-padding-bottom">
-      <%= link_to root_path do %>
-        <div class="back-button">
-         <%= inline_svg_tag "left-arrow.svg"%>
-        </div>
-      <% end %>
-      <%= link_to user_path(current_user) do%>
-      <%= render 'shared/avatar' %>
-      <% end %>
-    </div>
-  </div>
-
-<!-- Reviews cards -->
-
-  <div id="user_index">
-  <% @users.each do |user| %>
-      <div class="card_review">
-        <p class="card_review__comment">Excellente bière !</p>
-        <div class="card_review__rating">ÉTOILE</div>
-        <div class="card_review__info">
-          <div class="card_review__avatar"><% if user.avatar.attached? %>
-              <%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
-            <% else %>
-              <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
-            <% end %>
-          </div>
-          <div class="card_review__user">
-            <p class="card_review__id"><%= link_to user_path(user) do %>
-              <%= user.name %><% end %>
-            </p>
-            <p class="card_review__city"><%= link_to user_path(user) do %>
-              <%= user.location %><% end %>
-            </p>
-          </div>
-        </div>
-      </div>
-  <% end %>
-  </div>
-</div>
-
-
 <!--carousel-->
-
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= render 'beers/slideshowcard', beer: @beer %>
+    </div>
+    <div class="carousel-item">
+    <%= render 'beers/slideshowcard', beer: @beer %>
+    </div>
+    <div class="carousel-item">
+  <%= render 'beers/slideshowcard', beer: @beer %>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- // carousel-->
+<h2> New Users </h2>
+<!-- Recent Users x 4 -->
+<div id="user_index">
+<% @users.limit(5).each do |user| %>
+  <div class="card_social">
+    <div class="card_social__info">
+      <div class="card_social__avatar"><% if user.avatar.attached? %>
+          <%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
+        <% else %>
+          <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
+        <% end %>
+      </div>
+      <div class="card_social__user">
+        <p class="card_social__id"><%= link_to user_path(user) do %>
+          <%= user.name %><% end %>
+        </p>
+        <p class="card_social__city"><%= link_to user_path(user) do %>
+          <%= user.location %><% end %></p>
+      </div>
+    </div>
+    <% if  user != current_user %>
+    <span id="follow_btn_<%= user.id%>">
+      <%= render 'friendships/follow_button', user: user %>
+    </span>
+    <% end %>
+  </div>
+<% end %>
+</div>
 <!-- review scripts w raty to average -->
 <script>
 $(document).ready(function() {

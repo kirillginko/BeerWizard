@@ -147,3 +147,153 @@ file = URI.open("https://images.unsplash.com/photo-1521119989659-a83eee488004?ix
   user30 = User.find(30)
   user30.avatar.attach(io: file, filename: 'Alexis', content_type: "image/png")
   user30.save!
+
+  file = URI.open("https://images.unsplash.com/photo-1478427094460-4c8d412903e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user31 = User.find(31)
+  user31.avatar.attach(io: file, filename: 'Frankie', content_type: "image/png")
+  user31.save!
+
+  file = URI.open("https://images.unsplash.com/photo-1543315238-0df7b9e8817e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user32 = User.find(32)
+  user32.avatar.attach(io: file, filename: 'Feebo', content_type: "image/png")
+  user32.save!
+
+  file = URI.open("https://images.unsplash.com/photo-1516542241506-ef0f5246dc91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user33 = User.find(33)
+  user33.avatar.attach(io: file, filename: 'Kodo', content_type: "image/png")
+  user33.save!
+
+  file = URI.open("https://images.unsplash.com/photo-1545114643-2a7356729134?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user34 = User.find(34)
+  user34.avatar.attach(io: file, filename: 'Javonte', content_type: "image/png")
+  user34.save!
+
+  file = URI.open("https://images.unsplash.com/photo-1507126117511-e87526de90e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user35 = User.find(35)
+  user35.avatar.attach(io: file, filename: 'Camron', content_type: "image/png")
+  user35.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1488820098099-8d4a4723a490?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user36 = User.find(36)
+  user36.avatar.attach(io: file, filename: 'Ben', content_type: "image/png")
+  user36.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1519135161701-e6f451f6d547?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user37 = User.find(37)
+  user37.avatar.attach(io: file, filename: 'Al', content_type: "image/png")
+  user37.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1481608790904-6b47c88e5b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user38 = User.find(38)
+  user38.avatar.attach(io: file, filename: 'Kenny', content_type: "image/png")
+  user38.save!
+
+  file = URI.open("https://images.unsplash.com/photo-1468218457742-ee484fe2fe4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user39 = User.find(39)
+  user39.avatar.attach(io: file, filename: 'Gary', content_type: "image/png")
+  user39.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1517356382738-e5f6d7828d84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user40 = User.find(40)
+  user40.avatar.attach(io: file, filename: 'Marge', content_type: "image/png")
+  user40.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1518904659698-a5ec9180760f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user41 = User.find(41)
+  user41.avatar.attach(io: file, filename: 'Kelly', content_type: "image/png")
+  user41.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1541595948840-f299cdb13759?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user42 = User.find(42)
+  user42.avatar.attach(io: file, filename: 'Cami', content_type: "image/png")
+  user42.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1516362543167-b3a9f77a89df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user43 = User.find(43)
+  user43.avatar.attach(io: file, filename: 'Alice', content_type: "image/png")
+  user43.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1518749557006-c22cb289824e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user44 = User.find(44)
+  user44.avatar.attach(io: file, filename: 'Harmonie', content_type: "image/png")
+  user44.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1520014133332-c1399969d592?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user45 = User.find(45)
+  user45.avatar.attach(io: file, filename: 'Jen1', content_type: "image/png")
+  user45.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1523261013998-4725fe3a01db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user46 = User.find(46)
+  user46.avatar.attach(io: file, filename: 'Kendra', content_type: "image/png")
+  user46.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1519323751229-d99671f70424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user47 = User.find(47)
+  user47.avatar.attach(io: file, filename: 'Allie', content_type: "image/png")
+  user47.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1505892313714-cf3b68204126?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user48 = User.find(48)
+  user48.avatar.attach(io: file, filename: 'Sanna', content_type: "image/png")
+  user48.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1529680459049-bf0340fa0755?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user49 = User.find(49)
+  user49.avatar.attach(io: file, filename: 'Jennifer1', content_type: "image/png")
+  user49.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1542850773-2a2961314332?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user50 = User.find(50)
+  user50.avatar.attach(io: file, filename: 'Colin', content_type: "image/png")
+  user50.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1519093476740-ad52af63ce22?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user51 = User.find(51)
+  user51.avatar.attach(io: file, filename: 'Craig', content_type: "image/png")
+  user51.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1520714481543-41afe1fe908d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user52 = User.find(52)
+  user52.avatar.attach(io: file, filename: 'Sam1', content_type: "image/png")
+  user52.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1518417823698-91652324a3f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user53 = User.find(53)
+  user53.avatar.attach(io: file, filename: 'Quinn', content_type: "image/png")
+  user53.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1517567269072-460c787cfa28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user54 = User.find(54)
+  user54.avatar.attach(io: file, filename: 'Alain', content_type: "image/png")
+  user54.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1507907709363-97dae7783dc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user55 = User.find(55)
+  user55.avatar.attach(io: file, filename: 'Fredrick', content_type: "image/png")
+  user55.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1517508699486-c37a80dfd3a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user56 = User.find(56)
+  user56.avatar.attach(io: file, filename: 'Freego', content_type: "image/png")
+  user56.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1460795744360-274bcc74ec40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user57 = User.find(57)
+  user57.avatar.attach(io: file, filename: 'Tony', content_type: "image/png")
+  user57.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user58 = User.find(58)
+  user58.avatar.attach(io: file, filename: 'Eric1', content_type: "image/png")
+  user58.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1525002267934-d62af40273c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user59 = User.find(59)
+  user59.avatar.attach(io: file, filename: 'Stephan1', content_type: "image/png")
+  user59.save!
+
+    file = URI.open("https://images.unsplash.com/photo-1536548665027-b96d34a005ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60")
+  user60 = User.find(60)
+  user60.avatar.attach(io: file, filename: 'John', content_type: "image/png")
+  user60.save!
