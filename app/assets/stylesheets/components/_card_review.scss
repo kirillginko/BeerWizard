@@ -1,9 +1,10 @@
 .card_review {
-  //background: #f7f7f7;
+  color: #000000;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
-  width: 269px;
+  align-items: center;
+  width: 100%;
+  margin: 4px 0;
 
   &__comment {
     width: 263px;

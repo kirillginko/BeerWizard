@@ -72,6 +72,54 @@
           <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
         <% end %>
       </div>
+<<<<<<< HEAD
+      <% if  user != current_user %>
+      <span id="follow_btn_<%= user.id%>">
+        <%= render 'friendships/follow_button', user: user %>
+      </span>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
+ </div>
+
+<br>
+
+
+<!-- Navbar -->
+
+<!-- Text paragraph -->
+
+
+
+<!-- Bookmark button -->
+
+<!-- Accordion -->
+
+
+<!-- User Profile -->
+
+
+<!-- Search Query Buttons -->
+
+
+<!-- Back button -->
+
+
+
+
+<script>
+$(document).ready(function() {
+  $('.review-rating').raty({
+      readOnly: true,
+      score: function() {
+          return $(this).attr('data-score');
+      },
+      path: '/assets/'
+  });
+});
+</script>
+=======
       <div class="card_social__user">
         <p class="card_social__id"><%= link_to user_path(user) do %>
           <%= user.name %><% end %>
@@ -88,6 +136,7 @@
   </div>
 <% end %>
 </div>
+>>>>>>> 1da3d5122fcbddd7e081e3044e3a46c561825284
 <!-- review scripts w raty to average -->
 <script>
 $(document).ready(function() {
