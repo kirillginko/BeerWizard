@@ -55,77 +55,59 @@
     </li>
   </ul>
 </div>
-
-
-
-<!-- Accordion -->
-
-
-<div class="beer-background">
-  <% current_user.bookmarks.each do |bookmark| %>
-    <%= link_to beer_path(bookmark.beer) do %>
-      <div class="card_beer">
-        <div class="card_beer__beer">
-          <%= cl_image_tag bookmark.beer.avatar.key %>
-        </div>
-        <div class="card_beer__heart">
-          <%= link_to like_beer_path(bookmark.beer), class: "like-btn", method: :put, remote: :true do %>
-            <%= inline_svg_tag "Heart_full.svg" %>
-          <% end %>
-        </div>
-        <div class="card_beer__content">
-          <p class="card_beer__title"><%= bookmark.beer.name %></p>
-          <p class="card_beer__infos"><%= bookmark.beer.beer_type %>, <%= bookmark.beer.abv %></p>
-            <div class="average-review-rating" id="average-review-rating" data-score=
-            <%= bookmark.beer.average_review %>></div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
+<div class="user-profile__toggle-btn">
+  <div uk-toggle="target: #favorites; animation: uk-animation-fade" class="user-profile__fav-btn">
+    <a class="">Favorite</a>
+  </div>
+  <div uk-toggle="target: #bookmark; animation: uk-animation-fade" class="user-profile__fav-btn">
+    <a class="">Saved beers</a>
+  </div>
 </div>
-<div class="accordion">
-  <ul uk-accordion>
-    <li>
-      <a href="#" class="uk-accordion-title accordion__title"><h5>Favorites<span class="accordion__counter"><%=@user.find_liked_items.count%></span></h5></a>
-      <div class="uk-accordion-content accordion__content">
-        <% current_user.find_liked_items.each do |liked_item|%>
+<div class="beer-background">
+  <div id="favorites" class="user-profile__favorites">
+      <% current_user.find_liked_items.each do |liked_item|%>
         <%= link_to beer_path(liked_item) do %>
-          <%= cl_image_tag liked_item.avatar.key, width: 80, height: 80 %>
-        <!-- avarage rating -->
+          <div class="card_beer">
+            <div class="card_beer__beer">
+              <%= cl_image_tag liked_item.avatar.key %>
+            </div>
+          <div class="card_beer__heart">
+            <%= link_to like_beer_path(liked_item), class: "like-btn", method: :put, remote: :true do %>
+              <%= inline_svg_tag "Heart_full.svg" %>
+            <% end %>
+          </div>
+          <div class="card_beer__content">
+            <p class="card_beer__title"><%= liked_item.name%></p>
+            <p class="card_beer__infos"><%= liked_item.beer_type %>, <%= liked_item.abv %></p>
+            <div class="average-review-rating" id="average-review-rating" data-score=
+            <%= liked_item.average_review %>></div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div id="bookmark" class="user-profile__bookmark">
+    <% current_user.bookmarks.each do |bookmark| %>
+      <%= link_to beer_path(bookmark.beer) do %>
+        <div class="card_beer">
+          <div class="card_beer__beer">
+            <%= cl_image_tag bookmark.beer.avatar.key %>
+          </div>
+          <div class="card_beer__heart">
+            <%= link_to like_beer_path(bookmark.beer), class: "like-btn", method: :put, remote: :true do %>
+              <%= inline_svg_tag "Heart_full.svg" %>
+            <% end %>
+          </div>
+          <div class="card_beer__content">
+            <p class="card_beer__title"><%= bookmark.beer.name %></p>
+            <p class="card_beer__infos"><%= bookmark.beer.beer_type %>, <%= bookmark.beer.abv %></p>
               <div class="average-review-rating" id="average-review-rating" data-score=
-      <%= liked_item.average_review %>></div>
-        <span><small><b>Based on <%= liked_item.reviews.count %> reviews</b></small></span>
-            <p><%= liked_item.name%></p>
-
-            <p><small><b>Brewery:</b> <%= liked_item.brewery %></small></p>
-          <p><small><b>Description:</b> <%= liked_item.description %></small></p>
-          <% end %>
-        <!-- avarage rating -->
-        <br>
+              <%= bookmark.beer.average_review %>></div>
+          </div>
+        </div>
       <% end %>
-    </div>
-  </li>
-
-    <li>
-      <a href="#" class="uk-accordion-title accordion__title"><h5>Reviews <span class="accordion__counter"><%=@user.reviews.count%></span></h5></a>
-      <div class="uk-accordion-content accordion__content">
-        <% @user.reviews.limit(4).each do |reviews| %>
-        <%= link_to beer_path(reviews.beer) do %>
-        <div class="review-rating" data-score="<%= reviews.stars %>"></div>
-        <p><%= reviews.user.name%></p>
-       <% if reviews.beer.avatar.attached? %>
-          <%= cl_image_tag reviews.beer.avatar.key, width: 80, height: 80 %>
-        <% else %>
-          <%= image_tag '/assets/Sir-Wallac-Hivernale-07a26e9c9dcb449a374caa9eae5f80950a683b3518e0c65d1561d12293915e27.png',  width: 50, height: 50, crop: :fill %>
-        <% end %>
-        <p><b><%= reviews.title %></b></p>
-        <p><small><%= reviews.description %></small></p>
-        <% end %>
-      <% end %>
-        <p></p>
-      </div>
-    </li>
-  </ul>
+    <% end %>
+  </div>
 </div>
 
 

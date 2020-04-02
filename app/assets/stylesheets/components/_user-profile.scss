@@ -72,6 +72,62 @@
     padding: 0 24px
   }
 
+  &__toggle-btn {
+    margin: 24px 0;
+    padding: 0 16px 0 24px;
+    // border: solid black 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__fav-btn {
+    margin-right: 8px;
+    text-align: center;
+    height: 36px;
+    padding: 8px 24px;
+    border: solid black 1px;
+    flex: 1 0 45%;
+    color: #000;
+    border : {
+      style: solid;
+      color: $medium-gray;
+      width: 1px;
+      radius: 3px;
+    }
+    font : {
+      family: 'Rift W05 Bold', 'Rift';
+      size: 13px;
+      weight: bold;
+    }
+
+    a {
+      color: #000;
+
+      &:hover {
+        text-decoration: none;
+        // color: #606060;
+      }
+
+      &:active {
+        background-color: $dark-gray;
+        color: #fff;
+      }
+    }
+  }
+
+  &__favorites {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__bookmark {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   h2 {
     color: #fff;
     margin: 0;
