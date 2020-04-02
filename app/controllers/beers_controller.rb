@@ -14,6 +14,26 @@ end
   def show
     @review = Review.new
     @bookmark_exists = Bookmark.where(beer: @beer, user: current_user) == [] ? false : true
+
+    color_hash = {
+      "IPA" => "#92B0DB;",
+      "Scotch Ale" => "#9A8BC0;",
+      "Pilsner" => "#FFDCAC;",
+      "Red Ale" => "#A38168;",
+      "Sour" => "#D5E29D;",
+      "Stout" => "#EF9FA2;",
+      "Pale Ale" => "#98CC9F;",
+      "Belgian" => "#FF994E;",
+      "Smoked Ale" => "#9A8BC0;",
+      "Witbier" => "#FFDCAD;",
+      "Hefeweizen" => "#9F928D;",
+      "Bitter" => "#FFDCAC;",
+      "Farmhouse Ale" => "#FFED86;",
+      "Lambic" => "#FFED86;",
+      "Brown ale" => "#A38168;"
+    }
+    @color = color_hash[@beer.style]
+
   end
 
   def edit; end

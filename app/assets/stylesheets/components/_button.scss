@@ -30,6 +30,10 @@
     text-decoration: none;
     // color: #606060;
   }
+
+  &:active {
+    background-color: $red;
+  }
 }
 
 .button-l {
