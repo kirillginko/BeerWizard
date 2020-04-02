@@ -60,32 +60,30 @@
 
 <!-- Accordion -->
 
-
-<div class="beer-background">
-  <% current_user.bookmarks.each do |bookmark| %>
-    <%= link_to beer_path(bookmark.beer) do %>
-      <div class="card_beer">
-        <div class="card_beer__beer">
-          <%= cl_image_tag bookmark.beer.avatar.key %>
-        </div>
-        <div class="card_beer__heart">
-          <%= link_to like_beer_path(bookmark.beer), class: "like-btn", method: :put, remote: :true do %>
-            <%= inline_svg_tag "Heart_full.svg" %>
-          <% end %>
-        </div>
-        <div class="card_beer__content">
-          <p class="card_beer__title"><%= bookmark.beer.name %></p>
-          <p class="card_beer__infos"><%= bookmark.beer.beer_type %>, <%= bookmark.beer.abv %></p>
-            <div class="average-review-rating" id="average-review-rating" data-score=
-            <%= bookmark.beer.average_review %>></div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-</div>
 <div class="accordion">
   <ul uk-accordion>
     <li>
+      <div class="beer-background">
+        <a href="#" class="uk-accordion-title accordion__title"><h5>Wanted List<span class="accordion__counter"><%=@user.bookmarks.count%></span></h5></a>
+          <div class="uk-accordion-content accordion__content">
+            <% current_user.bookmarks.each do |bookmark| %>
+            <%= link_to beer_path(bookmark.beer) do %>
+            <%= cl_image_tag bookmark.beer.avatar.key %>
+
+        <!-- avarage rating -->
+            <div class="average-review-rating" id="average-review-rating" data-score=
+            <%= bookmark.beer.average_review %>></div>
+        <span><small><b>Based on <%= bookmark.beer.reviews.count %> reviews</b></small></span>
+
+        <p><%= bookmark.beer.name %></p>
+        <p><b><small>Brewery: <%= bookmark.beer.brewery %></small></b></p>
+        <p><small><b>Description:</b> <%= bookmark.beer.description %></small></p>
+        <% end %>
+      <% end %>
+    </div>
+    </div>
+  </li>
+  <li>
       <a href="#" class="uk-accordion-title accordion__title"><h5>Favorites<span class="accordion__counter"><%=@user.find_liked_items.count%></span></h5></a>
       <div class="uk-accordion-content accordion__content">
         <% current_user.find_liked_items.each do |liked_item|%>
