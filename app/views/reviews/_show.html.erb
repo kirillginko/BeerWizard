@@ -1,18 +1,27 @@
-
+<!-- users review in beer card -->
+  <div class="card_review">
+    <% if review.user.avatar.attached? %>
+      <%= cl_image_tag review.user.avatar.key, class: "avatar_s--has-no-border" %>
+    <% else %>
+      <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
+    <% end %>
+    <div class="card_review__user">
+      <p class="card_review__id"><%= link_to user_path(review.user) do %>
+        <%= review.user.name %>
+      </p>
+      <p class="card_review__city">
+        <%= review.user.location %><% end %>
+      </p>
+    </div>
+  </div>
   <div class="review-rating" data-score="<%= review.stars %>"></div>
   <p class="review-title"><%= review.title %></p>
-  <% if review.user.avatar.attached? %>
-    <%= cl_image_tag review.user.avatar.key, class: "avatar_s--has-no-border" %>
-  <% else %>
-    <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
-  <% end %>
+  <p class="review-description"><%= review.description %>"</p>
+
+<hr>
 
 
-    <%= review.user.name %>
-    <div class="mt-4">
-    <p><b><%= review.title %></b></p>
-    <p><small>"<%= review.description %>"</small></p>
-</div>
+
 
 
 

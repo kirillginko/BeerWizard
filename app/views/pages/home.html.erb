@@ -77,53 +77,6 @@
  </div>
 
 <br>
-<br>
-<br>
-
-<!-- INDEX REVIEWS -->
-<!-- Header-->
-<div class="container mt-4">
-  <div id="user_index">
-  <h2>REVIEWS INDEX</h2>
-    <div class="beer__topnav bw-padding-bottom">
-      <%= link_to root_path do %>
-        <div class="back-button">
-         <%= inline_svg_tag "left-arrow.svg"%>
-        </div>
-      <% end %>
-      <%= link_to user_path(current_user) do%>
-      <%= render 'shared/avatar' %>
-      <% end %>
-    </div>
-  </div>
-
-<!-- Reviews cards -->
-
-  <div id="user_index">
-  <% @users.each do |user| %>
-      <div class="card_review">
-        <p class="card_review__comment">Excellente bière !</p>
-        <div class="card_review__rating">ÉTOILE</div>
-        <div class="card_review__info">
-          <div class="card_review__avatar"><% if user.avatar.attached? %>
-              <%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
-            <% else %>
-              <%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
-            <% end %>
-          </div>
-          <div class="card_review__user">
-            <p class="card_review__id"><%= link_to user_path(user) do %>
-              <%= user.name %><% end %>
-            </p>
-            <p class="card_review__city"><%= link_to user_path(user) do %>
-              <%= user.location %><% end %>
-            </p>
-          </div>
-        </div>
-      </div>
-  <% end %>
-  </div>
-</div>
 
 
 <!-- Navbar -->
