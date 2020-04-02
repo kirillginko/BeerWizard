@@ -22,6 +22,9 @@
   </div>
   <ul uk-switcher="animation: uk-animation-fade" class="user-profile__numbers">
     <%= link_to "#" do %>
+    <li></li>
+    <% end %>
+    <%= link_to "#" do %>
     <li class="user-profile__reviews-btn">
       <h5>Reviews</h5>
       <p><%= @user.reviews.size %></p>
@@ -44,6 +47,7 @@
   </ul>
 
   <ul class="user-profile__switcher-content uk-switcher bw-container">
+    <li></li>
     <li>
       <%= render "reviews/reviewcard", class: "user-profile__list-item" %>
     </li>
@@ -77,10 +81,10 @@
             <% end %>
           </div>
           <div class="card_beer__content">
-            <p class="card_beer__title"><%= liked_item.name%></p>
-            <p class="card_beer__infos"><%= liked_item.beer_type %>, <%= liked_item.abv %></p>
             <div class="average-review-rating" id="average-review-rating" data-score=
             <%= liked_item.average_review %>></div>
+            <p class="card_beer__title"><%= liked_item.name%></p>
+            <p class="card_beer__infos"><%= liked_item.beer_type %>, <%= liked_item.abv %></p>
           </div>
         </div>
       <% end %>
@@ -99,10 +103,10 @@
             <% end %>
           </div>
           <div class="card_beer__content">
-            <p class="card_beer__title"><%= bookmark.beer.name %></p>
-            <p class="card_beer__infos"><%= bookmark.beer.beer_type %>, <%= bookmark.beer.abv %></p>
               <div class="average-review-rating" id="average-review-rating" data-score=
               <%= bookmark.beer.average_review %>></div>
+            <p class="card_beer__title"><%= bookmark.beer.name %></p>
+            <p class="card_beer__infos"><%= bookmark.beer.beer_type %>, <%= bookmark.beer.abv %></p>
           </div>
         </div>
       <% end %>

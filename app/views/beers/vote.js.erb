@@ -5,6 +5,9 @@ $(document).ready(function() {
   $('.like-btn').removeClass('like-btn');
 <% end %>
 });
+
 showVotes = document.getElementById('likes-count-<%= @beer.id %>');
 showVotes.innerHTML = "<%= j render 'beers/vote', beer: @beer %>";
+
+
 

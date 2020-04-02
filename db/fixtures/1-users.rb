@@ -237,3 +237,243 @@ User.seed do |s|
   s.password = "123456"
   s.location = "Montréal, QC"
 end
+
+User.seed do |s|
+  s.id    = 31
+  s.email = "Frankie1@example.com"
+  s.name  = "Franko"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 32
+  s.email = "Feebo1@example.com"
+  s.name  = "Feebo"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 33
+  s.email = "Kodo1@example.com"
+  s.name  = "Kodo"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 34
+  s.email = "Javonte1@example.com"
+  s.name  = "Javonte"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 35
+  s.email = "Camron1@example.com"
+  s.name  = "Camron"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 36
+  s.email = "Ben1@example.com"
+  s.name  = "Ben"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 37
+  s.email = "Al1@example.com"
+  s.name  = "Al"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 38
+  s.email = "Kenny1@example.com"
+  s.name  = "Kenny"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 39
+  s.email = "Gary1@example.com"
+  s.name  = "Gary"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 40
+  s.email = "Marge1@example.com"
+  s.name  = "Marge"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 41
+  s.email = "Kelly1@example.com"
+  s.name  = "Kelly"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 42
+  s.email = "Cami@example.com"
+  s.name  = "Cami"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 43
+  s.email = "Alice1@example.com"
+  s.name  = "Alice"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 44
+  s.email = "Harmonie1@example.com"
+  s.name  = "Harmonie"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 45
+  s.email = "Jen1@example.com"
+  s.name  = "Jen"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 46
+  s.email = "Kendra1@example.com"
+  s.name  = "Kendra"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 47
+  s.email = "Allie1@example.com"
+  s.name  = "Allie"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 48
+  s.email = "Sanna1@example.com"
+  s.name  = "Sanna"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 49
+  s.email = "Jennifer1@example.com"
+  s.name  = "Jennifer"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 50
+  s.email = "Colin1@example.com"
+  s.name  = "Colin"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 51
+  s.email = "Craig1@example.com"
+  s.name  = "Craig"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 52
+  s.email = "Sam1@example.com"
+  s.name  = "Sam"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 53
+  s.email = "Quinn1@example.com"
+  s.name  = "Quinn"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 54
+  s.email = "Alain1@example.com"
+  s.name  = "Alain"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 55
+  s.email = "Fredrick1@example.com"
+  s.name  = "Fredrick"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 56
+  s.email = "Freego@example.com"
+  s.name  = "Freego"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 57
+  s.email = "Tony1@example.com"
+  s.name  = "Tony"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 58
+  s.email = "Eric1@example.com"
+  s.name  = "Eric"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 59
+  s.email = "Stephan1@example.com"
+  s.name  = "Stephan"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end
+
+User.seed do |s|
+  s.id    = 60
+  s.email = "John@example.com"
+  s.name  = "John"
+  s.password = "123456"
+  s.location = "Montréal, QC"
+end

@@ -1,5 +1,5 @@
 <div class="beer-background">
-  <% beers.each do |beer| %>
+  <% @beers.limit(2).each do |beer| %>
     <%= link_to beer_path(beer) do %>
     <div class="card_beer">
       <div class="card_beer__beer">
@@ -7,19 +7,23 @@
       </div>
       <div class="card_beer__heart">
         <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
-          <%= render 'beers/like', beer: beer %>
+          <a href="#" class="like">
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
         <% end %>
       </div>
       <div class="card_beer__content">
-        <div class="average-review-rating average-review-rating-s" id="average-review-rating<%= beer.id %>" data-score=<%= beer.id %>>
-        </div>
         <p class="card_beer__title"><%= beer.name %></p>
         <p class="card_beer__infos"><%= beer.beer_type %>, <%= beer.abv %></p>
+
+        <div class="average-review-rating average-review-rating-s" id="average-review-rating<%= beer.id %>" data-score=<%= beer.id %>>
+          </div>
+
+
+           <span class="likes-count-" id="likes-count-<%= beer.id %>">
+            <%= render 'beers/vote', beer: beer %></span>
       </div>
     </div>
     <% end %>
   <% end %>
 </div>
-
-
-
