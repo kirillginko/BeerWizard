@@ -7,8 +7,10 @@
       </div>
       <div class="card_beer__heart">
         <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
+        <div id="heart<%= beer.id %>">
           <%= render 'beers/like', beer: beer %>
-        <% end %>
+        </div>
+      <% end %>
       </div>
       <div class="card_beer__content">
         <div class="average-review-rating average-review-rating-s" id="average-review-rating<%= beer.id %>" data-score=<%= beer.id %>>

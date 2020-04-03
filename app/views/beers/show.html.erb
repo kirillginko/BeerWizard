@@ -33,14 +33,17 @@
         <div class="beer__bookmark">
           <div class="circle">
           <%= link_to like_beer_path(@beer), class: "like-btn", method: :put, remote: :true do %>
-            <%= inline_svg_tag "heart_stroke.svg", class: "circle__bookmark"%>
-            <% end %>
+          <div id ="heart-show<%= @beer.id%>">
+            <%= render 'beers/favorite', beer: @beer %>
           </div>
+          </div>
+          <% end %>
           <div class="circle">
             <%= link_to bookmarks_update_path(beer: @beer), method: :get, remote: true do %>
-            <%= inline_svg_tag "bookmark_stroke.svg", class: "circle__bookmark"%>
-            <% end %>
+            <div id="bookmark-show<%= @beer.id %>">
+          <%= inline_svg_tag "Bookmark_full.svg", class: "circle__bookmark"  %>
           </div>
+         <% end %>
         </div>
       </div>
     </div>

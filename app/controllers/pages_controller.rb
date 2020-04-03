@@ -9,4 +9,5 @@ class PagesController < ApplicationController
   end
   @users = User.all.order("name Asc")
 end
+  @sample = Beer.all.sample(5)
 end

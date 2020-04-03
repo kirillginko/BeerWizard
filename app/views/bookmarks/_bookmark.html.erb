@@ -1,0 +1,6 @@
+<% if @bookmark_exists? %>
+<%= inline_svg_tag "Bookmark_full.svg", class: "circle__bookmark"  %>
+<% else %>
+<%= inline_svg_tag "bookmark_stroke.svg", class: "circle__bookmark" %>
+<% end %>
+
