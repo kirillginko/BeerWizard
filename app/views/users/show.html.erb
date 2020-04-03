@@ -20,45 +20,48 @@
         </div>
       </div>
   </div>
-  <ul uk-switcher="animation: uk-animation-fade" class="user-profile__numbers">
-    <%= link_to "#" do %>
-    <li></li>
-    <% end %>
-    <%= link_to "#" do %>
+  <ul class="user-profile__numbers">
     <li class="user-profile__reviews-btn">
       <h5>Reviews</h5>
       <p><%= @user.reviews.size %></p>
-    <% end %>
     </li>
-    <%= link_to "#" do %>
     <li class="user-profile__followers-btn">
       <h5>Followers</h5>
       <p class="user-profile__bold-numbers"><%= @user.followers.count %></p>
     </li>
-    <% end %>
-    <%= link_to "#" do %>
     <li class="user-profile__follows-btn">
       <h5>Following</h5>
       <p class="user-profile__bold-numbers" id="follow_profile_">
         <%= @user.following.count %>
         </p>
     </li>
-    <% end %>
   </ul>
-
-  <ul class="user-profile__switcher-content uk-switcher bw-container">
-    <li></li>
+</div>
+<div class="accordion">
+  <ul uk-accordion class="user-profile__switcher-content bw-container">
     <li>
-      <%= render "reviews/reviewcard", class: "user-profile__list-item" %>
+      <a href="#" class="uk-accordion-title"><h5 class="accordion__title">Reviews<span class="accordion__counter"><%=@user.bookmarks.count%></span></h5></a>
+      <div class="uk-accordion-content">
+        <%= render "reviews/reviewcard", class: "user-profile__list-item" %>
+      </div>
     </li>
     <li>
-      <%= render "friendships/followerscard", class: "user-profile__list-item" %>
+      <a href="#" class="uk-accordion-title accordion__title"><h5>Favorites<span class="accordion__counter"><%=@user.find_liked_items.count%></span></h5></a>
+      <div class="uk-accordion-content">
+        <%= render "friendships/followerscard", class: "user-profile__list-item" %>
+      </div>
     </li>
     <li class="user-profile__followers">
+        <a href="#" class="uk-accordion-title accordion__title"><h5>Reviews <span class="accordion__counter"><%=@user.reviews.count%></span></h5></a>
+      <div class="uk-accordion-content">
       <%= render "friendships/followingcard", class: "user-profile__list-item" %>
+      </div>
     </li>
   </ul>
 </div>
+
+
+
 <div class="user-profile__toggle-btn">
   <div uk-toggle="target: #favorites; animation: uk-animation-fade" class="user-profile__fav-btn">
     <a class="">Favorite</a>
