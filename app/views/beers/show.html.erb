@@ -75,7 +75,7 @@
         <li>
 
           <a href="#" class="uk-accordion-title accordion__title">
-          <h5>Review <span class="accordion__counter"><%= @beer.reviews.count %></span></h5></a>
+          <h5>Review <span class="accordion__counter" id="review-counter"><%= @beer.reviews.count %></span></h5></a>
             <div class="uk-accordion-content accordion__content">
               <p><% @beer.reviews.each do |review| %></p>
                 <div id="reviews">
