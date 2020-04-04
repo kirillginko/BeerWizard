@@ -33,14 +33,17 @@
         <div class="beer__bookmark">
           <div class="circle">
           <%= link_to like_beer_path(@beer), class: "like-btn", method: :put, remote: :true do %>
-            <%= inline_svg_tag "heart_stroke.svg", class: "circle__bookmark"%>
-            <% end %>
+          <div id ="heart-show<%= @beer.id%>">
+            <%= render 'beers/favorite', beer: @beer %>
           </div>
+          </div>
+          <% end %>
           <div class="circle">
             <%= link_to bookmarks_update_path(beer: @beer), method: :get, remote: true do %>
-            <%= inline_svg_tag "bookmark_stroke.svg", class: "circle__bookmark"%>
-            <% end %>
+            <div id="bookmark-show<%= @beer.id %>">
+          <%= inline_svg_tag "Bookmark_full.svg", class: "circle__bookmark"  %>
           </div>
+         <% end %>
         </div>
       </div>
     </div>
@@ -75,7 +78,7 @@
         <li>
 
           <a href="#" class="uk-accordion-title accordion__title">
-          <h5>Review <span class="accordion__counter"><%= @beer.reviews.count %></span></h5></a>
+          <h5>Review <span class="accordion__counter" id="review-counter"><%= @beer.reviews.count %></span></h5></a>
             <div class="uk-accordion-content accordion__content">
               <p><% @beer.reviews.each do |review| %></p>
                 <div id="reviews">

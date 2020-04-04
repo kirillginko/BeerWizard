@@ -4,8 +4,10 @@ reviewForm = document.getElementById('new_review')
 newReview = "<%= j render 'reviews/show', review: @review %>";
 Username =  "<p><%= @review.user.name %>-</p>";
 reviews = document.getElementById('reviews');
+counter = document.getElementById('review-counter');
 reviews.insertAdjacentHTML('beforeend', Username);
 reviews.insertAdjacentHTML('beforeend', newReview);
+counter.innerHTML = '<%= @beer.reviews.count %>';
 reviewForm.innerHTML = "<%= j render 'reviews/form', beer: @beer, review: Review.new %>";
 <% else %>
 reviewForm.innerHTML = "<%= j render 'reviews/form', beer: @beer, review: @review %>";
