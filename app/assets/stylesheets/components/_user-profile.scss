@@ -7,7 +7,7 @@
   &__container {
     display: flex;
     justify-content: center;
-    padding: 36px 0 0 0;
+    padding: 36px 0;
     background-color: $red;
     width: 100%;
   }
@@ -19,7 +19,7 @@
 
   &__content {
     text-align: center;
-    padding-bottom: 16px;
+    // padding-bottom: 16px;
   }
 
   &__avatar {
@@ -79,6 +79,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    list-style-type: none;
   }
 
   &__fav-btn {
@@ -146,5 +147,16 @@
   ul {
     list-style-type: none;
   }
+
+  li {
+    margin-top: 20px;
+  }
+}
+
+.user-profile__fav-btn.uk-active {
+  background-color: $red;
+  color: white;
+  border: none;
+  transition: 0.3s;
 }
 

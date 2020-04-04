@@ -20,7 +20,7 @@
         </div>
       </div>
   </div>
-  <ul class="user-profile__numbers">
+  <!-- <ul class="user-profile__numbers">
     <li class="user-profile__reviews-btn">
       <h5>Reviews</h5>
       <p><%= @user.reviews.size %></p>
@@ -35,24 +35,24 @@
         <%= @user.following.count %>
         </p>
     </li>
-  </ul>
+  </ul> -->
 </div>
 <div class="accordion">
   <ul uk-accordion class="user-profile__switcher-content bw-container">
     <li>
-      <a href="#" class="uk-accordion-title"><h5 class="accordion__title">Reviews<span class="accordion__counter"><%=@user.bookmarks.count%></span></h5></a>
+      <a href="#" class="uk-accordion-title"><h5 class="accordion__title">Reviews<span class="accordion__counter"><%=@user.reviews.count%></span></h5></a>
       <div class="uk-accordion-content">
         <%= render "reviews/reviewcard", class: "user-profile__list-item" %>
       </div>
     </li>
     <li>
-      <a href="#" class="uk-accordion-title accordion__title"><h5>Favorites<span class="accordion__counter"><%=@user.find_liked_items.count%></span></h5></a>
+      <a href="#" class="uk-accordion-title accordion__title"><h5>Followers<span class="accordion__counter"><%=@user.followers.count%></span></h5></a>
       <div class="uk-accordion-content">
         <%= render "friendships/followerscard", class: "user-profile__list-item" %>
       </div>
     </li>
     <li class="user-profile__followers">
-        <a href="#" class="uk-accordion-title accordion__title"><h5>Reviews <span class="accordion__counter"><%=@user.reviews.count%></span></h5></a>
+        <a href="#" class="uk-accordion-title accordion__title"><h5>Following<span class="accordion__counter"><%=@user.following.count%></span></h5></a>
       <div class="uk-accordion-content">
       <%= render "friendships/followingcard", class: "user-profile__list-item" %>
       </div>
@@ -60,62 +60,82 @@
   </ul>
 </div>
 
+<!-- UL Navigation -->
 
-
-<div class="user-profile__toggle-btn">
-  <div uk-toggle="target: #favorites; animation: uk-animation-fade" class="user-profile__fav-btn">
+<ul uk-switcher="animation: uk-animation-fade" class="user-profile__toggle-btn">
+  <li class="user-profile__fav-btn">
     <a class="">Favorite</a>
-  </div>
-  <div uk-toggle="target: #bookmark; animation: uk-animation-fade" class="user-profile__fav-btn">
+  </li>
+  <li class="user-profile__fav-btn">
     <a class="">Saved beers</a>
-  </div>
-</div>
-<div class="beer-background">
-  <div id="favorites" class="user-profile__favorites">
+  </li>
+</ul>
+
+
+  <ul class="beer-background uk-switcher">
+    <li>
+      <div id="favorites" class="user-profile__favorites">
       <% current_user.find_liked_items.each do |liked_item|%>
         <%= link_to beer_path(liked_item) do %>
-          <div class="card_beer">
-            <div class="card_beer__beer">
-              <%= cl_image_tag liked_item.avatar.key %>
-            </div>
-          <div class="card_beer__heart">
-            <%= link_to like_beer_path(liked_item), class: "like-btn", method: :put, remote: :true do %>
-              <%= inline_svg_tag "Heart_full.svg" %>
-            <% end %>
-          </div>
-          <div class="card_beer__content">
-            <div class="average-review-rating" id="average-review-rating" data-score=
-            <%= liked_item.average_review %>></div>
-            <p class="card_beer__title"><%= liked_item.name%></p>
-            <p class="card_beer__infos"><%= liked_item.beer_type %>, <%= liked_item.abv %></p>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-  <div id="bookmark" class="user-profile__bookmark">
-    <% current_user.bookmarks.each do |bookmark| %>
-      <%= link_to beer_path(bookmark.beer) do %>
-        <div class="card_beer">
-          <div class="card_beer__beer">
-            <%= cl_image_tag bookmark.beer.avatar.key %>
-          </div>
-          <div class="card_beer__heart">
-            <%= link_to like_beer_path(bookmark.beer), class: "like-btn", method: :put, remote: :true do %>
-              <%= inline_svg_tag "Heart_full.svg" %>
-            <% end %>
-          </div>
-          <div class="card_beer__content">
+            <div class="card_beer">
+              <div class="card_beer__beer">
+                <%= cl_image_tag liked_item.avatar.key %>
+              </div>
+              <div class="card_beer__heart">
+                <%= link_to like_beer_path(liked_item), class: "like-btn", method: :put, remote: :true do %>
+                <div id="heart<%= liked_item.id %>">
+                  <%= render 'beers/like', beer: liked_item %>
+                </div>
+                <% end %>
+              </div>
+            <div class="card_beer__content">
               <div class="average-review-rating" id="average-review-rating" data-score=
-              <%= bookmark.beer.average_review %>></div>
-            <p class="card_beer__title"><%= bookmark.beer.name %></p>
-            <p class="card_beer__infos"><%= bookmark.beer.beer_type %>, <%= bookmark.beer.abv %></p>
-          </div>
-        </div>
+              <%= liked_item.average_review %>></div>
+              <p class="card_beer__title"><%= liked_item.name%></p>
+              <p class="card_beer__infos"><%= liked_item.beer_type %>, <%= liked_item.abv %></p>
+              </div>
+            </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-</div>
+    </li>
+    <li>
+      <div id="bookmark" class="user-profile__bookmark">
+        <% current_user.bookmarks.each do |bookmark| %>
+          <%= link_to beer_path(bookmark.beer) do %>
+            <div class="card_beer">
+              <div class="card_beer__beer">
+                <%= cl_image_tag bookmark.beer.avatar.key %>
+              </div>
+              <div class="card_beer__heart">
+                <%= link_to like_beer_path(bookmark.beer), class: "like-btn", method: :put, remote: :true do %>
+                  <%= inline_svg_tag "Heart_full.svg" %>
+                <% end %>
+              </div>
+              <div class="card_beer__content">
+                  <div class="average-review-rating" id="average-review-rating" data-score=
+                  <%= bookmark.beer.average_review %>></div>
+                <p class="card_beer__title"><%= bookmark.beer.name %></p>
+                <p class="card_beer__infos"><%= bookmark.beer.beer_type %>, <%= bookmark.beer.abv %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </li>
+  </ul>
+<!-- </div>
+ -->
+<ul uk-switcher>
+    <li><a href="#">test</a></li>
+    <li><a href="#">test2</a></li>
+</ul>
+
+<!-- This is the container of the content items -->
+<ul class="uk-switcher">
+    <li>allo</li>
+    <li>mon ami</li>
+</ul>
+
 
 
 
