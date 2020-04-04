@@ -44,7 +44,7 @@
           <div class="circle">
             <%= link_to bookmarks_update_path(beer: @beer), method: :get, remote: true do %>
             <div id="bookmark-show<%= @beer.id %>">
-          <%= inline_svg_tag "bookmark_stroke.svg", class: "circle__bookmark" %>
+            <%= render 'beers/bookmark', beer: @beer, user: @user%>
           </div>
          <% end %>
         </div>
