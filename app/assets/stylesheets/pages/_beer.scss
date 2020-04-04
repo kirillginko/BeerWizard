@@ -13,6 +13,11 @@
     bottom: 0px;
   }
 
+  &__title {
+    padding-bottom: 24px;
+    border-bottom: solid 1px $medium-gray;
+  }
+
   &__topnav {
     display: flex;
     justify-content: space-between;
@@ -75,6 +80,7 @@
 
 table {
     width: 100%;
+    margin-bottom: 24px;
 
     td {
       font-size: 14px;
