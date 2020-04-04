@@ -4,9 +4,11 @@
     <%= link_to beer_path(reviews.beer) do %>
       <div class="review-rating" data-score="<%= reviews.stars %>"></div>
         <p><%= reviews.beer.name%></p>
-        <% end %>
-      <p class="review-title"><%= reviews.title %></p>
-    <p class="review-description"><%= reviews.description %></p>
+
+      <p><b><%= reviews.title %></b></p>
+    <p><small><%= reviews.description %></small></p>
+    <hr>
+    <% end %>
   <% end %>
-<!-- </div>
- -->
+
+
