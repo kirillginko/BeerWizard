@@ -44,7 +44,7 @@
           <div class="circle">
             <%= link_to bookmarks_update_path(beer: @beer), method: :get, remote: true do %>
             <div id="bookmark-show<%= @beer.id %>">
-          <%= inline_svg_tag "Bookmark_full.svg", class: "circle__bookmark"  %>
+          <%= render 'beers/bookmark', beer: @beer %>
           </div>
          <% end %>
         </div>
@@ -105,11 +105,11 @@
     </div>
   </section>
 </section>
-<%= render 'shared/bottomnav' %>
+
 
 <hr>
 
-    <%=link_to "edit beer", edit_beer_path, class: "btn btn-primary mt-2" %>
+
     </div>
   </div>
 </div>
