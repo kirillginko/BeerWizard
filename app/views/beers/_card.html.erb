@@ -13,7 +13,7 @@
       <% end %>
       </div>
       <div class="card_beer__content">
-        <div class="average-review-rating average-review-rating-s" id="average-review-rating<%= beer.id %>" data-score=<%= beer.id %>>
+        <div class="average-review-rating average-review-rating-s" id="average-review-rating<%= beer.id %>" data-score=<%= beer.average_review %>>
         </div>
         <p class="card_beer__title"><%= beer.name %></p>
         <p class="card_beer__infos"><%= beer.beer_type %>, <%= beer.abv %></p>
@@ -22,6 +22,18 @@
     <% end %>
   <% end %>
 </div>
+
+<script>
+$(document).ready(function() {
+$('.average-review-rating').raty({
+readOnly: true,
+path: '/assets/',
+score: function() {
+return $(this).attr('data-score');
+},
+});
+});
+</script>
 
 
 

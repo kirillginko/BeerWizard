@@ -13,8 +13,8 @@ if (showVotes) showVotes.innerHTML = "<%= j render 'beers/vote', beer: @beer %>"
 showHeart = document.getElementById('heart<%= @beer.id%>');
 if (showHeart) showHeart.innerHTML = "<%= j render 'beers/like', beer: @beer %>";
 
-
-
 showLike = document.getElementById('heart-show<%= @beer.id %>');
 if (showLike) showLike.innerHTML = "<%= j render 'beers/favorite', beer: @beer %>";
+
+
 

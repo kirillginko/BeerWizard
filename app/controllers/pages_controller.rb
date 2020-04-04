@@ -9,5 +9,5 @@ class PagesController < ApplicationController
   end
   @users = User.all.order("name Asc")
 end
-  @sample = Beer.all.sample(5)
+  @samples = Beer.all.limit(5)
 end
