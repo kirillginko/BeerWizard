@@ -77,8 +77,10 @@
             </div>
           <div class="card_beer__heart">
             <%= link_to like_beer_path(liked_item), class: "like-btn", method: :put, remote: :true do %>
-              <%= inline_svg_tag "Heart_full.svg" %>
-            <% end %>
+            <div id='like-show<%= liked_item.id %>'>
+              <%= render 'beers/showlike', liked_item: liked_item %>
+            </div>
+          <% end %>
           </div>
           <div class="card_beer__content">
             <div class="average-review-rating" id="average-review-rating" data-score=
@@ -99,7 +101,7 @@
           </div>
           <div class="card_beer__heart">
             <%= link_to like_beer_path(bookmark.beer), class: "like-btn", method: :put, remote: :true do %>
-              <%= inline_svg_tag "Heart_full.svg" %>
+            <%= inline_svg_tag "Heart_full.svg" %>
             <% end %>
           </div>
           <div class="card_beer__content">

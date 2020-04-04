@@ -1,11 +1,16 @@
 <!-- Search bar --->
 <div class="mt-2">
+  <h2> Beer Wizard </h2>
+  <div class= "mb-2">
+
+</div>
 <%= form_tag beers_path, method: :get, id: "query", class: "search-bar" do %>
 <%= text_field_tag :query,
 params[:query],
 placeholder: "Find a Beer"%>
 <% end %>
 </div>
+
 <!---------->
 <!-- Search Query Buttons -->
 <div class="beer_type">
@@ -19,21 +24,15 @@ placeholder: "Find a Beer"%>
 <%= link_to "Saison", {controller: "beers", query: "Saison"}, class: "beer-type__button"%>
 <%= link_to "Belgian", {controller: "beers", query: "Belgian"}, class: "beer-type__button"%>
 </div>
-<a href="#" class="like">
-<i class="fa fa-heart" aria-hidden="true"></i>
-</a>
-<script>
-$(document).ready(function(){
-$(".like").click(function(){
-$(this).toggleClass("heart");
-});
-});
-</script>
-<h2> Top Rated </h2>
+
+<h2> Top Rated Beers </h2>
 <!--carousel-->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner">
 <div class="carousel-item active">
+<%= render 'beers/slideshowcard', beer: @beer %>
+</div>
+<div class="carousel-item">
 <%= render 'beers/slideshowcard', beer: @beer %>
 </div>
 <div class="carousel-item">
@@ -56,7 +55,7 @@ $(this).toggleClass("heart");
 <h2> New Users </h2>
 <!-- Recent Users x 4 -->
 <div id="user_index">
-<% @users.limit(5).each do |user| %>
+<% @users.sample(5).each do |user| %>
 <div class="card_social">
 <div class="card_social__info">
 <div class="card_social__avatar"><% if user.avatar.attached? %>
