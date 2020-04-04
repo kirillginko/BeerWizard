@@ -629,7 +629,7 @@ Beer.seed do |s|
     s.location = "https://www.unibroue.com"
     s.description = "Subtle bouquet of spice, citrus notes, aromas of yeast breads, coriander, and cloves Wheat and subtle spices blanketed in citrus flavors reminiscent of orange and lemon"
     s.style = "Witbier"
-    s.beer_type = ""
+    s.beer_type = "Belgian"
     s.abv = "5%"
     s.ibu = "10"
     s.pairing = "Great with lighter seafooddishes—classic with steamed mussels."
