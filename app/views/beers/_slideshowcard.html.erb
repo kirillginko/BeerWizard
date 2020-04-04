@@ -7,9 +7,7 @@
       </div>
       <div class="card_beer__heart">
         <%= link_to like_beer_path(beer), class: "like-btn", method: :put, remote: :true do %>
-        <div id="heart<%= beer.id %>">
-          <%= render 'beers/like', beer: beer %>
-        </div>
+
         <% end %>
       </div>
       <div class="card_beer__content">
