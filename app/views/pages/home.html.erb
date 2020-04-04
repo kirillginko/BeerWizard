@@ -1,5 +1,5 @@
 <!-- Search bar --->
-<div class="mt-2">
+<div class="mt-2 ml-2 mr-2">
   <h2> Beer Wizard </h2>
   <div class= "mb-2">
 
@@ -24,8 +24,9 @@ placeholder: "Find a Beer"%>
 <%= link_to "Saison", {controller: "beers", query: "Saison"}, class: "beer-type__button"%>
 <%= link_to "Belgian", {controller: "beers", query: "Belgian"}, class: "beer-type__button"%>
 </div>
-
+<div class="ml-2">
 <h2> Top Rated Beers </h2>
+</div>
 <!--carousel-->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner">
@@ -52,34 +53,46 @@ placeholder: "Find a Beer"%>
 </a>
 </div>
 <!-- // carousel-->
+<div class="ml-2 mt-2">
 <h2> New Users </h2>
-<!-- Recent Users x 4 -->
-<div id="user_index">
-<% @users.sample(5).each do |user| %>
-<div class="card_social">
-<div class="card_social__info">
-<div class="card_social__avatar"><% if user.avatar.attached? %>
-<%= cl_image_tag user.avatar.key, class: "avatar_s--has-no-border" %>
-<% else %>
-<%= image_tag 'BeerWizardLogo.png', class: "avatar_s--has-no-border" %>
-<% end %>
 </div>
-<div class="card_social__user">
-<p class="card_social__id"><%= link_to user_path(user) do %>
-<%= user.name %><% end %>
-</p>
-<p class="card_social__city"><%= link_to user_path(user) do %>
-<%= user.location %><% end %></p>
+<!--carousel-->
+<div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<%= render 'users/userslides', user: @user %>
+</div>
+<div class="carousel-item">
+<%= render 'users/userslides', user: @user %>
+</div>
+<div class="carousel-item">
+<%= render 'users/userslides', user: @user %>
+</div>
+<div class="carousel-item">
+<%= render 'users/userslides', user: @user %>
 </div>
 </div>
-<% if user != current_user %>
-<span id="follow_btn_<%= user.id%>">
-<%= render 'friendships/follow_button', user: user %>
-</span>
-<% end %>
+<a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
 </div>
-<% end %>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- review scripts w raty to average -->
 <script>
 $(document).ready(function() {

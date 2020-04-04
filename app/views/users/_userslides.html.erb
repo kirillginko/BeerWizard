@@ -1,0 +1,21 @@
+<div class="beer-background">
+  <% @users.sample(3).each do |user| %>
+    <%= link_to user_path(user) do %>
+    <div class="card-user ml-2">
+      <div class="card_social__avatar">
+        <%= cl_image_tag user.avatar.key, class: "avatar_l" %>
+      <div class="card_beer__content">
+        <div class="card_beer__title">
+          <p><%= user.name %></p>
+          <% if user != current_user %>
+        <span id="follow_btn_<%= user.id%>">
+          <%= render 'friendships/follow_button', user: user %>
+          </span>
+        <% end %>
+      </div>
+      </div>
+    </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
