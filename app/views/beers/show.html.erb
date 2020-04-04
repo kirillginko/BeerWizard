@@ -6,7 +6,7 @@
 
       <%= link_to beers_path do %>
       <div class="back-button">
-       <%= inline_svg_tag "left-arrow.svg"%>
+       <%= image_tag "arrow-left.png"%>
 
       </div>
       <% end %>
@@ -67,16 +67,17 @@
 </section>
 <section class="beer__description">
   <div class="bw-container">
+    <h5 class="beer__h5">Beer description</h5>
+    <p class="beer__title"><%= @beer.description %></p>
+
     <div class="accordion">
       <ul uk-accordion>
-        <li>
-          <a href="#" class="uk-accordion-title accordion__title"><h5>Beer description</h5></a>
+<!--         <li>
+          <a href="#" class="uk-accordion-title accordion__title"></a>
           <div class="uk-accordion-content accordion__content">
-            <p class=""><%= @beer.description %></p>
           </div>
         </li>
-        <li>
-
+ -->        <li>
           <a href="#" class="uk-accordion-title accordion__title">
           <h5>Review <span class="accordion__counter" id="review-counter"><%= @beer.reviews.count %></span></h5></a>
             <div class="uk-accordion-content accordion__content">

@@ -1,10 +1,14 @@
+<!-- <div class="card_review">
+ -->
   <% @user.reviews.limit(4).each do |reviews| %>
-    <%= link_to beer_path(reviews.beer)do %>
+    <%= link_to beer_path(reviews.beer) do %>
       <div class="review-rating" data-score="<%= reviews.stars %>"></div>
         <p><%= reviews.beer.name%></p>
+
       <p><b><%= reviews.title %></b></p>
     <p><small><%= reviews.description %></small></p>
     <hr>
     <% end %>
   <% end %>
+
 

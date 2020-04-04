@@ -15,6 +15,15 @@
   &__list-item {
     // width: 375px;
     background-color: #fff;
+    text-decoration: none;
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none;
+    }
   }
 
   &__content {
