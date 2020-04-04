@@ -20,7 +20,7 @@
         </div>
       </div>
   </div>
-  <!-- <ul class="user-profile__numbers">
+<ul class="user-profile__numbers">
     <li class="user-profile__reviews-btn">
       <h5>Reviews</h5>
       <p><%= @user.reviews.size %></p>
@@ -35,7 +35,7 @@
         <%= @user.following.count %>
         </p>
     </li>
-  </ul> -->
+  </ul>
 </div>
 <div class="accordion">
   <ul uk-accordion class="user-profile__switcher-content bw-container">
@@ -123,6 +123,16 @@
       </div>
     </li>
   </ul>
-<!-- </div>
+</div>
+  <script>
+$(document).ready(function() {
+  $('.average-review-rating').raty({
+      readOnly: true,
+      path: '/assets/',
+      score: function() {
+          return $(this).attr('data-score');
+      },
+  });
+});
+</script>
 
-<!-- Review Ratings Raty Script -->
