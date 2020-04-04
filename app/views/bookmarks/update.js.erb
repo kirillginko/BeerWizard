@@ -1,4 +1,2 @@
-$('#bookmark_link').text("<%= bookmark_link %>");
-
 beerBookmark = document.getElementById('bookmark-show<%= @beer.id %>');
 beerBookmark.innerHTML = "<%= j render 'beers/bookmark', beer: @beer, user: @user%>";
