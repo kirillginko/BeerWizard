@@ -39,6 +39,7 @@
     }
   }
 
+
   &__title {
     color: #000;
     font-family: 'Avenir Next LT W01 Demi';
@@ -57,5 +58,10 @@
       text-decoration: none;
     }
   }
+}
 
+#red {
+  svg, path {
+    fill: $red;
+  }
 }

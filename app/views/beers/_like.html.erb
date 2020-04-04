@@ -1,5 +1,5 @@
 <% if current_user.liked? beer %>
-        <%= inline_svg_tag "Heart_full.svg" %>
+        <%= inline_svg_tag "Heart_full.svg", id: "red"%>
         <% else %>
-          <%= inline_svg_tag "heart_stroke.svg" %>
+          <%= inline_svg_tag "Heart_full.svg"%>
         <% end %>

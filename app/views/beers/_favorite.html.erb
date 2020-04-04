@@ -1,5 +1,5 @@
 <% if current_user.liked? @beer %>
-        <%= inline_svg_tag "Heart_full.svg", class: "circle__bookmark" %>
+        <%= inline_svg_tag "Heart_full_on.svg", class: "circle__bookmark" %>
         <% else %>
           <%= inline_svg_tag "heart_stroke.svg", class: "circle__bookmark" %>
         <% end %>
